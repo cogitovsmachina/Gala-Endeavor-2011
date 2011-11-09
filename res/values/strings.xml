@@ -43,6 +43,6 @@
     <string name="decline">Declinar</string>
 
 	<string name="about_title">Sobre los desarrolladores</string>
-	<string name="about_text">Ésta aplicación ha sido desarrollada por <a href="http://www.androidtitlan.org/">AndroidTitlan.org</a>,
+	<string name="about_text">Ésta aplicación ha sido desarrollada por <a href="http://www.androidtitlan.mx/">AndroidTitlan.mx</a>,
 	 la comunidad más grande de desarrolladores en América Latina.</string>
 </resources>

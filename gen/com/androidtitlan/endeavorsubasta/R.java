@@ -71,6 +71,7 @@ public final class R {
     }
     public static final class menu {
         public static final int home_menu_items=0x7f060000;
+        public static final int product_menu_items=0x7f060001;
     }
     public static final class plurals {
         public static final int whats_on_countdown_title=0x7f050000;
