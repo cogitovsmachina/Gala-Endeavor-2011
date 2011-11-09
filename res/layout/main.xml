@@ -26,23 +26,14 @@
             
             <TextView
                 android:id="@+id/TextView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:lines="4"
                 android:text="Descripción del Producto"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                style="@style/DescriptionProduct"/>
 
 			<TextView
                 android:id="@+id/TextView17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_below="@+id/TextView19"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="21dp"
-                android:text="Medium Text"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="$100.00"
+                style="@style/PriceProduct"/>
 
         </RelativeLayout>
 
@@ -65,23 +56,15 @@
 
             <TextView
                 android:id="@+id/TextView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignRight="@+id/TextView15"
-                android:layout_centerVertical="true"
-                android:lines="4"
                 android:text="Descripción del Producto"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                style="@style/DescriptionProduct"/>
+
 
             <TextView
                 android:id="@+id/TextView04"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_below="@+id/TextView16"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="21dp"
-                android:text="Medium Text"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="$100.00"
+                style="@style/PriceProduct"/>
 
         </RelativeLayout>
 
@@ -103,23 +86,14 @@
 
             <TextView
                 android:id="@+id/TextView03"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignRight="@+id/TextView02"
-                android:layout_centerVertical="true"
-                android:lines="4"
                 android:text="Descripción del Producto"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                style="@style/DescriptionProduct"/>
 
             <TextView
                 android:id="@+id/TextView01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_below="@+id/TextView03"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="21dp"
-                android:text="Medium Text"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="$100.00"
+                style="@style/PriceProduct"/>
 
         </RelativeLayout>
 
@@ -142,23 +116,14 @@
 
             <TextView
                 android:id="@+id/TextView05"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignRight="@+id/TextView06"
-                android:layout_centerVertical="true"
-                android:lines="4"
                 android:text="Descripción del Producto"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                style="@style/DescriptionProduct"/>
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_below="@+id/TextView05"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="21dp"
-                android:text="Medium Text"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="$100.00"
+                style="@style/PriceProduct"/>
 
         </RelativeLayout>
 
@@ -186,23 +151,14 @@
 
                 <TextView
                     android:id="@+id/TextView22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignRight="@+id/TextView23"
-                    android:layout_centerVertical="true"
-                    android:lines="4"
                     android:text="Descripción del Producto"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                	style="@style/DescriptionProduct"/>
 
                 <TextView
                     android:id="@+id/TextView21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_below="@+id/TextView22"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="21dp"
-                    android:text="Medium Text"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="$100.00"
+               		style="@style/PriceProduct"/>
 
             </RelativeLayout>
 
@@ -224,23 +180,14 @@
 
                 <TextView
                     android:id="@+id/TextView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignRight="@+id/TextView20"
-                    android:layout_centerVertical="true"
-                    android:lines="4"
                     android:text="Descripción del Producto"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                	style="@style/DescriptionProduct"/>
 
                 <TextView
                     android:id="@+id/TextView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_below="@+id/TextView14"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="21dp"
-                    android:text="Medium Text"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="$100.00"
+               		style="@style/PriceProduct"/>
 
             </RelativeLayout>
 
@@ -262,23 +209,14 @@
 
                 <TextView
                     android:id="@+id/TextView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignRight="@+id/TextView12"
-                    android:layout_centerVertical="true"
-                    android:lines="4"
                     android:text="Descripción del Producto"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                	style="@style/DescriptionProduct"/>
 
                 <TextView
                     android:id="@+id/TextView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_below="@+id/TextView11"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="21dp"
-                    android:text="Medium Text"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="$100.00"
+               	 	style="@style/PriceProduct"/>
 
             </RelativeLayout>
 
@@ -298,26 +236,16 @@
                		android:layout_toRightOf="@id/eight_image_button"
 					style="@style/ProductTitle"/>
 
-
                 <TextView
                     android:id="@+id/TextView08"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignRight="@+id/TextView09"
-                    android:layout_centerVertical="true"
-                    android:lines="4"
                     android:text="Descripción del Producto"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                	style="@style/DescriptionProduct"/>
 
                 <TextView
                     android:id="@+id/TextView07"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:layout_below="@+id/TextView08"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="21dp"
-                    android:text="Medium Text"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:text="$100.00"
+               	 	style="@style/PriceProduct"/>
             </RelativeLayout>
 
     </LinearLayout>

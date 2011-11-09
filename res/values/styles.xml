@@ -68,8 +68,29 @@
 			<item name="android:textColor">@color/home_font_color</item>
         </style>
         
-
+        <!-- Style for Description Product in Main Activity  -->     
+        <style name="DescriptionProduct">
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_height">wrap_content</item>
+			<item name="android:layout_centerHorizontal">true</item>
+			<item name="android:layout_centerVertical">true</item>
+			<item name="android:lines">4</item>    
+			<item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+			<item name="android:textColor">@color/home_font_color</item>
+        </style>    
+ 
+            <!-- Style for Price Product in Main Activity  -->     
+        <style name="PriceProduct">
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_height">wrap_content</item>
+			<item name="android:layout_centerHorizontal">true</item>
+			<item name="android:layout_marginTop">21dp</item>
+			<item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+			<item name="android:textColor">@color/home_font_color</item>
+        </style> 
             
+                
+           
     <!-- Start with the Holographic Light theme -->
     <style name="Theme.IOSched.Home" parent="style/Theme.IOSched">
         <item name="android:windowBackground">@drawable/background_noise</item>
