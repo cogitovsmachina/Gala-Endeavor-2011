@@ -6,31 +6,24 @@
 
     <LinearLayout
         android:id="@+id/up_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true" 
-        android:layout_marginTop="50dp">
+       	style="@style/UpLayout">
 
         <RelativeLayout
-            android:id="@+id/firstproduct"
-            android:layout_width="50dp"
-            android:layout_height="300dp"
-            android:layout_weight="25" >
+            style="@style/ProductLayout"
+             >
 
             <Button
                 android:id="@+id/firstimagebutton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="35dp"
                 android:onClick="goToProductActivity"
-                android:text="Button" />
+                android:text="Button"
+                style="@style/ProductButton"/>
 
+            <TextView
+                android:id="@+id/product1_title"
+                android:layout_toRightOf="@+id/firstimagebutton"
+                android:text="Producto 1"
+				style="@style/ProductTitle"/>
+            
             <TextView
                 android:id="@+id/TextView19"
                 android:layout_width="wrap_content"
@@ -41,7 +34,7 @@
                 android:text="Descripción del Producto"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
-            <TextView
+			<TextView
                 android:id="@+id/TextView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -51,46 +44,24 @@
                 android:text="Medium Text"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
-            <TextView
-                android:id="@+id/product1_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="29dp"
-                android:layout_toRightOf="@+id/firstimagebutton"
-                android:text="Producto 1"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/secondproduct"
-            android:layout_width="50dp"
-            android:layout_height="300dp"
-            android:layout_weight="25" >
+        	style="@style/ProductLayout"
+            >
 
             <Button
                 android:id="@+id/second_image_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="35dp"
                 android:onClick="goToProductActivity"
                 android:text="Button" 
-                />
+                style="@style/ProductButton"/>
+                
 
             <TextView
-                android:id="@+id/TextView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/Button02"
-                android:layout_alignBottom="@+id/Button02"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="58dp"
-                android:text="Producto 1"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:id="@+id/product_title2"
+                android:text="Producto 2"
+                android:layout_toRightOf="@id/second_image_button"
+				style="@style/ProductTitle"/>
 
             <TextView
                 android:id="@+id/TextView16"
@@ -115,32 +86,20 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/thirdproduct"
-            android:layout_width="50dp"
-            android:layout_height="300dp"
-            android:layout_weight="25" >
+	    	style="@style/ProductLayout">
 
             <Button
                 android:id="@+id/third_image_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="35dp"
                 android:onClick="goToProductActivity"
-                android:text="Button" />
+                android:text="Button"
+                style="@style/ProductButton"/>
+
 
             <TextView
                 android:id="@+id/TextView02"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/Button01"
-                android:layout_alignBottom="@+id/Button01"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="58dp"
-                android:text="Producto 1"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:layout_toRightOf="@id/third_image_button"
+                android:text="Producto 3"
+				style="@style/ProductTitle"/>
 
             <TextView
                 android:id="@+id/TextView03"
@@ -165,32 +124,21 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/fourproduct"
-            android:layout_width="50dp"
-            android:layout_height="300dp"
-            android:layout_weight="25" >
+	    	style="@style/ProductLayout">
+
 
             <Button
                 android:id="@+id/fourth_image_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="35dp"
                 android:onClick="goToProductActivity"
-                android:text="Button" />
+                android:text="Button"
+                style="@style/ProductButton"/>
+
 
             <TextView
                 android:id="@+id/TextView06"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/Button03"
-                android:layout_alignBottom="@+id/Button03"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="58dp"
-                android:text="Producto 1"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:text="Producto 4"
+                android:layout_toRightOf="@id/fourth_image_button"
+				style="@style/ProductTitle"/>
 
             <TextView
                 android:id="@+id/TextView05"
@@ -217,42 +165,24 @@
     </LinearLayout>
     
         <LinearLayout
-            android:id="@+id/down_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true" 
-            android:layout_marginBottom="50dp">
+            android:id="@+id/downside_layout"
+            style="@style/DownsideLayout">
 
             <RelativeLayout
-                android:id="@+id/fifthproduct"
-                android:layout_width="50dp"
-                android:layout_height="300dp"
-                android:layout_weight="25" >
+	    		style="@style/ProductLayout">
+
 
                 <Button
                     android:id="@+id/fifth_image_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="35dp"
                     android:onClick="goToProductActivity"
-                    android:text="Button" />
+                    android:text="Button"
+                    style="@style/ProductButton"/>
 
                 <TextView
                     android:id="@+id/TextView23"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/Button07"
-                    android:layout_alignBottom="@+id/Button07"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="58dp"
-                    android:text="Producto 1"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/home_font_color" />
+                    android:text="Producto 5"
+               		android:layout_toRightOf="@id/fifth_image_button"
+					style="@style/ProductTitle"/>
 
                 <TextView
                     android:id="@+id/TextView22"
@@ -277,32 +207,20 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/RelativeLayout06"
-                android:layout_width="50dp"
-                android:layout_height="300dp"
-                android:layout_weight="25" >
+	    		style="@style/ProductLayout">
+
 
                 <Button
                     android:id="@+id/sixth_image_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="35dp"
                     android:onClick="goToProductActivity"
-                    android:text="Button" />
+                    android:text="Button"
+                    style="@style/ProductButton"/>
 
                 <TextView
                     android:id="@+id/TextView20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/Button06"
-                    android:layout_alignBottom="@+id/Button06"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="58dp"
-                    android:text="Producto 1"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                    android:text="Producto 6"
+               		android:layout_toRightOf="@id/sixth_image_button"
+					style="@style/ProductTitle"/>
 
                 <TextView
                     android:id="@+id/TextView14"
@@ -327,32 +245,20 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/RelativeLayout05"
-                android:layout_width="50dp"
-                android:layout_height="300dp"
-                android:layout_weight="25" >
+	    		style="@style/ProductLayout">
+
 
                 <Button
                     android:id="@+id/seventh_image_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="35dp"
                     android:onClick="goToProductActivity"
-                    android:text="Button" />
+                    android:text="Button"
+                    style="@style/ProductButton"/>
 
                 <TextView
                     android:id="@+id/TextView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/Button05"
-                    android:layout_alignBottom="@+id/Button05"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="58dp"
-                    android:text="Producto 1"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                    android:text="Producto 7"
+               		android:layout_toRightOf="@id/seventh_image_button"
+					style="@style/ProductTitle"/>
 
                 <TextView
                     android:id="@+id/TextView11"
@@ -377,32 +283,21 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/RelativeLayout04"
-                android:layout_width="50dp"
-                android:layout_height="300dp"
-                android:layout_weight="25" >
+	    		style="@style/ProductLayout">
+
 
                 <Button
                     android:id="@+id/eight_image_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="35dp"
                     android:onClick="goToProductActivity"
-                    android:text="Button" />
+                    android:text="Button"
+                    style="@style/ProductButton"/>
 
                 <TextView
                     android:id="@+id/TextView09"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/Button04"
-                    android:layout_alignBottom="@+id/Button04"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="58dp"
-                    android:text="Producto 1"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                    android:text="Producto 8"
+               		android:layout_toRightOf="@id/eight_image_button"
+					style="@style/ProductTitle"/>
+
 
                 <TextView
                     android:id="@+id/TextView08"
@@ -423,7 +318,6 @@
                     android:layout_marginTop="21dp"
                     android:text="Medium Text"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
-
             </RelativeLayout>
 
     </LinearLayout>

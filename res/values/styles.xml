@@ -6,7 +6,7 @@
     <style name="Theme.IOSched" parent="android:style/Theme.Light">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
-
+            
         <!-- custom attributes -->
         <item name="textHeaderMaxLines">@integer/text_header_max_lines</item>
         <item name="trackAbstractMaxLines">@integer/track_abstract_max_lines</item>
@@ -18,7 +18,58 @@
         <item name="actionbarCompatLogoStyle">@style/ActionBarCompatLogo</item>
         <item name="actionbarCompatTextStyle">@style/ActionBarCompatText</item>
     </style>
+    
+        <!-- Style for Upside Layouts in Main Activity  --> 
+        <style name="UpLayout">
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_height">wrap_content</item>
+	        <item name="android:layout_alignParentBottom">false</item>
+	        <item name="android:layout_alignParentLeft">true</item>
+	        <item name="android:layout_alignParentRight">true</item>
+	        <item name="android:layout_alignParentTop">true</item>
+	        <item name="android:layout_marginTop">50dp</item>	            	            
+		</style>
+		
+             <!-- Style for Downside Layouts in Main Activity  --> 
+        <style name="DownsideLayout">
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_height">wrap_content</item>
+	        <item name="android:layout_alignParentBottom">true</item>
+	        <item name="android:layout_alignParentLeft">true</item>
+	        <item name="android:layout_alignParentRight">true</item>
+	        <item name="android:layout_alignParentTop">false</item>
+	        <item name="android:layout_marginBottom">50dp</item>	            	            
+		</style>
 
+        <!-- Style for Layouts in Main Activity  --> 
+        <style name="ProductLayout">
+            <item name="android:layout_width">50dp</item>
+            <item name="android:layout_height">300dp</item>
+            <item name="android:layout_weight">25</item>   
+        </style>
+        
+        <!-- Style for ImageButtons in Main Activity  -->     
+        <style name="ProductButton">
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_height">wrap_content</item>
+			<item name="android:layout_alignParentLeft">true</item>
+			<item name="android:layout_alignParentTop">true</item>
+			<item name="android:layout_marginLeft">30dp</item>
+			<item name="android:layout_marginTop">35dp</item>
+        </style>
+        
+       <!-- Style for Product Title in Main Activity  -->     
+        <style name="ProductTitle">
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_height">wrap_content</item>
+			<item name="android:layout_alignParentTop">true</item>
+			<item name="android:layout_marginLeft">30dp</item>
+			<item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+			<item name="android:textColor">@color/home_font_color</item>
+        </style>
+        
+
+            
     <!-- Start with the Holographic Light theme -->
     <style name="Theme.IOSched.Home" parent="style/Theme.IOSched">
         <item name="android:windowBackground">@drawable/background_noise</item>
@@ -199,6 +250,4 @@
         <item name="android:textSize">@dimen/text_size_small</item>
         <item name="android:background">@drawable/btn</item>
     </style>
-
-
 </resources>
