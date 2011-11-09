@@ -9,100 +9,766 @@ package com.androidtitlan.endeavorsubasta;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionbarCompatButtonStyle=0x7f010000;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionbarCompatLogoStyle=0x7f010003;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionbarCompatProgressIndicatorStyle=0x7f010001;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionbarCompatSeparatorStyle=0x7f010002;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionbarCompatTextStyle=0x7f010004;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int borderDrawable=0x7f010012;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int columns=0x7f010007;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int dividerColor=0x7f01000e;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int endHour=0x7f010010;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int headerWidth=0x7f010008;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int horizontalDivider=0x7f01000a;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int hourHeight=0x7f010009;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int labelColor=0x7f01000d;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int labelPaddingLeft=0x7f01000c;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int labelTextSize=0x7f01000b;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int maskDrawable=0x7f010011;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int startHour=0x7f01000f;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textHeaderMaxLines=0x7f010005;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int trackAbstractMaxLines=0x7f010006;
+    }
+    public static final class color {
+        public static final int accent_1=0x7f040007;
+        public static final int actionbar_background=0x7f04000f;
+        public static final int actionbar_text=0x7f040000;
+        public static final int all_track_color=0x7f04000b;
+        public static final int background_1=0x7f040009;
+        public static final int block_column_1=0x7f04000c;
+        public static final int block_column_2=0x7f04000d;
+        public static final int block_column_3=0x7f04000e;
+        public static final int body_text_1=0x7f040002;
+        public static final int body_text_1_inverse=0x7f040005;
+        public static final int body_text_2=0x7f040003;
+        public static final int body_text_2_inverse=0x7f040006;
+        public static final int body_text_disabled=0x7f040004;
+        public static final int home_font_color=0x7f040001;
+        public static final int hyperlink=0x7f040008;
+        public static final int whats_on_separator=0x7f04000a;
+    }
+    public static final class dimen {
+        public static final int actionbar_compat_height=0x7f060001;
+        public static final int activity_padding_small=0x7f06001b;
+        public static final int activity_pane_spacing=0x7f06001a;
+        /**  UI elements 
+         */
+        public static final int activity_side_padding=0x7f060018;
+        public static final int activity_vert_padding=0x7f060019;
+        public static final int body_padding_large=0x7f06000f;
+        /**  body content 
+         */
+        public static final int body_padding_medium=0x7f06000e;
+        /**  UI elements 
+ UI elements 
+         */
+        public static final int colorstrip_height=0x7f060000;
+        public static final int detail_breadcrumb_height=0x7f06001d;
+        public static final int detail_pane_padding=0x7f06001c;
+        public static final int panel_button_height=0x7f06001f;
+        public static final int panel_button_width=0x7f06001e;
+        public static final int schedule_header_padding=0x7f060005;
+        public static final int schedule_hour_height=0x7f060006;
+        public static final int schedule_label_header_width=0x7f060007;
+        public static final int schedule_label_padding=0x7f060008;
+        public static final int speaker_image_padding=0x7f060015;
+        public static final int speaker_image_size=0x7f060014;
+        public static final int star_button_padding=0x7f060009;
+        public static final int tab_height=0x7f06000a;
+        public static final int tab_side_padding=0x7f06000b;
+        public static final int text_size_large=0x7f060012;
+        public static final int text_size_medium=0x7f060011;
+        public static final int text_size_small=0x7f060010;
+        /**  body content 
+         */
+        public static final int text_size_xlarge=0x7f060013;
+        public static final int thickbar_height=0x7f060017;
+        public static final int track_icon_padding=0x7f06000d;
+        public static final int track_icon_width=0x7f06000c;
+        public static final int vendor_image_size=0x7f060016;
+        public static final int whats_on_button_right_padding=0x7f060004;
+        public static final int whats_on_height=0x7f060002;
+        public static final int whats_on_item_padding=0x7f060003;
     }
     public static final class drawable {
-        public static final int home_btn_vendors_default=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
+        public static final int actionbar_compat_background=0x7f020000;
+        public static final int actionbar_compat_button=0x7f020001;
+        public static final int actionbar_compat_logo=0x7f020002;
+        public static final int actionbar_compat_separator=0x7f020003;
+        public static final int background=0x7f020004;
+        public static final int background_effect=0x7f020005;
+        public static final int background_effects=0x7f020006;
+        public static final int background_noise=0x7f020007;
+        public static final int btn=0x7f020008;
+        public static final int btn_bg_pressed=0x7f020009;
+        public static final int btn_bg_selected=0x7f02000a;
+        public static final int btn_block_border=0x7f02000b;
+        public static final int btn_block_border_default=0x7f02000c;
+        public static final int btn_block_border_pressed=0x7f02000d;
+        public static final int btn_block_border_selected=0x7f02000e;
+        public static final int btn_default=0x7f02000f;
+        public static final int btn_focused=0x7f020010;
+        public static final int btn_pressed=0x7f020011;
+        public static final int colorstrip=0x7f020012;
+        public static final int colorstrip_shadow=0x7f020013;
+        public static final int home_btn_vendors_default=0x7f020014;
+        public static final int home_topleft_strip=0x7f020015;
+        public static final int home_topleft_strip_raw=0x7f020016;
+        public static final int ic_close_holo_light=0x7f020017;
+        public static final int ic_launcher=0x7f020018;
+        public static final int logo_home=0x7f020019;
+        public static final int logo_home0=0x7f02001a;
+        public static final int pane_under_thickbar_background=0x7f02001b;
+        public static final int panel_button_background=0x7f02001c;
+        public static final int panel_button_focused_holo=0x7f02001d;
+        public static final int panel_button_pressed_holo=0x7f02001e;
+        public static final int speaker_image_empty=0x7f02001f;
+        public static final int tab_background=0x7f020020;
+        public static final int tab_indicator=0x7f020021;
+        public static final int tab_off_background=0x7f020022;
+        public static final int tab_selected=0x7f020023;
+        public static final int tab_selected_focused=0x7f020024;
+        public static final int tab_selected_pressed=0x7f020025;
+        public static final int tab_unselected=0x7f020026;
+        public static final int tab_unselected_focused=0x7f020027;
+        public static final int tab_unselected_pressed=0x7f020028;
+        public static final int thickbar_left_background_default=0x7f020029;
+        public static final int thickbar_left_background_interactive=0x7f02002a;
+        public static final int thickbar_left_background_pressed=0x7f02002b;
+        public static final int thickbar_right_background=0x7f02002c;
+        public static final int thickbar_shadow=0x7f02002d;
+        public static final int track_dropdown_arrow_dark=0x7f02002e;
+        public static final int track_dropdown_arrow_light=0x7f02002f;
+        public static final int whats_on_background=0x7f020030;
+        public static final int whats_on_button=0x7f020031;
+        public static final int whats_on_button_default=0x7f020032;
+        public static final int whats_on_button_pressed=0x7f020033;
+        public static final int whats_on_separator=0x7f020034;
+        public static final int window_background=0x7f020035;
+        public static final int window_background_home=0x7f020036;
     }
     public static final class id {
-        public static final int Button01=0x7f07000f;
-        public static final int Button02=0x7f070009;
-        public static final int Button03=0x7f070015;
-        public static final int Button04=0x7f07002e;
-        public static final int Button05=0x7f070028;
-        public static final int Button06=0x7f070022;
-        public static final int Button07=0x7f07001c;
-        public static final int RelativeLayout04=0x7f07002b;
-        public static final int RelativeLayout05=0x7f070025;
-        public static final int RelativeLayout06=0x7f07001f;
-        public static final int TextView01=0x7f070011;
-        public static final int TextView02=0x7f07000e;
-        public static final int TextView03=0x7f070010;
-        public static final int TextView04=0x7f07000b;
-        public static final int TextView05=0x7f070016;
-        public static final int TextView06=0x7f070014;
-        public static final int TextView07=0x7f070030;
-        public static final int TextView08=0x7f07002f;
-        public static final int TextView09=0x7f07002d;
-        public static final int TextView10=0x7f07002a;
-        public static final int TextView11=0x7f070029;
-        public static final int TextView12=0x7f070027;
-        public static final int TextView13=0x7f070024;
-        public static final int TextView14=0x7f070023;
-        public static final int TextView15=0x7f070008;
-        public static final int TextView16=0x7f07000a;
-        public static final int TextView17=0x7f070004;
-        public static final int TextView19=0x7f070003;
-        public static final int TextView20=0x7f070021;
-        public static final int TextView21=0x7f07001e;
-        public static final int TextView22=0x7f07001d;
-        public static final int TextView23=0x7f07001b;
-        public static final int down_layout=0x7f070018;
-        public static final int eight_image_button=0x7f07002c;
-        public static final int fifth_image_button=0x7f07001a;
-        public static final int fifthproduct=0x7f070019;
-        public static final int firstimagebutton=0x7f070002;
-        public static final int firstproduct=0x7f070001;
-        public static final int fourproduct=0x7f070012;
-        public static final int fourth_image_button=0x7f070013;
-        public static final int menu_about=0x7f070031;
-        public static final int product1_title=0x7f070005;
-        public static final int second_image_button=0x7f070007;
-        public static final int secondproduct=0x7f070006;
-        public static final int seventh_image_button=0x7f070026;
-        public static final int sixth_image_button=0x7f070020;
-        public static final int textView3=0x7f070017;
-        public static final int third_image_button=0x7f07000d;
-        public static final int thirdproduct=0x7f07000c;
-        public static final int up_layout=0x7f070000;
+        public static final int Button01=0x7f07001d;
+        public static final int Button02=0x7f070017;
+        public static final int Button03=0x7f070023;
+        public static final int Button04=0x7f07003c;
+        public static final int Button05=0x7f070036;
+        public static final int Button06=0x7f070030;
+        public static final int Button07=0x7f07002a;
+        public static final int RelativeLayout04=0x7f070039;
+        public static final int RelativeLayout05=0x7f070033;
+        public static final int RelativeLayout06=0x7f07002d;
+        public static final int TextView01=0x7f07001f;
+        public static final int TextView02=0x7f07001c;
+        public static final int TextView03=0x7f07001e;
+        public static final int TextView04=0x7f070019;
+        public static final int TextView05=0x7f070024;
+        public static final int TextView06=0x7f070022;
+        public static final int TextView07=0x7f07003e;
+        public static final int TextView08=0x7f07003d;
+        public static final int TextView09=0x7f07003b;
+        public static final int TextView10=0x7f070038;
+        public static final int TextView11=0x7f070037;
+        public static final int TextView12=0x7f070035;
+        public static final int TextView13=0x7f070032;
+        public static final int TextView14=0x7f070031;
+        public static final int TextView15=0x7f070016;
+        public static final int TextView16=0x7f070018;
+        public static final int TextView17=0x7f070012;
+        public static final int TextView19=0x7f070011;
+        public static final int TextView20=0x7f07002f;
+        public static final int TextView21=0x7f07002c;
+        public static final int TextView22=0x7f07002b;
+        public static final int TextView23=0x7f070029;
+        public static final int actionbar_compat=0x7f070000;
+        public static final int actionbar_compat_container=0x7f070001;
+        public static final int actionbar_compat_logo=0x7f070002;
+        public static final int actionbar_compat_text=0x7f070003;
+        public static final int blocks_now=0x7f07000c;
+        public static final int blocks_ruler=0x7f07000b;
+        public static final int colorstrip=0x7f07000d;
+        public static final int dialog_discard_confirm=0x7f070009;
+        public static final int dialog_moderator=0x7f07000a;
+        public static final int down_layout=0x7f070026;
+        public static final int eight_image_button=0x7f07003a;
+        public static final int fifth_image_button=0x7f070028;
+        public static final int fifthproduct=0x7f070027;
+        public static final int firstimagebutton=0x7f070010;
+        public static final int firstproduct=0x7f07000f;
+        public static final int fourproduct=0x7f070020;
+        public static final int fourth_image_button=0x7f070021;
+        public static final int fragment_session_detail=0x7f070005;
+        public static final int fragment_sessions=0x7f070004;
+        public static final int fragment_vendor_detail=0x7f070007;
+        public static final int fragment_vendors=0x7f070006;
+        public static final int menu_about=0x7f070040;
+        public static final int menu_refresh_progress=0x7f070008;
+        public static final int product1_title=0x7f070013;
+        public static final int second_image_button=0x7f070015;
+        public static final int secondproduct=0x7f070014;
+        public static final int seventh_image_button=0x7f070034;
+        public static final int sixth_image_button=0x7f07002e;
+        public static final int tab_label=0x7f07003f;
+        public static final int textView3=0x7f070025;
+        public static final int third_image_button=0x7f07001b;
+        public static final int thirdproduct=0x7f07001a;
+        public static final int up_layout=0x7f07000e;
+    }
+    public static final class integer {
+        public static final int fling_animation_duration=0x7f050000;
+        public static final int text_header_max_lines=0x7f050001;
+        public static final int track_abstract_max_lines=0x7f050002;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
+        public static final int actionbar=0x7f030000;
+        public static final int actionbar_indeterminate_progress=0x7f030001;
+        public static final int colorstrip=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int tab_indicator=0x7f030004;
     }
     public static final class menu {
-        public static final int home_menu_items=0x7f060000;
-        public static final int product_menu_items=0x7f060001;
+        public static final int home_menu_items=0x7f0b0000;
+        public static final int product_menu_items=0x7f0b0001;
     }
     public static final class plurals {
-        public static final int whats_on_countdown_title=0x7f050000;
+        public static final int whats_on_countdown_title=0x7f090000;
     }
     public static final class string {
-        public static final int about_text=0x7f040018;
-        public static final int about_title=0x7f040017;
-        public static final int accept=0x7f040015;
-        public static final int app_name=0x7f040000;
-        public static final int btn_product1=0x7f040009;
-        public static final int btn_product2=0x7f04000a;
-        public static final int btn_product3=0x7f04000b;
-        public static final int btn_product4=0x7f04000c;
-        public static final int btn_product5=0x7f04000d;
-        public static final int btn_product6=0x7f04000e;
-        public static final int decline=0x7f040016;
-        public static final int description_about=0x7f040002;
-        public static final int description_logo=0x7f040001;
-        public static final int eula_text=0x7f040014;
+        public static final int about_text=0x7f080018;
+        public static final int about_title=0x7f080017;
+        public static final int accept=0x7f080015;
+        public static final int app_name=0x7f080000;
+        public static final int btn_product1=0x7f080009;
+        public static final int btn_product2=0x7f08000a;
+        public static final int btn_product3=0x7f08000b;
+        public static final int btn_product4=0x7f08000c;
+        public static final int btn_product5=0x7f08000d;
+        public static final int btn_product6=0x7f08000e;
+        public static final int decline=0x7f080016;
+        public static final int description_about=0x7f080002;
+        public static final int description_logo=0x7f080001;
+        public static final int eula_text=0x7f080014;
         /**  ToS 
          */
-        public static final int eula_title=0x7f040013;
-        public static final int permission_write=0x7f040012;
-        public static final int title_now_playing=0x7f040003;
-        public static final int title_product1=0x7f040004;
-        public static final int title_product2=0x7f040005;
-        public static final int title_product3=0x7f040006;
-        public static final int title_product4=0x7f040007;
-        public static final int title_product6=0x7f040008;
-        public static final int whats_on_now_playing_title=0x7f040010;
-        public static final int whats_on_stream_title=0x7f04000f;
-        public static final int whats_on_thank_you_title=0x7f040011;
+        public static final int eula_title=0x7f080013;
+        public static final int permission_write=0x7f080012;
+        public static final int title_now_playing=0x7f080003;
+        public static final int title_product1=0x7f080004;
+        public static final int title_product2=0x7f080005;
+        public static final int title_product3=0x7f080006;
+        public static final int title_product4=0x7f080007;
+        public static final int title_product6=0x7f080008;
+        public static final int whats_on_now_playing_title=0x7f080010;
+        public static final int whats_on_stream_title=0x7f08000f;
+        public static final int whats_on_thank_you_title=0x7f080011;
     }
+    public static final class style {
+        public static final int ActionBar=0x7f0a0019;
+        public static final int ActionBarCompat=0x7f0a0003;
+        public static final int ActionBarCompatButton=0x7f0a0004;
+        public static final int ActionBarCompatLogo=0x7f0a0007;
+        public static final int ActionBarCompatProgressIndicator=0x7f0a0005;
+        public static final int ActionBarCompatSeparator=0x7f0a0006;
+        public static final int ActionBarCompatText=0x7f0a0008;
+        public static final int ActionBarText=0x7f0a001a;
+        public static final int DashboardButton=0x7f0a0009;
+        /**  used for more complex list items, e.g. those with stars aligned to the top-right 
+         */
+        public static final int ListItemContainer=0x7f0a000e;
+        public static final int ListItemContainerBase=0x7f0a000c;
+        public static final int ListItemContent=0x7f0a000f;
+        public static final int ListItemSubtitle=0x7f0a000b;
+        public static final int ListItemTitle=0x7f0a000a;
+        public static final int PushButton=0x7f0a0018;
+        /**  a simple list item is one whose container and content are the same view 
+         */
+        public static final int SimpleListItem=0x7f0a000d;
+        public static final int TextBody=0x7f0a0017;
+        /**  body content 
+         */
+        public static final int TextHeader=0x7f0a0013;
+        public static final int TextHeader2=0x7f0a0015;
+        public static final int TextHeader3=0x7f0a0016;
+        /**  body content 
+         */
+        public static final int TextHeaderSub=0x7f0a0014;
+        /**  Base application theme is the default theme. 
+         */
+        public static final int Theme=0x7f0a0000;
+        /**  Variation on the Light theme that turns off the title 
+ Start with the Holographic Light theme 
+         */
+        public static final int Theme_IOSched=0x7f0a0001;
+        /**  Start with the Holographic Light theme 
+         */
+        public static final int Theme_IOSched_Home=0x7f0a0002;
+        public static final int WhatsOnButtonItem=0x7f0a0012;
+        /**  What's On section in Home activity 
+         */
+        public static final int WhatsOnItemBase=0x7f0a0010;
+        /**  
+    <style name="DashboardButton">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">3dp</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/accent_1</item>
+        <item name="android:background">@null</item>
+    </style> 
+         */
+        public static final int WhatsOnStaticItem=0x7f0a0011;
+    }
+    public static final class styleable {
+        /** Attributes that can be used with a AppTheme.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #AppTheme_actionbarCompatButtonStyle com.androidtitlan.endeavorsubasta:actionbarCompatButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppTheme_actionbarCompatLogoStyle com.androidtitlan.endeavorsubasta:actionbarCompatLogoStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppTheme_actionbarCompatProgressIndicatorStyle com.androidtitlan.endeavorsubasta:actionbarCompatProgressIndicatorStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppTheme_actionbarCompatSeparatorStyle com.androidtitlan.endeavorsubasta:actionbarCompatSeparatorStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppTheme_actionbarCompatTextStyle com.androidtitlan.endeavorsubasta:actionbarCompatTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppTheme_textHeaderMaxLines com.androidtitlan.endeavorsubasta:textHeaderMaxLines}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppTheme_trackAbstractMaxLines com.androidtitlan.endeavorsubasta:trackAbstractMaxLines}</code></td><td></td></tr>
+           </table>
+           @see #AppTheme_actionbarCompatButtonStyle
+           @see #AppTheme_actionbarCompatLogoStyle
+           @see #AppTheme_actionbarCompatProgressIndicatorStyle
+           @see #AppTheme_actionbarCompatSeparatorStyle
+           @see #AppTheme_actionbarCompatTextStyle
+           @see #AppTheme_textHeaderMaxLines
+           @see #AppTheme_trackAbstractMaxLines
+         */
+        public static final int[] AppTheme = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#actionbarCompatButtonStyle}
+          attribute's value can be found in the {@link #AppTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionbarCompatButtonStyle
+        */
+        public static final int AppTheme_actionbarCompatButtonStyle = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#actionbarCompatLogoStyle}
+          attribute's value can be found in the {@link #AppTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionbarCompatLogoStyle
+        */
+        public static final int AppTheme_actionbarCompatLogoStyle = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#actionbarCompatProgressIndicatorStyle}
+          attribute's value can be found in the {@link #AppTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionbarCompatProgressIndicatorStyle
+        */
+        public static final int AppTheme_actionbarCompatProgressIndicatorStyle = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#actionbarCompatSeparatorStyle}
+          attribute's value can be found in the {@link #AppTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionbarCompatSeparatorStyle
+        */
+        public static final int AppTheme_actionbarCompatSeparatorStyle = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#actionbarCompatTextStyle}
+          attribute's value can be found in the {@link #AppTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionbarCompatTextStyle
+        */
+        public static final int AppTheme_actionbarCompatTextStyle = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#textHeaderMaxLines}
+          attribute's value can be found in the {@link #AppTheme} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:textHeaderMaxLines
+        */
+        public static final int AppTheme_textHeaderMaxLines = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#trackAbstractMaxLines}
+          attribute's value can be found in the {@link #AppTheme} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:trackAbstractMaxLines
+        */
+        public static final int AppTheme_trackAbstractMaxLines = 6;
+        /** Attributes that can be used with a BezelImageView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #BezelImageView_borderDrawable com.androidtitlan.endeavorsubasta:borderDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #BezelImageView_maskDrawable com.androidtitlan.endeavorsubasta:maskDrawable}</code></td><td></td></tr>
+           </table>
+           @see #BezelImageView_borderDrawable
+           @see #BezelImageView_maskDrawable
+         */
+        public static final int[] BezelImageView = {
+            0x7f010011, 0x7f010012
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#borderDrawable}
+          attribute's value can be found in the {@link #BezelImageView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:borderDrawable
+        */
+        public static final int BezelImageView_borderDrawable = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#maskDrawable}
+          attribute's value can be found in the {@link #BezelImageView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:maskDrawable
+        */
+        public static final int BezelImageView_maskDrawable = 0;
+        /** Attributes that can be used with a BlocksLayout.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #BlocksLayout_columns com.androidtitlan.endeavorsubasta:columns}</code></td><td></td></tr>
+           </table>
+           @see #BlocksLayout_columns
+         */
+        public static final int[] BlocksLayout = {
+            0x7f010007
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#columns}
+          attribute's value can be found in the {@link #BlocksLayout} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:columns
+        */
+        public static final int BlocksLayout_columns = 0;
+        /** Attributes that can be used with a TimeRulerView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #TimeRulerView_dividerColor com.androidtitlan.endeavorsubasta:dividerColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_endHour com.androidtitlan.endeavorsubasta:endHour}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_headerWidth com.androidtitlan.endeavorsubasta:headerWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_horizontalDivider com.androidtitlan.endeavorsubasta:horizontalDivider}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_hourHeight com.androidtitlan.endeavorsubasta:hourHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_labelColor com.androidtitlan.endeavorsubasta:labelColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_labelPaddingLeft com.androidtitlan.endeavorsubasta:labelPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_labelTextSize com.androidtitlan.endeavorsubasta:labelTextSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_startHour com.androidtitlan.endeavorsubasta:startHour}</code></td><td></td></tr>
+           </table>
+           @see #TimeRulerView_dividerColor
+           @see #TimeRulerView_endHour
+           @see #TimeRulerView_headerWidth
+           @see #TimeRulerView_horizontalDivider
+           @see #TimeRulerView_hourHeight
+           @see #TimeRulerView_labelColor
+           @see #TimeRulerView_labelPaddingLeft
+           @see #TimeRulerView_labelTextSize
+           @see #TimeRulerView_startHour
+         */
+        public static final int[] TimeRulerView = {
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f,
+            0x7f010010
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#dividerColor}
+          attribute's value can be found in the {@link #TimeRulerView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:dividerColor
+        */
+        public static final int TimeRulerView_dividerColor = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#endHour}
+          attribute's value can be found in the {@link #TimeRulerView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:endHour
+        */
+        public static final int TimeRulerView_endHour = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#headerWidth}
+          attribute's value can be found in the {@link #TimeRulerView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:headerWidth
+        */
+        public static final int TimeRulerView_headerWidth = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#horizontalDivider}
+          attribute's value can be found in the {@link #TimeRulerView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:horizontalDivider
+        */
+        public static final int TimeRulerView_horizontalDivider = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#hourHeight}
+          attribute's value can be found in the {@link #TimeRulerView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:hourHeight
+        */
+        public static final int TimeRulerView_hourHeight = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#labelColor}
+          attribute's value can be found in the {@link #TimeRulerView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:labelColor
+        */
+        public static final int TimeRulerView_labelColor = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#labelPaddingLeft}
+          attribute's value can be found in the {@link #TimeRulerView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:labelPaddingLeft
+        */
+        public static final int TimeRulerView_labelPaddingLeft = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#labelTextSize}
+          attribute's value can be found in the {@link #TimeRulerView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:labelTextSize
+        */
+        public static final int TimeRulerView_labelTextSize = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#startHour}
+          attribute's value can be found in the {@link #TimeRulerView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:startHour
+        */
+        public static final int TimeRulerView_startHour = 7;
+    };
 }
