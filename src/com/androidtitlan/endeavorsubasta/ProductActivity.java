@@ -6,15 +6,23 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract.FullNameStyle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 public class ProductActivity extends Activity {
+	
+	private static final int MY_CUSTOM_DIALOG = 0;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.productlayout);
 	}
 	
 	@Override
@@ -24,6 +32,24 @@ public class ProductActivity extends Activity {
 	    actionBar.setDisplayHomeAsUpEnabled(true);
 	}
 	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		switch(requestCode) {
+		case (MY_CUSTOM_DIALOG): {
+			if (resultCode == Activity.RESULT_OK) {
+				Log.d("ANDRO_DIALOG","Coming back from the search dialog..");
+				String fullName = data.getStringExtra(BiddingDialog.SEARCH_QUERY_RESULT_FROM_DIALOG);
+				Log.d("ANDRO_DIALOG", "Search query result: " + fullName);
+				Toast.makeText(this, "Gracias, " +fullName, Toast.LENGTH_SHORT).show();
+
+		}
+			break;
+		}
+		
+		}
+	}
+		
 	 /**
      * Inflating the Action Bar menu with MenuInflater instance and using the method inflate.
      */
@@ -32,6 +58,14 @@ public class ProductActivity extends Activity {
         inflater.inflate(R.menu.product_menu_items, menu);
         return true;
     }
+    
+    /**
+     * This is a method binded with the Button Onclick property
+     */
+    public void openBiddingDialog(View v){
+    	Intent intent = new Intent(this, BiddingDialog.class);
+    	startActivityForResult(intent, MY_CUSTOM_DIALOG);    
+    	}
     
     
     /**
@@ -73,7 +107,5 @@ public class ProductActivity extends Activity {
         about.show();
 
     }
-	
-	
-
+    
 }

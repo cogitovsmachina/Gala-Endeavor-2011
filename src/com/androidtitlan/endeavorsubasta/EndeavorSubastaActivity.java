@@ -11,18 +11,36 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+
 public class EndeavorSubastaActivity extends Activity {
-    /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        
-    }
-    
+
+
+	@Override
+	  public void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.main);
+      }
+	
+//	@Override
+//    public void onCreate(Bundle savedInstanceState) {	
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.main_custom_dialog); 
+//    }
+	    
+    /**
+     * This is a method binded with the Button Onclick property
+     */
     public void goToProductActivity(View v){
     	startActivity(new Intent(this, ProductActivity.class));
     }
+    
+    /**
+//   * Method to call a customized dialog.
+//   */
+//	private void startCustomDialog() {
+//  	Intent intent = new Intent(this, SearchDialog.class);
+//  	startActivityForResult(intent, MY_CUSTOM_DIALOG);
+//  	}
     
     /**
      * Inflating the Action Bar menu with MenuInflater instance and using the method inflate.
@@ -66,4 +84,7 @@ public class EndeavorSubastaActivity extends Activity {
         about.show();
 
     }
+    
+    
+//   
 }

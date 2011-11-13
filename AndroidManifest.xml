@@ -25,6 +25,11 @@
         <activity 
             android:label="Producto n"
             android:name=".ProductActivity"/>
+        
+        <activity android:name=".BiddingDialog" 
+          android:label="Escribe tu nombre" 
+          android:theme="@android:style/Theme.Dialog"/>
+        
     </application>
 
 </manifest>
