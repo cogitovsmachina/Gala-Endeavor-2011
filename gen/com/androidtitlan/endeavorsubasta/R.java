@@ -291,7 +291,7 @@ containing a value of this type.
         public static final int biddername=0x7f07000f;
         public static final int blocks_now=0x7f07000c;
         public static final int blocks_ruler=0x7f07000b;
-        public static final int button1=0x7f070035;
+        public static final int button1=0x7f070034;
         public static final int cancel=0x7f070011;
         public static final int colorstrip=0x7f07000d;
         public static final int dialog_discard_confirm=0x7f070009;
@@ -306,24 +306,23 @@ containing a value of this type.
         public static final int fragment_vendor_detail=0x7f070007;
         public static final int fragment_vendors=0x7f070006;
         public static final int layout_root=0x7f07000e;
-        public static final int menu_about=0x7f07003e;
+        public static final int menu_about=0x7f07003d;
         public static final int menu_refresh_progress=0x7f070008;
         public static final int product1_title=0x7f070014;
         public static final int product_title2=0x7f070018;
-        public static final int productimage=0x7f070036;
-        public static final int quickContactBadge1=0x7f07003a;
+        public static final int productimage=0x7f070035;
+        public static final int quickContactBadge1=0x7f070039;
         public static final int search=0x7f070010;
         public static final int second_image_button=0x7f070017;
-        public static final int seekBar1=0x7f07003b;
+        public static final int seekBar1=0x7f07003a;
         public static final int seventh_image_button=0x7f07002c;
         public static final int sixth_image_button=0x7f070028;
-        public static final int startdialog=0x7f070034;
-        public static final int tab_label=0x7f07003d;
-        public static final int textView1=0x7f070038;
-        public static final int textView2=0x7f070037;
+        public static final int tab_label=0x7f07003c;
+        public static final int textView1=0x7f070037;
+        public static final int textView2=0x7f070036;
         public static final int textView3=0x7f070022;
-        public static final int textView4=0x7f070039;
-        public static final int textView5=0x7f07003c;
+        public static final int textView4=0x7f070038;
+        public static final int textView5=0x7f07003b;
         public static final int third_image_button=0x7f07001b;
         public static final int up_layout=0x7f070012;
     }
@@ -338,9 +337,8 @@ containing a value of this type.
         public static final int colorstrip=0x7f030002;
         public static final int custom_dialog=0x7f030003;
         public static final int main=0x7f030004;
-        public static final int main_custom_dialog=0x7f030005;
-        public static final int productlayout=0x7f030006;
-        public static final int tab_indicator=0x7f030007;
+        public static final int productlayout=0x7f030005;
+        public static final int tab_indicator=0x7f030006;
     }
     public static final class menu {
         public static final int home_menu_items=0x7f0b0000;

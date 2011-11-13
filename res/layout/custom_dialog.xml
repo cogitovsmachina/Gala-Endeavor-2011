@@ -7,6 +7,7 @@
     android:padding="10dp">    	
     <EditText 
         android:id="@+id/biddername"
+        android:hint="Ejemplo: Vince García"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
     <CheckBox 
@@ -16,7 +17,6 @@
         />
     <LinearLayout 
         android:orientation="horizontal"
-   	 	android:background="@android:drawable/bottom_bar" 
    	 	android:paddingLeft="4.0dip"
    		android:paddingTop="5.0dip" 
    		android:paddingRight="4.0dip"
@@ -28,12 +28,14 @@
 	        android:layout_width="0.0dip"
 	        android:layout_height="fill_parent" 
 	        android:text="Aceptar"
-	        android:layout_weight="1.0"/>
+	        android:layout_weight="1.0"
+	        android:onClick="returnNamefromBiddingDialog"/>
 	    <Button 
 	        android:id="@+id/cancel" 
 	        android:layout_width="0.0dip"
 	        android:layout_height="fill_parent" 
 	        android:text="Cancelar"
-	        android:layout_weight="1.0"/>
+	        android:layout_weight="1.0"
+	        android:onClick="cancelBiddingDialog"/>
 	</LinearLayout>
 </LinearLayout>

@@ -38,9 +38,9 @@ public class ProductActivity extends Activity {
 		switch(requestCode) {
 		case (MY_CUSTOM_DIALOG): {
 			if (resultCode == Activity.RESULT_OK) {
-				Log.d("ANDRO_DIALOG","Coming back from the search dialog..");
-				String fullName = data.getStringExtra(BiddingDialog.SEARCH_QUERY_RESULT_FROM_DIALOG);
-				Log.d("ANDRO_DIALOG", "Search query result: " + fullName);
+				Log.d("ANDROID_DIALOG","Coming back from BiddingDialog...");
+				String fullName = data.getStringExtra(BiddingDialog.NAME_RESULT_FROM_DIALOG);
+				Log.d("ANDROID_DIALOG", "User entered: " + fullName);
 				Toast.makeText(this, "Gracias, " +fullName, Toast.LENGTH_SHORT).show();
 
 		}
