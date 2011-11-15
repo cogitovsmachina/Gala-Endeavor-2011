@@ -41,7 +41,7 @@ public class ProductActivity extends Activity {
 				Log.d("ANDROID_DIALOG","Coming back from BiddingDialog...");
 				String fullName = data.getStringExtra(BiddingDialog.NAME_RESULT_FROM_DIALOG);
 				Log.d("ANDROID_DIALOG", "User entered: " + fullName);
-				Toast.makeText(this, "Gracias, " +fullName, Toast.LENGTH_SHORT).show();
+//				Toast.makeText(this, "Gracias, " +fullName, Toast.LENGTH_SHORT).show();
 
 		}
 			break;

@@ -57,6 +57,9 @@ public class EndeavorSubastaActivity extends Activity {
      */
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.menu_help:
+            	showHelpMessage(this);
+            	return true;
             case R.id.menu_about:
             	showAboutMessage(this);
             	return true;
@@ -64,7 +67,25 @@ public class EndeavorSubastaActivity extends Activity {
         return false;
     }
 
-    /**
+	/**
+     * Show Help Dialog app.
+     * @param activity Activity started from.
+     */
+    private void showHelpMessage(Activity activity) {
+    	AlertDialog.Builder about = new AlertDialog.Builder(activity)
+        .setTitle(R.string.about_title)
+        .setIcon(android.R.drawable.ic_menu_help)
+        .setMessage(R.string.help_text)
+        .setPositiveButton(R.string.accept,
+                    new android.content.DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });	
+    	about.show();
+	}
+
+	/**
      * Show About this app.
      * @param activity Activity started from.
      */

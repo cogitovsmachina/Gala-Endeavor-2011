@@ -11,8 +11,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"/>
     <CheckBox 
+        android:id="@+id/termsandconditions"
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
+    	android:checked="false"
     	android:text="Acepto los términos y condiciones"
         />
     <LinearLayout 
