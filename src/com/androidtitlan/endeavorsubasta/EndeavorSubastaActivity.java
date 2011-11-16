@@ -1,6 +1,9 @@
 package com.androidtitlan.endeavorsubasta;
 
 
+import com.androidtitlan.endeavorsubasta.ui.Dialog;
+
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -21,11 +24,12 @@ public class EndeavorSubastaActivity extends Activity {
       setContentView(R.layout.main);
       }
 	
-//	@Override
-//    public void onCreate(Bundle savedInstanceState) {	
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.main_custom_dialog); 
-//    }
+	@Override
+	protected void onStart() {
+	    super.onStart();
+	    ActionBar actionBar = this.getActionBar();
+	    actionBar.setDisplayHomeAsUpEnabled(true);
+	}
 	    
     /**
      * This is a method binded with the Button Onclick property
@@ -58,54 +62,13 @@ public class EndeavorSubastaActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_help:
-            	showHelpMessage(this);
+            	Dialog.showHelpMessage(this);
             	return true;
             case R.id.menu_about:
-            	showAboutMessage(this);
+            	Dialog.showAboutMessage(this);
             	return true;
         }
         return false;
     }
-
-	/**
-     * Show Help Dialog app.
-     * @param activity Activity started from.
-     */
-    private void showHelpMessage(Activity activity) {
-    	AlertDialog.Builder about = new AlertDialog.Builder(activity)
-        .setTitle(R.string.about_title)
-        .setIcon(android.R.drawable.ic_menu_help)
-        .setMessage(R.string.help_text)
-        .setPositiveButton(R.string.accept,
-                    new android.content.DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });	
-    	about.show();
-	}
-
-	/**
-     * Show About this app.
-     * @param activity Activity started from.
-     */
-    
-    public static void showAboutMessage(final Activity activity) {
-            
-        AlertDialog.Builder about = new AlertDialog.Builder(activity)
-                .setTitle(R.string.about_title)
-                .setIcon(android.R.drawable.ic_dialog_info)
-                .setMessage(R.string.about_text)
-                .setPositiveButton(R.string.accept,
-                            new android.content.DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-        about.show();
-
-    }
-    
-    
-//   
+   
 }

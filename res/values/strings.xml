@@ -47,7 +47,7 @@
   	<string name="help_text">Aquí va el texto de ayuda.</string>
   	    
         
-	<string name="about_title">Acerca</string>
+	<string name="about_title">Acerca de</string>
 	<string name="about_text">Ésta aplicación ha sido desarrollada por <a href="http://www.androidtitlan.mx/">AndroidTitlan.mx</a>,
 	 la comunidad más grande de desarrolladores en América Latina.</string>
 </resources>

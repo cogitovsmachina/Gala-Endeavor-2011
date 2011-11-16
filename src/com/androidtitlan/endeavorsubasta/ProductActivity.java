@@ -2,17 +2,15 @@ package com.androidtitlan.endeavorsubasta;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract.FullNameStyle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+
+import com.androidtitlan.endeavorsubasta.ui.Dialog;
 
 public class ProductActivity extends Activity {
 	
@@ -78,34 +76,14 @@ public class ProductActivity extends Activity {
 	            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 	            startActivity(intent);
 	            return true;
-            
-        	case R.id.menu_about:
-            	showAboutMessage(this);
+        	case R.id.menu_help:
+            	Dialog.showHelpMessage(this);
+            	return true;
+            case R.id.menu_about:
+            	Dialog.showAboutMessage(this);
             	return true;
         	default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    /**
-     * Show About this app.
-     * @param activity Activity started from.
-     */
-    
-    public static void showAboutMessage(final Activity activity) {
-            
-        AlertDialog.Builder about = new AlertDialog.Builder(activity)
-                .setTitle(R.string.about_title)
-                .setIcon(android.R.drawable.ic_dialog_info)
-                .setMessage(R.string.about_text)
-                .setPositiveButton(R.string.accept,
-                            new android.content.DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-        about.show();
-
-    }
-    
+    }  
 }
