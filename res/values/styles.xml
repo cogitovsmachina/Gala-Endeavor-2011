@@ -12,124 +12,19 @@
         <item name="trackAbstractMaxLines">@integer/track_abstract_max_lines</item>
 
         <!-- for programmatic instantiation -->
-        <item name="actionbarCompatButtonStyle">@style/ActionBarCompatButton</item>
         <item name="actionbarCompatProgressIndicatorStyle">@style/ActionBarCompatProgressIndicator</item>
-        <item name="actionbarCompatSeparatorStyle">@style/ActionBarCompatSeparator</item>
-        <item name="actionbarCompatLogoStyle">@style/ActionBarCompatLogo</item>
         <item name="actionbarCompatTextStyle">@style/ActionBarCompatText</item>  
         <item name="android:actionBarTabTextStyle">@style/ActionBarText</item>
             
     </style>
-        
-        <!-- Style for Upside Layouts in Main Activity  --> 
-        <style name="UpLayout">
-            <item name="android:layout_width">wrap_content</item>
-            <item name="android:layout_height">wrap_content</item>
-	        <item name="android:layout_alignParentBottom">false</item>
-	        <item name="android:layout_alignParentLeft">true</item>
-	        <item name="android:layout_alignParentRight">true</item>
-	        <item name="android:layout_alignParentTop">true</item>
-	        <item name="android:layout_marginTop">50dp</item>	            	            
-		</style>
-		
-             <!-- Style for Downside Layouts in Main Activity  --> 
-        <style name="DownsideLayout">
-            <item name="android:layout_width">wrap_content</item>
-            <item name="android:layout_height">wrap_content</item>
-	        <item name="android:layout_alignParentBottom">true</item>
-	        <item name="android:layout_alignParentLeft">true</item>
-	        <item name="android:layout_alignParentRight">true</item>
-	        <item name="android:layout_alignParentTop">false</item>
-	        <item name="android:layout_marginBottom">50dp</item>	            	            
-		</style>
-
-        <!-- Style for Layouts in Main Activity  --> 
-        <style name="ProductLayout">
-            <item name="android:layout_width">50dp</item>
-            <item name="android:layout_height">300dp</item>
-            <item name="android:layout_weight">25</item>   
-        </style>
-        
-        <!-- Style for ImageButtons in Main Activity  -->     
-        <style name="ProductButton">
-            <item name="android:layout_width">wrap_content</item>
-            <item name="android:layout_height">wrap_content</item>
-			<item name="android:layout_alignParentLeft">true</item>
-			<item name="android:layout_alignParentTop">true</item>
-			<item name="android:layout_marginLeft">30dp</item>
-			<item name="android:layout_marginTop">35dp</item>
-        </style>
-        
-       <!-- Style for Product Title in Main Activity  -->     
-        <style name="ProductTitle">
-            <item name="android:layout_width">wrap_content</item>
-            <item name="android:layout_height">wrap_content</item>
-			<item name="android:layout_alignParentTop">true</item>
-			<item name="android:layout_marginLeft">30dp</item>
-			<item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
-			<item name="android:textColor">@color/home_font_color</item>
-        </style>
-        
-        <!-- Style for Description Product in Main Activity  -->     
-        <style name="DescriptionProduct">
-            <item name="android:layout_width">wrap_content</item>
-            <item name="android:layout_height">wrap_content</item>
-			<item name="android:layout_centerHorizontal">true</item>
-			<item name="android:layout_centerVertical">true</item>
-			<item name="android:lines">4</item>    
-			<item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
-			<item name="android:textColor">@color/home_font_color</item>
-        </style>    
- 
-            <!-- Style for Price Product in Main Activity  -->     
-        <style name="PriceProduct">
-            <item name="android:layout_width">wrap_content</item>
-            <item name="android:layout_height">wrap_content</item>
-			<item name="android:layout_centerHorizontal">true</item>
-			<item name="android:layout_marginTop">21dp</item>
-			<item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
-			<item name="android:textColor">@color/home_font_color</item>
-        </style> 
-                
            
     <!-- Start with the Holographic Light theme -->
     <style name="Theme.IOSched.Home" parent="style/Theme.IOSched">
         <item name="android:windowBackground">@drawable/background_noise</item>
     </style>
 
-    <style name="ActionBarCompat">
-        <item name="android:id">@id/actionbar_compat</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">@dimen/actionbar_compat_height</item>
-        <item name="android:orientation">horizontal</item>
-        <item name="android:background">@drawable/actionbar_compat_background</item>
-    </style>
-
-    <style name="ActionBarCompatButton">
-        <item name="android:layout_width">@dimen/actionbar_compat_height</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:scaleType">center</item>
-        <item name="android:background">@drawable/actionbar_compat_button</item>
-    </style>
-
     <style name="ActionBarCompatProgressIndicator" parent="android:style/Widget.ProgressBar.Small">
         <item name="android:indeterminate">true</item>
-    </style>
-                
-    <style name="ActionBarCompatSeparator">
-        <item name="android:layout_width">2px</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:background">@drawable/actionbar_compat_separator</item>
-    </style>
-
-    <style name="ActionBarCompatLogo">
-        <item name="android:id">@id/actionbar_compat_logo</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:clickable">false</item>
-        <item name="android:scaleType">center</item>
-        <item name="android:contentDescription">@string/description_logo</item>
-        <item name="android:src">@drawable/actionbar_compat_logo</item>
     </style>
 
     <style name="ActionBarCompatText">

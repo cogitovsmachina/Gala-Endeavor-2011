@@ -1,253 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
-
-    <LinearLayout
-        android:id="@+id/up_layout"
-       	style="@style/UpLayout">
-
-        <RelativeLayout
-            style="@style/ProductLayout"
-             >
-
-            <Button
-                android:id="@+id/firstimagebutton"
+    android:orientation="horizontal">
+    <Button android:text="L"
+    	android:layout_width="0dp"
+    	android:layout_height="fill_parent"
+    	android:layout_weight="5"/>
+    <LinearLayout android:orientation="vertical"
+    	android:layout_width="0dp"
+    	android:layout_height="fill_parent"
+    	android:layout_weight="90">
+    	<TableLayout android:layout_width="fill_parent"
+    		android:layout_height="0dp"
+    		android:layout_weight="50"
+    		android:stretchColumns="*">
+    		<TableRow>
+    			<LinearLayout android:layout_width="fill_parent"
+    				android:layout_height="fill_parent"
+    				android:orientation="horizontal"
+    				android:gravity="center">
+    				<Button
+		                android:id="@+id/productOne"
+		                android:onClick="goToProductActivity"
+		                android:text="Producto 1"
+		                android:layout_width="300dp"
+		                android:layout_height="300dp"/>
+    			</LinearLayout>
+	            <LinearLayout android:layout_width="fill_parent"
+    				android:layout_height="fill_parent"
+    				android:orientation="horizontal"
+    				android:gravity="center">
+    				<Button
+		                android:id="@+id/productTwo"
+		                android:onClick="goToProductActivity"
+		                android:text="Producto 2"
+		                android:layout_width="300dp"
+		                android:layout_height="300dp"/>
+    			</LinearLayout>
+    		</TableRow>
+    	</TableLayout>
+    	<LinearLayout android:layout_width="fill_parent"
+    		android:layout_height="0dp"
+    		android:layout_weight="50"
+    		android:orientation="horizontal"
+    		android:gravity="center">
+    		<Button
+                android:id="@+id/productThree"
                 android:onClick="goToProductActivity"
-                android:text="Button"
-                style="@style/ProductButton"/>
-
-            <TextView
-                android:id="@+id/product1_title"
-                android:layout_toRightOf="@+id/firstimagebutton"
-                android:text="Producto 1"
-				style="@style/ProductTitle"/>
-            
-            <TextView
-                android:id="@+id/TextView19"
-                android:text="Descripción del Producto"
-                style="@style/DescriptionProduct"/>
-
-			<TextView
-                android:id="@+id/TextView17"
-                android:layout_below="@+id/TextView19"
-                    android:text="$100.00"
-                style="@style/PriceProduct"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-        	style="@style/ProductLayout"
-            >
-
-            <Button
-                android:id="@+id/second_image_button"
-                android:onClick="goToProductActivity"
-                android:text="Button" 
-                style="@style/ProductButton"/>
-                
-
-            <TextView
-                android:id="@+id/product_title2"
-                android:text="Producto 2"
-                android:layout_toRightOf="@id/second_image_button"
-				style="@style/ProductTitle"/>
-
-            <TextView
-                android:id="@+id/TextView16"
-                android:text="Descripción del Producto"
-                style="@style/DescriptionProduct"/>
-
-
-            <TextView
-                android:id="@+id/TextView04"
-                android:layout_below="@+id/TextView16"
-                    android:text="$100.00"
-                style="@style/PriceProduct"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-	    	style="@style/ProductLayout">
-
-            <Button
-                android:id="@+id/third_image_button"
-                android:onClick="goToProductActivity"
-                android:text="Button"
-                style="@style/ProductButton"/>
-
-
-            <TextView
-                android:id="@+id/TextView02"
-                android:layout_toRightOf="@id/third_image_button"
                 android:text="Producto 3"
-				style="@style/ProductTitle"/>
-
-            <TextView
-                android:id="@+id/TextView03"
-                android:text="Descripción del Producto"
-                style="@style/DescriptionProduct"/>
-
-            <TextView
-                android:id="@+id/TextView01"
-                android:layout_below="@+id/TextView03"
-                    android:text="$100.00"
-                style="@style/PriceProduct"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-	    	style="@style/ProductLayout">
-
-
-            <Button
-                android:id="@+id/fourth_image_button"
-                android:onClick="goToProductActivity"
-                android:text="Button"
-                style="@style/ProductButton"/>
-
-
-            <TextView
-                android:id="@+id/TextView06"
-                android:text="Producto 4"
-                android:layout_toRightOf="@id/fourth_image_button"
-				style="@style/ProductTitle"/>
-
-            <TextView
-                android:id="@+id/TextView05"
-                android:text="Descripción del Producto"
-                style="@style/DescriptionProduct"/>
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_below="@+id/TextView05"
-                    android:text="$100.00"
-                style="@style/PriceProduct"/>
-
-        </RelativeLayout>
-
+                android:layout_width="300dp"
+                android:layout_height="300dp"/>
+    	</LinearLayout>
     </LinearLayout>
-    
-        <LinearLayout
-            android:id="@+id/downside_layout"
-            style="@style/DownsideLayout">
-
-            <RelativeLayout
-	    		style="@style/ProductLayout">
-
-
-                <Button
-                    android:id="@+id/fifth_image_button"
-                    android:onClick="goToProductActivity"
-                    android:text="Button"
-                    style="@style/ProductButton"/>
-
-                <TextView
-                    android:id="@+id/TextView23"
-                    android:text="Producto 5"
-               		android:layout_toRightOf="@id/fifth_image_button"
-					style="@style/ProductTitle"/>
-
-                <TextView
-                    android:id="@+id/TextView22"
-                    android:text="Descripción del Producto"
-                	style="@style/DescriptionProduct"/>
-
-                <TextView
-                    android:id="@+id/TextView21"
-                    android:layout_below="@+id/TextView22"
-                    android:text="$100.00"
-               		style="@style/PriceProduct"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-	    		style="@style/ProductLayout">
-
-
-                <Button
-                    android:id="@+id/sixth_image_button"
-                    android:onClick="goToProductActivity"
-                    android:text="Button"
-                    style="@style/ProductButton"/>
-
-                <TextView
-                    android:id="@+id/TextView20"
-                    android:text="Producto 6"
-               		android:layout_toRightOf="@id/sixth_image_button"
-					style="@style/ProductTitle"/>
-
-                <TextView
-                    android:id="@+id/TextView14"
-                    android:text="Descripción del Producto"
-                	style="@style/DescriptionProduct"/>
-
-                <TextView
-                    android:id="@+id/TextView13"
-                    android:layout_below="@+id/TextView14"
-                    android:text="$100.00"
-               		style="@style/PriceProduct"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-	    		style="@style/ProductLayout">
-
-
-                <Button
-                    android:id="@+id/seventh_image_button"
-                    android:onClick="goToProductActivity"
-                    android:text="Button"
-                    style="@style/ProductButton"/>
-
-                <TextView
-                    android:id="@+id/TextView12"
-                    android:text="Producto 7"
-               		android:layout_toRightOf="@id/seventh_image_button"
-					style="@style/ProductTitle"/>
-
-                <TextView
-                    android:id="@+id/TextView11"
-                    android:text="Descripción del Producto"
-                	style="@style/DescriptionProduct"/>
-
-                <TextView
-                    android:id="@+id/TextView10"
-                    android:layout_below="@+id/TextView11"
-                    android:text="$100.00"
-               	 	style="@style/PriceProduct"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-	    		style="@style/ProductLayout">
-
-
-                <Button
-                    android:id="@+id/eight_image_button"
-                    android:onClick="goToProductActivity"
-                    android:text="Button"
-                    style="@style/ProductButton"/>
-
-                <TextView
-                    android:id="@+id/TextView09"
-                    android:text="Producto 8"
-               		android:layout_toRightOf="@id/eight_image_button"
-					style="@style/ProductTitle"/>
-
-                <TextView
-                    android:id="@+id/TextView08"
-                    android:text="Descripción del Producto"
-                	style="@style/DescriptionProduct"/>
-
-                <TextView
-                    android:id="@+id/TextView07"
-                    android:layout_below="@+id/TextView08"
-                    android:text="$100.00"
-               	 	style="@style/PriceProduct"/>
-            </RelativeLayout>
-
-    </LinearLayout>
-        
-</RelativeLayout>
+    <Button android:text="R"
+    	android:layout_width="0dp"
+    	android:layout_height="fill_parent"
+    	android:layout_weight="5"/>
+</LinearLayout>
