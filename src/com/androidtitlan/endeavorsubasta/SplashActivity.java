@@ -24,7 +24,7 @@ public class SplashActivity extends Activity {
 	      final LinearLayout splash=(LinearLayout)findViewById(R.id.splash);
 	      splash.startAnimation(anim);	      
 	      splash.setOnClickListener(new View.OnClickListener() {
-			@Override
+			
 			public void onClick(View v) {
 				splash.startAnimation(anim2);
 				startActivity(new Intent(SplashActivity.this, EndeavorSubastaActivity.class));
