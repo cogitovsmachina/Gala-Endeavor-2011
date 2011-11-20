@@ -100,6 +100,51 @@
 	                android:layout_height="650dp"/>
 	    	</LinearLayout>
 	    </LinearLayout>
+	    
+	    
+	    
+	    <LinearLayout android:orientation="vertical"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent">
+	    	<TableLayout android:layout_width="fill_parent"
+	    		android:layout_height="0dp"
+	    		android:layout_weight="50"
+	    		android:stretchColumns="*">
+	    		<TableRow>
+	    			<LinearLayout android:layout_width="fill_parent"
+	    				android:layout_height="fill_parent"
+	    				android:orientation="horizontal"
+	    				android:gravity="center">
+	    				<ImageView android:src="@drawable/producto7_collar"
+			                android:id="@+id/productSeven"
+			                android:onClick="goToProductActivity"
+			                android:layout_width="550dp"
+			                android:layout_height="350dp"/>
+	    			</LinearLayout>
+		            <LinearLayout android:layout_width="fill_parent"
+	    				android:layout_height="fill_parent"
+	    				android:orientation="horizontal"
+	    				android:gravity="center">
+	    				<ImageView android:src="@drawable/producto8_collar"
+			                android:id="@+id/productEight"
+			                android:onClick="goToProductActivity"
+			                android:layout_width="530dp"
+			                android:layout_height="350dp"/>
+	    			</LinearLayout>
+	    		</TableRow>
+	    	</TableLayout>
+	    	<LinearLayout android:layout_width="fill_parent"
+	    		android:layout_height="0dp"
+	    		android:layout_weight="50"
+	    		android:orientation="horizontal"
+	    		android:gravity="center">
+	    		<ImageView android:src="@drawable/producto9_collar"
+	                android:id="@+id/productNine"
+	                android:onClick="goToProductActivity"
+	                android:layout_width="550dp"
+	                android:layout_height="350dp"/>
+	    	</LinearLayout>
+	    </LinearLayout>
 	</ViewFlipper>
 	<Button android:text="R"
     	android:id="@+id/next"
