@@ -5,16 +5,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector;
+import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
+import android.widget.Button;
 import android.widget.ViewFlipper;
 
 import com.androidtitlan.endeavorsubasta.ui.Dialog;
@@ -22,7 +21,7 @@ import com.androidtitlan.endeavorsubasta.ui.Dialog;
 
 public class EndeavorSubastaActivity extends Activity {
 
-	/*private static final int SWIPE_MIN_DISTANCE = 120;
+	private static final int SWIPE_MIN_DISTANCE = 120;
     private static final int SWIPE_MAX_OFF_PATH = 250;
 	private static final int SWIPE_THRESHOLD_VELOCITY = 200;
 	private GestureDetector gestureDetector;
@@ -32,6 +31,7 @@ public class EndeavorSubastaActivity extends Activity {
 	private Animation slideRightIn;
     private Animation slideRightOut;
     private ViewFlipper viewFlipper;
+    
 
     class MyGestureDetector extends SimpleOnGestureListener {
         @Override
@@ -61,18 +61,21 @@ public class EndeavorSubastaActivity extends Activity {
 	        return true;
 	    else
 	    	return false;
-    }*/
+    }
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       setContentView(R.layout.main);
       
-      /*viewFlipper = (ViewFlipper)findViewById(R.id.flipper);
+      viewFlipper = (ViewFlipper)findViewById(R.id.flipper);
       slideLeftIn = AnimationUtils.loadAnimation(this, R.anim.slide_left_in);
       slideLeftOut = AnimationUtils.loadAnimation(this, R.anim.slide_left_out);
       slideRightIn = AnimationUtils.loadAnimation(this, R.anim.slide_right_in);
       slideRightOut = AnimationUtils.loadAnimation(this, R.anim.slide_right_out);
+      
+      Button previous = (Button) findViewById(R.id.previous);
+      Button next = (Button) findViewById(R.id.next);
       
       gestureDetector = new GestureDetector(new MyGestureDetector());
       gestureListener = new View.OnTouchListener() {
@@ -82,7 +85,24 @@ public class EndeavorSubastaActivity extends Activity {
               }
               return false;
           }
-      };*/
+      };
+      
+      previous.setOnClickListener(new View.OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			viewFlipper.setInAnimation(slideRightIn);
+            viewFlipper.setOutAnimation(slideRightOut);
+        	viewFlipper.showPrevious();
+		}
+	});
+      next.setOnClickListener(new View.OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			viewFlipper.setInAnimation(slideLeftIn);
+            viewFlipper.setOutAnimation(slideLeftOut);
+        	viewFlipper.showNext();
+		}
+	});
     }
 	
 	@Override

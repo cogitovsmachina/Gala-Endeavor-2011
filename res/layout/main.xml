@@ -4,56 +4,105 @@
     android:layout_height="fill_parent"
     android:orientation="horizontal">
     <Button android:text="L"
+    	android:id="@+id/previous"
     	android:layout_width="0dp"
     	android:layout_height="fill_parent"
     	android:layout_weight="5"/>
-    <LinearLayout android:orientation="vertical"
-    	android:layout_width="0dp"
-    	android:layout_height="fill_parent"
-    	android:layout_weight="90">
-    	<TableLayout android:layout_width="fill_parent"
-    		android:layout_height="0dp"
-    		android:layout_weight="50"
-    		android:stretchColumns="*">
-    		<TableRow>
-    			<LinearLayout android:layout_width="fill_parent"
-    				android:layout_height="fill_parent"
-    				android:orientation="horizontal"
-    				android:gravity="center">
-    				<Button
-		                android:id="@+id/productOne"
-		                android:onClick="goToProductActivity"
-		                android:text="Producto 1"
-		                android:layout_width="300dp"
-		                android:layout_height="300dp"/>
-    			</LinearLayout>
-	            <LinearLayout android:layout_width="fill_parent"
-    				android:layout_height="fill_parent"
-    				android:orientation="horizontal"
-    				android:gravity="center">
-    				<Button
-		                android:id="@+id/productTwo"
-		                android:onClick="goToProductActivity"
-		                android:text="Producto 2"
-		                android:layout_width="300dp"
-		                android:layout_height="300dp"/>
-    			</LinearLayout>
-    		</TableRow>
-    	</TableLayout>
-    	<LinearLayout android:layout_width="fill_parent"
-    		android:layout_height="0dp"
-    		android:layout_weight="50"
-    		android:orientation="horizontal"
-    		android:gravity="center">
-    		<Button
-                android:id="@+id/productThree"
-                android:onClick="goToProductActivity"
-                android:text="Producto 3"
-                android:layout_width="300dp"
-                android:layout_height="300dp"/>
-    	</LinearLayout>
-    </LinearLayout>
-    <Button android:text="R"
+	<ViewFlipper
+	   	android:id="@+id/flipper"
+	   	android:layout_width="0dp" 
+	   	android:layout_height="fill_parent"
+	   	android:layout_weight="90">
+	    <LinearLayout android:orientation="vertical"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent">
+	    	<TableLayout android:layout_width="fill_parent"
+	    		android:layout_height="0dp"
+	    		android:layout_weight="50"
+	    		android:stretchColumns="*">
+	    		<TableRow>
+	    			<LinearLayout android:layout_width="fill_parent"
+	    				android:layout_height="fill_parent"
+	    				android:orientation="horizontal"
+	    				android:gravity="center">
+	    				<ImageView android:src="@drawable/producto1_reloj"
+			                android:id="@+id/productOne"
+			                android:onClick="goToProductActivity"
+			                android:layout_width="480dp"
+			                android:layout_height="350dp"/>
+	    			</LinearLayout>
+		            <LinearLayout android:layout_width="fill_parent"
+	    				android:layout_height="fill_parent"
+	    				android:orientation="horizontal"
+	    				android:gravity="center">
+	    				<ImageView android:src="@drawable/producto2_collar"
+			                android:id="@+id/productTwo"
+			                android:onClick="goToProductActivity"
+			                android:layout_width="550dp"
+			                android:layout_height="350dp"/>
+	    			</LinearLayout>
+	    		</TableRow>
+	    	</TableLayout>
+	    	<LinearLayout android:layout_width="fill_parent"
+	    		android:layout_height="0dp"
+	    		android:layout_weight="50"
+	    		android:orientation="horizontal"
+	    		android:gravity="center">
+	    		<ImageView android:src="@drawable/producto3_collar"
+	                android:id="@+id/productThree"
+	                android:onClick="goToProductActivity"
+	                android:layout_width="560dp"
+	                android:layout_height="350dp"/>
+	    	</LinearLayout>
+	    </LinearLayout>
+	
+	
+	
+	    <LinearLayout android:orientation="horizontal"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent">
+	    	<LinearLayout android:layout_width="0dp"
+	    		android:layout_height="fill_parent"
+	    		android:layout_weight="70"
+	    		android:orientation="vertical">
+	    			<LinearLayout android:layout_width="fill_parent"
+	    				android:layout_height="0dp"
+	    				android:orientation="horizontal"
+	    				android:gravity="center"
+	    				android:layout_weight="50">
+	    				<ImageView android:src="@drawable/producto4_moto"
+			                android:id="@+id/productFour"
+			                android:onClick="goToProductActivity"
+			                android:layout_width="630dp"
+			                android:layout_height="350dp"/>
+	    			</LinearLayout>
+		            <LinearLayout android:layout_width="fill_parent"
+	    				android:layout_height="0dp"
+	    				android:orientation="horizontal"
+	    				android:gravity="center"
+	    				android:layout_weight="50">
+	    				<ImageView android:src="@drawable/producto5_johnnie"
+			                android:id="@+id/productFive"
+			                android:onClick="goToProductActivity"
+			                android:layout_width="650dp"
+			                android:layout_height="350dp"/>
+	    			</LinearLayout>
+	    	</LinearLayout>
+	    	<LinearLayout android:layout_width="0dp"
+	    		android:layout_height="fill_parent"
+	    		android:layout_weight="30"
+	    		android:orientation="horizontal"
+	    		android:gravity="center">
+	    		<ImageView android:src="@drawable/producto6_bmw"
+	                android:id="@+id/productSix"
+	                android:onClick="goToProductActivity"
+	                android:layout_width="450dp"
+	                android:layout_height="650dp"/>
+	    	</LinearLayout>
+	    </LinearLayout>
+	</ViewFlipper>
+	<Button android:text="R"
+    	android:id="@+id/next"
     	android:layout_width="0dp"
     	android:layout_height="fill_parent"
     	android:layout_weight="5"/>
