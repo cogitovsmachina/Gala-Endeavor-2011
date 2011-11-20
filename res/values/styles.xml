@@ -3,7 +3,7 @@
     <style name="Theme" parent="android:style/Theme" />
 
     <!-- Variation on the Light theme that turns off the title -->
-    <style name="Theme.IOSched" parent="android:style/Theme.Light">
+    <style name="Theme.IOSched" parent="android:style/Theme.Holo">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
             

@@ -40,14 +40,6 @@ public class EndeavorSubastaActivity extends Activity {
     }
     
     /**
-//   * Method to call a customized dialog.
-//   */
-//	private void startCustomDialog() {
-//  	Intent intent = new Intent(this, SearchDialog.class);
-//  	startActivityForResult(intent, MY_CUSTOM_DIALOG);
-//  	}
-    
-    /**
      * Inflating the Action Bar menu with MenuInflater instance and using the method inflate.
      */
     public boolean onCreateOptionsMenu(Menu menu) {

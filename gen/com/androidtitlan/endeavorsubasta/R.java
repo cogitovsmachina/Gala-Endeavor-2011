@@ -150,13 +150,12 @@ containing a value of this type.
     }
     public static final class color {
         public static final int accent_1=0x7f050007;
-        public static final int actionbar_background=0x7f05000f;
+        public static final int actionbar_background=0x7f05000e;
         public static final int actionbar_text=0x7f050000;
-        public static final int all_track_color=0x7f05000b;
-        public static final int background_1=0x7f050009;
-        public static final int block_column_1=0x7f05000c;
-        public static final int block_column_2=0x7f05000d;
-        public static final int block_column_3=0x7f05000e;
+        public static final int all_track_color=0x7f05000a;
+        public static final int block_column_1=0x7f05000b;
+        public static final int block_column_2=0x7f05000c;
+        public static final int block_column_3=0x7f05000d;
         public static final int body_text_1=0x7f050002;
         public static final int body_text_1_inverse=0x7f050005;
         public static final int body_text_2=0x7f050003;
@@ -164,7 +163,7 @@ containing a value of this type.
         public static final int body_text_disabled=0x7f050004;
         public static final int home_font_color=0x7f050001;
         public static final int hyperlink=0x7f050008;
-        public static final int whats_on_separator=0x7f05000a;
+        public static final int whats_on_separator=0x7f050009;
     }
     public static final class dimen {
         public static final int actionbar_compat_height=0x7f070001;
@@ -218,60 +217,59 @@ containing a value of this type.
         public static final int background_effect=0x7f020005;
         public static final int background_effects=0x7f020006;
         public static final int background_noise=0x7f020007;
-        public static final int be=0x7f020008;
-        public static final int btn=0x7f020009;
-        public static final int btn_bg_pressed=0x7f02000a;
-        public static final int btn_bg_selected=0x7f02000b;
-        public static final int btn_block_border=0x7f02000c;
-        public static final int btn_block_border_default=0x7f02000d;
-        public static final int btn_block_border_pressed=0x7f02000e;
-        public static final int btn_block_border_selected=0x7f02000f;
-        public static final int btn_default=0x7f020010;
-        public static final int btn_focused=0x7f020011;
-        public static final int btn_pressed=0x7f020012;
-        public static final int colorstrip=0x7f020013;
-        public static final int colorstrip_shadow=0x7f020014;
-        public static final int gradientline=0x7f020015;
-        public static final int home_btn_vendors_default=0x7f020016;
-        public static final int home_topleft_strip=0x7f020017;
-        public static final int home_topleft_strip_raw=0x7f020018;
-        public static final int ic_close_holo_light=0x7f020019;
-        public static final int ic_dialog_info=0x7f02001a;
-        public static final int ic_launcher=0x7f02001b;
-        public static final int ic_menu_help=0x7f02001c;
-        public static final int ic_menu_help_holo_light=0x7f02001d;
-        public static final int ic_menu_info_details=0x7f02001e;
-        public static final int logo_home=0x7f02001f;
-        public static final int logo_home0=0x7f020020;
-        public static final int pane_under_thickbar_background=0x7f020021;
-        public static final int panel_button_background=0x7f020022;
-        public static final int panel_button_focused_holo=0x7f020023;
-        public static final int panel_button_pressed_holo=0x7f020024;
-        public static final int pantalla_splash=0x7f020025;
-        public static final int speaker_image_empty=0x7f020026;
-        public static final int tab_background=0x7f020027;
-        public static final int tab_indicator=0x7f020028;
-        public static final int tab_off_background=0x7f020029;
-        public static final int tab_selected=0x7f02002a;
-        public static final int tab_selected_focused=0x7f02002b;
-        public static final int tab_selected_pressed=0x7f02002c;
-        public static final int tab_unselected=0x7f02002d;
-        public static final int tab_unselected_focused=0x7f02002e;
-        public static final int tab_unselected_pressed=0x7f02002f;
-        public static final int thickbar_left_background_default=0x7f020030;
-        public static final int thickbar_left_background_interactive=0x7f020031;
-        public static final int thickbar_left_background_pressed=0x7f020032;
-        public static final int thickbar_right_background=0x7f020033;
-        public static final int thickbar_shadow=0x7f020034;
-        public static final int track_dropdown_arrow_dark=0x7f020035;
-        public static final int track_dropdown_arrow_light=0x7f020036;
-        public static final int whats_on_background=0x7f020037;
-        public static final int whats_on_button=0x7f020038;
-        public static final int whats_on_button_default=0x7f020039;
-        public static final int whats_on_button_pressed=0x7f02003a;
-        public static final int whats_on_separator=0x7f02003b;
-        public static final int window_background=0x7f02003c;
-        public static final int window_background_home=0x7f02003d;
+        public static final int btn=0x7f020008;
+        public static final int btn_bg_pressed=0x7f020009;
+        public static final int btn_bg_selected=0x7f02000a;
+        public static final int btn_block_border=0x7f02000b;
+        public static final int btn_block_border_default=0x7f02000c;
+        public static final int btn_block_border_pressed=0x7f02000d;
+        public static final int btn_block_border_selected=0x7f02000e;
+        public static final int btn_default=0x7f02000f;
+        public static final int btn_focused=0x7f020010;
+        public static final int btn_pressed=0x7f020011;
+        public static final int colorstrip=0x7f020012;
+        public static final int colorstrip_shadow=0x7f020013;
+        public static final int gradientline=0x7f020014;
+        public static final int home_btn_vendors_default=0x7f020015;
+        public static final int home_topleft_strip=0x7f020016;
+        public static final int home_topleft_strip_raw=0x7f020017;
+        public static final int ic_close_holo_light=0x7f020018;
+        public static final int ic_dialog_info=0x7f020019;
+        public static final int ic_launcher=0x7f02001a;
+        public static final int ic_menu_help=0x7f02001b;
+        public static final int ic_menu_help_holo_light=0x7f02001c;
+        public static final int ic_menu_info_details=0x7f02001d;
+        public static final int logo_home=0x7f02001e;
+        public static final int logo_home0=0x7f02001f;
+        public static final int pane_under_thickbar_background=0x7f020020;
+        public static final int panel_button_background=0x7f020021;
+        public static final int panel_button_focused_holo=0x7f020022;
+        public static final int panel_button_pressed_holo=0x7f020023;
+        public static final int pantalla_splash=0x7f020024;
+        public static final int speaker_image_empty=0x7f020025;
+        public static final int tab_background=0x7f020026;
+        public static final int tab_indicator=0x7f020027;
+        public static final int tab_off_background=0x7f020028;
+        public static final int tab_selected=0x7f020029;
+        public static final int tab_selected_focused=0x7f02002a;
+        public static final int tab_selected_pressed=0x7f02002b;
+        public static final int tab_unselected=0x7f02002c;
+        public static final int tab_unselected_focused=0x7f02002d;
+        public static final int tab_unselected_pressed=0x7f02002e;
+        public static final int thickbar_left_background_default=0x7f02002f;
+        public static final int thickbar_left_background_interactive=0x7f020030;
+        public static final int thickbar_left_background_pressed=0x7f020031;
+        public static final int thickbar_right_background=0x7f020032;
+        public static final int thickbar_shadow=0x7f020033;
+        public static final int track_dropdown_arrow_dark=0x7f020034;
+        public static final int track_dropdown_arrow_light=0x7f020035;
+        public static final int whats_on_background=0x7f020036;
+        public static final int whats_on_button=0x7f020037;
+        public static final int whats_on_button_default=0x7f020038;
+        public static final int whats_on_button_pressed=0x7f020039;
+        public static final int whats_on_separator=0x7f02003a;
+        public static final int window_background=0x7f02003b;
+        public static final int window_background_home=0x7f02003c;
     }
     public static final class id {
         public static final int TextView01=0x7f080023;
@@ -464,19 +462,6 @@ containing a value of this type.
         /**  What's On section in Home activity 
          */
         public static final int WhatsOnItemBase=0x7f0b0017;
-        /**  
-    <style name="DashboardButton">
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center_horizontal</item>
-        <item name="android:drawablePadding">3dp</item>
-        <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/accent_1</item>
-        <item name="android:background">@null</item>
-    </style> 
-         */
         public static final int WhatsOnStaticItem=0x7f0b0018;
     }
     public static final class styleable {
