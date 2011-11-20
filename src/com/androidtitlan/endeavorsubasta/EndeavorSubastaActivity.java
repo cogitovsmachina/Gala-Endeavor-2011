@@ -1,28 +1,29 @@
 package com.androidtitlan.endeavorsubasta;
 
-
-import com.androidtitlan.endeavorsubasta.ui.Dialog;
-
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.LinearLayout;
+
+import com.androidtitlan.endeavorsubasta.ui.Dialog;
 
 
 public class EndeavorSubastaActivity extends Activity {
 
 
 	@Override
-	  public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       setContentView(R.layout.main);
-      }
+    }
 	
 	@Override
 	protected void onStart() {
