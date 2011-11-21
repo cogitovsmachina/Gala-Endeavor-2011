@@ -3,11 +3,14 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="horizontal">
-    <Button android:text="L"
+    <ImageView android:src="@drawable/button_previous"
+    	android:clickable="true"
     	android:id="@+id/previous"
     	android:layout_width="0dp"
-    	android:layout_height="fill_parent"
-    	android:layout_weight="5"/>
+    	android:layout_height="wrap_content"
+		android:adjustViewBounds="true"
+    	android:layout_weight="5"
+    	android:layout_gravity="center_vertical"/>
 	<ViewFlipper
 	   	android:id="@+id/flipper"
 	   	android:layout_width="0dp" 
@@ -96,13 +99,10 @@
 	    		<ImageView android:src="@drawable/producto6_bmw"
 	                android:id="@+id/productSix"
 	                android:onClick="goToProductActivity"
-	                android:layout_width="450dp"
-	                android:layout_height="650dp"/>
+	                android:layout_width="378dp"
+	                android:layout_height="585dp"/>
 	    	</LinearLayout>
 	    </LinearLayout>
-	    
-	    
-	    
 	    <LinearLayout android:orientation="vertical"
 	    	android:layout_width="fill_parent"
 	    	android:layout_height="fill_parent">
@@ -146,9 +146,12 @@
 	    	</LinearLayout>
 	    </LinearLayout>
 	</ViewFlipper>
-	<Button android:text="R"
+	<ImageView android:src="@drawable/button_next"
+    	android:clickable="true"
     	android:id="@+id/next"
     	android:layout_width="0dp"
-    	android:layout_height="fill_parent"
-    	android:layout_weight="5"/>
+    	android:layout_height="wrap_content"
+		android:adjustViewBounds="true"
+    	android:layout_weight="5"
+    	android:layout_gravity="center_vertical"/>
 </LinearLayout>

@@ -13,7 +13,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
 import com.androidtitlan.endeavorsubasta.ui.Dialog;
@@ -74,8 +74,8 @@ public class EndeavorSubastaActivity extends Activity {
       slideRightIn = AnimationUtils.loadAnimation(this, R.anim.slide_right_in);
       slideRightOut = AnimationUtils.loadAnimation(this, R.anim.slide_right_out);
       
-      Button previous = (Button) findViewById(R.id.previous);
-      Button next = (Button) findViewById(R.id.next);
+      ImageView previous = (ImageView) findViewById(R.id.previous);
+      ImageView next = (ImageView) findViewById(R.id.next);
       
       gestureDetector = new GestureDetector(new MyGestureDetector());
       gestureListener = new View.OnTouchListener() {

@@ -5,5 +5,5 @@
     android:orientation="vertical"
     android:background="@drawable/pantalla_splash"
     android:id="@+id/splash"
-    android:clickable="true">"
+    android:clickable="true">
 </LinearLayout>

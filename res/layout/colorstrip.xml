@@ -3,4 +3,4 @@
     android:layout_width="fill_parent"
     android:layout_height="@dimen/colorstrip_height"
     android:foreground="@drawable/colorstrip_shadow"
-    android:background="@drawable/colorstrip" />
+    android:background="@drawable/colorstrip"/>
