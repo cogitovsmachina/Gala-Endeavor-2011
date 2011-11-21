@@ -221,69 +221,80 @@ containing a value of this type.
         public static final int background_effects=0x7f020005;
         public static final int background_noise=0x7f020006;
         public static final int be=0x7f020007;
-        public static final int btn_bg_pressed=0x7f020008;
-        public static final int btn_bg_selected=0x7f020009;
-        public static final int btn_block_border=0x7f02000a;
-        public static final int btn_block_border_default=0x7f02000b;
-        public static final int btn_block_border_pressed=0x7f02000c;
-        public static final int btn_block_border_selected=0x7f02000d;
-        public static final int btn_default=0x7f02000e;
-        public static final int btn_focused=0x7f02000f;
-        public static final int btn_pressed=0x7f020010;
-        public static final int button_next=0x7f020011;
-        public static final int button_previous=0x7f020012;
-        public static final int colorstrip=0x7f020013;
-        public static final int colorstrip_shadow=0x7f020014;
-        public static final int flecha_derecha=0x7f020015;
-        public static final int flecha_derecha2=0x7f020016;
-        public static final int flecha_izquierda=0x7f020017;
-        public static final int flecha_izquierda2=0x7f020018;
-        public static final int gradientline=0x7f020019;
-        public static final int ic_close_holo_light=0x7f02001a;
-        public static final int ic_dialog_info=0x7f02001b;
-        public static final int ic_launcher=0x7f02001c;
-        public static final int ic_menu_help=0x7f02001d;
-        public static final int ic_menu_help_holo_light=0x7f02001e;
-        public static final int ic_menu_info_details=0x7f02001f;
-        public static final int pane_under_thickbar_background=0x7f020020;
-        public static final int panel_button_background=0x7f020021;
-        public static final int panel_button_focused_holo=0x7f020022;
-        public static final int panel_button_pressed_holo=0x7f020023;
-        public static final int pantalla_splash=0x7f020024;
-        public static final int producto1_reloj=0x7f020025;
-        public static final int producto2_collar=0x7f020026;
-        public static final int producto3_collar=0x7f020027;
-        public static final int producto4_moto=0x7f020028;
-        public static final int producto5_johnnie=0x7f020029;
-        public static final int producto6_bmw=0x7f02002a;
-        public static final int producto7_collar=0x7f02002b;
-        public static final int producto8_collar=0x7f02002c;
-        public static final int producto9_collar=0x7f02002d;
-        public static final int tab_background=0x7f02002e;
-        public static final int tab_indicator=0x7f02002f;
-        public static final int tab_off_background=0x7f020030;
-        public static final int tab_selected=0x7f020031;
-        public static final int tab_selected_focused=0x7f020032;
-        public static final int tab_selected_pressed=0x7f020033;
-        public static final int tab_unselected=0x7f020034;
-        public static final int tab_unselected_focused=0x7f020035;
-        public static final int tab_unselected_pressed=0x7f020036;
-        public static final int thickbar_left_background_default=0x7f020037;
-        public static final int thickbar_left_background_interactive=0x7f020038;
-        public static final int thickbar_left_background_pressed=0x7f020039;
-        public static final int thickbar_right_background=0x7f02003a;
-        public static final int thickbar_shadow=0x7f02003b;
-        public static final int track_dropdown_arrow_dark=0x7f02003c;
-        public static final int track_dropdown_arrow_light=0x7f02003d;
-        public static final int whats_on_background=0x7f02003e;
-        public static final int whats_on_button=0x7f02003f;
-        public static final int whats_on_button_default=0x7f020040;
-        public static final int whats_on_button_pressed=0x7f020041;
-        public static final int whats_on_separator=0x7f020042;
-        public static final int window_background=0x7f020043;
-        public static final int window_background_home=0x7f020044;
+        public static final int btn=0x7f020008;
+        public static final int btn_bg_pressed=0x7f020009;
+        public static final int btn_bg_selected=0x7f02000a;
+        public static final int btn_block_border=0x7f02000b;
+        public static final int btn_block_border_default=0x7f02000c;
+        public static final int btn_block_border_pressed=0x7f02000d;
+        public static final int btn_block_border_selected=0x7f02000e;
+        public static final int btn_default=0x7f02000f;
+        public static final int btn_focused=0x7f020010;
+        public static final int btn_pressed=0x7f020011;
+        public static final int button_next=0x7f020012;
+        public static final int button_previous=0x7f020013;
+        public static final int colorstrip=0x7f020014;
+        public static final int colorstrip_shadow=0x7f020015;
+        public static final int flecha_derecha=0x7f020016;
+        public static final int flecha_derecha2=0x7f020017;
+        public static final int flecha_izquierda=0x7f020018;
+        public static final int flecha_izquierda2=0x7f020019;
+        public static final int gradientline=0x7f02001a;
+        public static final int ic_close_holo_light=0x7f02001b;
+        public static final int ic_dialog_info=0x7f02001c;
+        public static final int ic_launcher=0x7f02001d;
+        public static final int ic_menu_help=0x7f02001e;
+        public static final int ic_menu_help_holo_light=0x7f02001f;
+        public static final int ic_menu_info_details=0x7f020020;
+        public static final int pane_under_thickbar_background=0x7f020021;
+        public static final int panel_button_background=0x7f020022;
+        public static final int panel_button_focused_holo=0x7f020023;
+        public static final int panel_button_pressed_holo=0x7f020024;
+        public static final int pantalla_splash=0x7f020025;
+        public static final int producto1_reloj=0x7f020026;
+        public static final int producto2_collar=0x7f020027;
+        public static final int producto3_collar=0x7f020028;
+        public static final int producto4_moto=0x7f020029;
+        public static final int producto5_johnnie=0x7f02002a;
+        public static final int producto6_bmw=0x7f02002b;
+        public static final int producto7_collar=0x7f02002c;
+        public static final int producto8_collar=0x7f02002d;
+        public static final int producto9_collar=0x7f02002e;
+        public static final int progress_vertical=0x7f02002f;
+        public static final int seek_thumb=0x7f020030;
+        public static final int seek_thumb_normal=0x7f020031;
+        public static final int seek_thumb_normal_wide=0x7f020032;
+        public static final int seek_thumb_pressed=0x7f020033;
+        public static final int seek_thumb_pressed_wide=0x7f020034;
+        public static final int seek_thumb_selected=0x7f020035;
+        public static final int seek_thumb_selected_wide=0x7f020036;
+        public static final int seek_thumb_wide=0x7f020037;
+        public static final int tab_background=0x7f020038;
+        public static final int tab_indicator=0x7f020039;
+        public static final int tab_off_background=0x7f02003a;
+        public static final int tab_selected=0x7f02003b;
+        public static final int tab_selected_focused=0x7f02003c;
+        public static final int tab_selected_pressed=0x7f02003d;
+        public static final int tab_unselected=0x7f02003e;
+        public static final int tab_unselected_focused=0x7f02003f;
+        public static final int tab_unselected_pressed=0x7f020040;
+        public static final int thickbar_left_background_default=0x7f020041;
+        public static final int thickbar_left_background_interactive=0x7f020042;
+        public static final int thickbar_left_background_pressed=0x7f020043;
+        public static final int thickbar_right_background=0x7f020044;
+        public static final int thickbar_shadow=0x7f020045;
+        public static final int track_dropdown_arrow_dark=0x7f020046;
+        public static final int track_dropdown_arrow_light=0x7f020047;
+        public static final int whats_on_background=0x7f020048;
+        public static final int whats_on_button=0x7f020049;
+        public static final int whats_on_button_default=0x7f02004a;
+        public static final int whats_on_button_pressed=0x7f02004b;
+        public static final int whats_on_separator=0x7f02004c;
+        public static final int window_background=0x7f02004d;
+        public static final int window_background_home=0x7f02004e;
     }
     public static final class id {
+        public static final int SeekBar02=0x7f08002d;
         public static final int TextView01=0x7f080029;
         public static final int actionbar_compat=0x7f080000;
         public static final int actionbar_compat_container=0x7f080001;
@@ -319,12 +330,10 @@ containing a value of this type.
         public static final int productThree=0x7f08001b;
         public static final int productTwo=0x7f08001a;
         public static final int productimage=0x7f080025;
-        public static final int quickContactBadge1=0x7f08002b;
         public static final int registro_biddername=0x7f080013;
         public static final int registro_bidderpass=0x7f080014;
         public static final int registro_bidderusername=0x7f080012;
         public static final int search=0x7f080011;
-        public static final int seekBar1=0x7f08002c;
         public static final int splash=0x7f08002e;
         public static final int startdialog=0x7f080023;
         public static final int tab_label=0x7f08002f;
@@ -333,7 +342,8 @@ containing a value of this type.
         public static final int textView2=0x7f080026;
         public static final int textView3=0x7f080027;
         public static final int textView4=0x7f08002a;
-        public static final int textView5=0x7f08002d;
+        public static final int textView5=0x7f08002b;
+        public static final int vertical_slider_seeker=0x7f08002c;
     }
     public static final class integer {
         public static final int fling_animation_duration=0x7f060000;
@@ -597,6 +607,128 @@ containing a value of this type.
           @attr name android:columns
         */
         public static final int BlocksLayout_columns = 0;
+        /** Attributes that can be used with a ProgressBar.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ProgressBar_android_max com.androidtitlan.endeavorsubasta:android_max}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_maxHeight com.androidtitlan.endeavorsubasta:android_maxHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_maxWidth com.androidtitlan.endeavorsubasta:android_maxWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_minHeight com.androidtitlan.endeavorsubasta:android_minHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_minWidth com.androidtitlan.endeavorsubasta:android_minWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_progress com.androidtitlan.endeavorsubasta:android_progress}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_progressDrawable com.androidtitlan.endeavorsubasta:android_progressDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ProgressBar_android_secondaryProgress com.androidtitlan.endeavorsubasta:android_secondaryProgress}</code></td><td></td></tr>
+           </table>
+           @see #ProgressBar_android_max
+           @see #ProgressBar_android_maxHeight
+           @see #ProgressBar_android_maxWidth
+           @see #ProgressBar_android_minHeight
+           @see #ProgressBar_android_minWidth
+           @see #ProgressBar_android_progress
+           @see #ProgressBar_android_progressDrawable
+           @see #ProgressBar_android_secondaryProgress
+         */
+        public static final int[] ProgressBar = {
+            0x0101011f, 0x01010120, 0x01010136, 0x01010137,
+            0x01010138, 0x0101013c, 0x0101013f, 0x01010140
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#android_max}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:android_max
+        */
+        public static final int ProgressBar_android_max = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#android_maxHeight}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:android_maxHeight
+        */
+        public static final int ProgressBar_android_maxHeight = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#android_maxWidth}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:android_maxWidth
+        */
+        public static final int ProgressBar_android_maxWidth = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#android_minHeight}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:android_minHeight
+        */
+        public static final int ProgressBar_android_minHeight = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#android_minWidth}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:android_minWidth
+        */
+        public static final int ProgressBar_android_minWidth = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#android_progress}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:android_progress
+        */
+        public static final int ProgressBar_android_progress = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#android_progressDrawable}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:android_progressDrawable
+        */
+        public static final int ProgressBar_android_progressDrawable = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#android_secondaryProgress}
+          attribute's value can be found in the {@link #ProgressBar} array.
+          @attr name android:android_secondaryProgress
+        */
+        public static final int ProgressBar_android_secondaryProgress = 4;
+        /** Attributes that can be used with a SeekBar.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SeekBar_android_thumb com.androidtitlan.endeavorsubasta:android_thumb}</code></td><td></td></tr>
+           <tr><td><code>{@link #SeekBar_android_thumbOffset com.androidtitlan.endeavorsubasta:android_thumbOffset}</code></td><td></td></tr>
+           </table>
+           @see #SeekBar_android_thumb
+           @see #SeekBar_android_thumbOffset
+         */
+        public static final int[] SeekBar = {
+            0x01010142, 0x01010143
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#android_thumb}
+          attribute's value can be found in the {@link #SeekBar} array.
+          @attr name android:android_thumb
+        */
+        public static final int SeekBar_android_thumb = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#android_thumbOffset}
+          attribute's value can be found in the {@link #SeekBar} array.
+          @attr name android:android_thumbOffset
+        */
+        public static final int SeekBar_android_thumbOffset = 1;
+        /** Attributes that can be used with a Theme.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #Theme_android_disabledAlpha com.androidtitlan.endeavorsubasta:android_disabledAlpha}</code></td><td></td></tr>
+           </table>
+           @see #Theme_android_disabledAlpha
+         */
+        public static final int[] Theme = {
+            0x01010033
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.androidtitlan.endeavorsubasta.R.attr#android_disabledAlpha}
+          attribute's value can be found in the {@link #Theme} array.
+          @attr name android:android_disabledAlpha
+        */
+        public static final int Theme_android_disabledAlpha = 0;
         /** Attributes that can be used with a TimeRulerView.
            <p>Includes the following attributes:</p>
            <table>

@@ -88,7 +88,7 @@ public class EndeavorSubastaActivity extends Activity {
       };
       
       previous.setOnClickListener(new View.OnClickListener() {
-		@Override
+//		@Override
 		public void onClick(View v) {
 			viewFlipper.setInAnimation(slideRightIn);
             viewFlipper.setOutAnimation(slideRightOut);
@@ -96,7 +96,7 @@ public class EndeavorSubastaActivity extends Activity {
 		}
 	});
       next.setOnClickListener(new View.OnClickListener() {
-		@Override
+//		@Override
 		public void onClick(View v) {
 			viewFlipper.setInAnimation(slideLeftIn);
             viewFlipper.setOutAnimation(slideLeftOut);
