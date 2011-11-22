@@ -97,7 +97,10 @@
             android:layout_width="50dip"
             android:layout_height="fill_parent"
             android:progressDrawable="@drawable/progress_vertical"
-            android:thumb="@drawable/seek_thumb_wide" />
+            android:thumb="@drawable/seek_thumb_wide"
+            android:layout_margin="15dp"
+            android:thumbOffset="8dp"
+            />
     </LinearLayout>
 
 </RelativeLayout>
