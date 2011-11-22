@@ -12,20 +12,21 @@
         <item name="trackAbstractMaxLines">@integer/track_abstract_max_lines</item>
 
         <!-- for programmatic instantiation -->
-        <item name="actionbarCompatProgressIndicatorStyle">@style/ActionBarCompatProgressIndicator</item>
+    <!--     <item name="actionbarCompatProgressIndicatorStyle">@style/ActionBarCompatProgressIndicator</item> 
         <item name="actionbarCompatTextStyle">@style/ActionBarCompatText</item>  
         <item name="android:actionBarTabTextStyle">@style/ActionBarText</item>
             
     </style>
            
-    <!-- Start with the Holographic Light theme -->
-    <style name="Theme.IOSched.Home" parent="style/Theme.IOSched">
+    Start with the Holographic Light theme 
+    <style name="Theme.IOSched.Home" parent="style/Theme.IOSched"> -->
         <item name="android:windowBackground">@drawable/background_noise</item>
     </style>
-
+<!-- 
     <style name="ActionBarCompatProgressIndicator" parent="android:style/Widget.ProgressBar.Small">
         <item name="android:indeterminate">true</item>
     </style>
+
 
     <style name="ActionBarCompatText">
         <item name="android:id">@id/actionbar_compat_text</item>
@@ -57,7 +58,7 @@
         <item name="android:background">@null</item>
     </style>
      
-    
+ -->   
     
 
     <style name="ListItemTitle">

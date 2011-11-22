@@ -213,85 +213,88 @@ containing a value of this type.
         public static final int whats_on_item_padding=0x7f070003;
     }
     public static final class drawable {
-        public static final int actionbar_compat_background=0x7f020000;
-        public static final int actionbar_compat_button=0x7f020001;
-        public static final int actionbar_compat_separator=0x7f020002;
-        public static final int background=0x7f020003;
-        public static final int background_effect=0x7f020004;
-        public static final int background_effects=0x7f020005;
-        public static final int background_noise=0x7f020006;
-        public static final int be=0x7f020007;
-        public static final int btn=0x7f020008;
-        public static final int btn_bg_pressed=0x7f020009;
-        public static final int btn_bg_selected=0x7f02000a;
-        public static final int btn_block_border=0x7f02000b;
-        public static final int btn_block_border_default=0x7f02000c;
-        public static final int btn_block_border_pressed=0x7f02000d;
-        public static final int btn_block_border_selected=0x7f02000e;
-        public static final int btn_default=0x7f02000f;
-        public static final int btn_focused=0x7f020010;
-        public static final int btn_pressed=0x7f020011;
-        public static final int button_next=0x7f020012;
-        public static final int button_previous=0x7f020013;
-        public static final int colorstrip=0x7f020014;
-        public static final int colorstrip_shadow=0x7f020015;
-        public static final int flecha_derecha=0x7f020016;
-        public static final int flecha_derecha2=0x7f020017;
-        public static final int flecha_izquierda=0x7f020018;
-        public static final int flecha_izquierda2=0x7f020019;
-        public static final int gradientline=0x7f02001a;
-        public static final int ic_close_holo_light=0x7f02001b;
-        public static final int ic_dialog_info=0x7f02001c;
-        public static final int ic_launcher=0x7f02001d;
-        public static final int ic_menu_help=0x7f02001e;
-        public static final int ic_menu_help_holo_light=0x7f02001f;
-        public static final int ic_menu_info_details=0x7f020020;
-        public static final int pane_under_thickbar_background=0x7f020021;
-        public static final int panel_button_background=0x7f020022;
-        public static final int panel_button_focused_holo=0x7f020023;
-        public static final int panel_button_pressed_holo=0x7f020024;
-        public static final int pantalla_splash=0x7f020025;
-        public static final int producto1_reloj=0x7f020026;
-        public static final int producto2_collar=0x7f020027;
-        public static final int producto3_collar=0x7f020028;
-        public static final int producto4_moto=0x7f020029;
-        public static final int producto5_johnnie=0x7f02002a;
-        public static final int producto6_bmw=0x7f02002b;
-        public static final int producto7_collar=0x7f02002c;
-        public static final int producto8_collar=0x7f02002d;
-        public static final int producto9_collar=0x7f02002e;
-        public static final int progress_vertical=0x7f02002f;
-        public static final int seek_thumb=0x7f020030;
-        public static final int seek_thumb_normal=0x7f020031;
-        public static final int seek_thumb_normal_wide=0x7f020032;
-        public static final int seek_thumb_pressed=0x7f020033;
-        public static final int seek_thumb_pressed_wide=0x7f020034;
-        public static final int seek_thumb_selected=0x7f020035;
-        public static final int seek_thumb_selected_wide=0x7f020036;
-        public static final int seek_thumb_wide=0x7f020037;
-        public static final int tab_background=0x7f020038;
-        public static final int tab_indicator=0x7f020039;
-        public static final int tab_off_background=0x7f02003a;
-        public static final int tab_selected=0x7f02003b;
-        public static final int tab_selected_focused=0x7f02003c;
-        public static final int tab_selected_pressed=0x7f02003d;
-        public static final int tab_unselected=0x7f02003e;
-        public static final int tab_unselected_focused=0x7f02003f;
-        public static final int tab_unselected_pressed=0x7f020040;
-        public static final int thickbar_left_background_default=0x7f020041;
-        public static final int thickbar_left_background_interactive=0x7f020042;
-        public static final int thickbar_left_background_pressed=0x7f020043;
-        public static final int thickbar_right_background=0x7f020044;
-        public static final int thickbar_shadow=0x7f020045;
-        public static final int track_dropdown_arrow_dark=0x7f020046;
-        public static final int track_dropdown_arrow_light=0x7f020047;
-        public static final int whats_on_background=0x7f020048;
-        public static final int whats_on_button=0x7f020049;
-        public static final int whats_on_button_default=0x7f02004a;
-        public static final int whats_on_button_pressed=0x7f02004b;
-        public static final int whats_on_separator=0x7f02004c;
-        public static final int window_background=0x7f02004d;
-        public static final int window_background_home=0x7f02004e;
+        public static final int about_icon=0x7f020000;
+        public static final int actionbar_compat_background=0x7f020001;
+        public static final int actionbar_compat_button=0x7f020002;
+        public static final int actionbar_compat_separator=0x7f020003;
+        public static final int background=0x7f020004;
+        public static final int background_effect=0x7f020005;
+        public static final int background_effects=0x7f020006;
+        public static final int background_noise=0x7f020007;
+        public static final int be=0x7f020008;
+        public static final int btn=0x7f020009;
+        public static final int btn_bg_pressed=0x7f02000a;
+        public static final int btn_bg_selected=0x7f02000b;
+        public static final int btn_block_border=0x7f02000c;
+        public static final int btn_block_border_default=0x7f02000d;
+        public static final int btn_block_border_pressed=0x7f02000e;
+        public static final int btn_block_border_selected=0x7f02000f;
+        public static final int btn_default=0x7f020010;
+        public static final int btn_focused=0x7f020011;
+        public static final int btn_pressed=0x7f020012;
+        public static final int button_next=0x7f020013;
+        public static final int button_previous=0x7f020014;
+        public static final int colorstrip=0x7f020015;
+        public static final int colorstrip_shadow=0x7f020016;
+        public static final int flecha_derecha=0x7f020017;
+        public static final int flecha_derecha2=0x7f020018;
+        public static final int flecha_izquierda=0x7f020019;
+        public static final int flecha_izquierda2=0x7f02001a;
+        public static final int gradientline=0x7f02001b;
+        public static final int help_icon=0x7f02001c;
+        public static final int ic_close_holo_light=0x7f02001d;
+        public static final int ic_dialog_info=0x7f02001e;
+        public static final int ic_launcher=0x7f02001f;
+        public static final int ic_menu_help=0x7f020020;
+        public static final int ic_menu_help_holo_light=0x7f020021;
+        public static final int ic_menu_info_details=0x7f020022;
+        public static final int info_icon=0x7f020023;
+        public static final int pane_under_thickbar_background=0x7f020024;
+        public static final int panel_button_background=0x7f020025;
+        public static final int panel_button_focused_holo=0x7f020026;
+        public static final int panel_button_pressed_holo=0x7f020027;
+        public static final int pantalla_splash=0x7f020028;
+        public static final int producto1_reloj=0x7f020029;
+        public static final int producto2_collar=0x7f02002a;
+        public static final int producto3_collar=0x7f02002b;
+        public static final int producto4_moto=0x7f02002c;
+        public static final int producto5_johnnie=0x7f02002d;
+        public static final int producto6_bmw=0x7f02002e;
+        public static final int producto7_collar=0x7f02002f;
+        public static final int producto8_collar=0x7f020030;
+        public static final int producto9_collar=0x7f020031;
+        public static final int progress_vertical=0x7f020032;
+        public static final int seek_thumb=0x7f020033;
+        public static final int seek_thumb_normal=0x7f020034;
+        public static final int seek_thumb_normal_wide=0x7f020035;
+        public static final int seek_thumb_pressed=0x7f020036;
+        public static final int seek_thumb_pressed_wide=0x7f020037;
+        public static final int seek_thumb_selected=0x7f020038;
+        public static final int seek_thumb_selected_wide=0x7f020039;
+        public static final int seek_thumb_wide=0x7f02003a;
+        public static final int tab_background=0x7f02003b;
+        public static final int tab_indicator=0x7f02003c;
+        public static final int tab_off_background=0x7f02003d;
+        public static final int tab_selected=0x7f02003e;
+        public static final int tab_selected_focused=0x7f02003f;
+        public static final int tab_selected_pressed=0x7f020040;
+        public static final int tab_unselected=0x7f020041;
+        public static final int tab_unselected_focused=0x7f020042;
+        public static final int tab_unselected_pressed=0x7f020043;
+        public static final int thickbar_left_background_default=0x7f020044;
+        public static final int thickbar_left_background_interactive=0x7f020045;
+        public static final int thickbar_left_background_pressed=0x7f020046;
+        public static final int thickbar_right_background=0x7f020047;
+        public static final int thickbar_shadow=0x7f020048;
+        public static final int track_dropdown_arrow_dark=0x7f020049;
+        public static final int track_dropdown_arrow_light=0x7f02004a;
+        public static final int whats_on_background=0x7f02004b;
+        public static final int whats_on_button=0x7f02004c;
+        public static final int whats_on_button_default=0x7f02004d;
+        public static final int whats_on_button_pressed=0x7f02004e;
+        public static final int whats_on_separator=0x7f02004f;
+        public static final int window_background=0x7f020050;
+        public static final int window_background_home=0x7f020051;
     }
     public static final class id {
         public static final int SeekBar02=0x7f08002d;
@@ -400,30 +403,63 @@ containing a value of this type.
         public static final int whats_on_thank_you_title=0x7f090011;
     }
     public static final class style {
-        public static final int ActionBar=0x7f0b0014;
-        public static final int ActionBarCompatProgressIndicator=0x7f0b0003;
-        public static final int ActionBarCompatText=0x7f0b0004;
-        public static final int ActionBarText=0x7f0b0015;
-        public static final int DashboardButton=0x7f0b0005;
         /**  used for more complex list items, e.g. those with stars aligned to the top-right 
          */
-        public static final int ListItemContainer=0x7f0b000a;
-        public static final int ListItemContainerBase=0x7f0b0008;
-        public static final int ListItemContent=0x7f0b000b;
-        public static final int ListItemSubtitle=0x7f0b0007;
-        public static final int ListItemTitle=0x7f0b0006;
+        public static final int ListItemContainer=0x7f0b0006;
+        public static final int ListItemContainerBase=0x7f0b0004;
+        public static final int ListItemContent=0x7f0b0007;
+        public static final int ListItemSubtitle=0x7f0b0003;
+        /**  
+    <style name="ActionBarCompatProgressIndicator" parent="android:style/Widget.ProgressBar.Small">
+        <item name="android:indeterminate">true</item>
+    </style>
+
+
+    <style name="ActionBarCompatText">
+        <item name="android:id">@id/actionbar_compat_text</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/home_font_color</item>
+        <item name="android:shadowColor">#fff</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.00001</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+      <style name="DashboardButton">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/accent_1</item>
+        <item name="android:background">@null</item>
+    </style>
+     
+ 
+         */
+        public static final int ListItemTitle=0x7f0b0002;
         /**  a simple list item is one whose container and content are the same view 
          */
-        public static final int SimpleListItem=0x7f0b0009;
-        public static final int TextBody=0x7f0b0013;
+        public static final int SimpleListItem=0x7f0b0005;
+        public static final int TextBody=0x7f0b000f;
         /**  body content 
          */
-        public static final int TextHeader=0x7f0b000f;
-        public static final int TextHeader2=0x7f0b0011;
-        public static final int TextHeader3=0x7f0b0012;
+        public static final int TextHeader=0x7f0b000b;
+        public static final int TextHeader2=0x7f0b000d;
+        public static final int TextHeader3=0x7f0b000e;
         /**  body content 
          */
-        public static final int TextHeaderSub=0x7f0b0010;
+        public static final int TextHeaderSub=0x7f0b000c;
         /**  Base application theme is the default theme. 
          */
         public static final int Theme=0x7f0b0000;
@@ -431,14 +467,12 @@ containing a value of this type.
  Start with the Holographic Light theme 
          */
         public static final int Theme_IOSched=0x7f0b0001;
-        /**  Start with the Holographic Light theme 
-         */
-        public static final int Theme_IOSched_Home=0x7f0b0002;
-        public static final int WhatsOnButtonItem=0x7f0b000e;
+        public static final int Theme_IOSched_Home=0x7f0b0010;
+        public static final int WhatsOnButtonItem=0x7f0b000a;
         /**  What's On section in Home activity 
          */
-        public static final int WhatsOnItemBase=0x7f0b000c;
-        public static final int WhatsOnStaticItem=0x7f0b000d;
+        public static final int WhatsOnItemBase=0x7f0b0008;
+        public static final int WhatsOnStaticItem=0x7f0b0009;
     }
     public static final class styleable {
         /** Attributes that can be used with a AppTheme.
