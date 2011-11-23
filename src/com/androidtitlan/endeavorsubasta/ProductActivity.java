@@ -21,6 +21,7 @@ public class ProductActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+<<<<<<< HEAD
 		/*
 		 * TextViews dinamicos de Nombre del ultimo bidder y precio actual
 		 */
@@ -95,6 +96,15 @@ public class ProductActivity extends Activity {
 		bidderName="El exitoso Enrique Díaz";
 		//ofertante.setText(bidderName);
 		//precioActual.setText(Integer.toString(price));
+=======
+		
+		//TODO: Implement the needed logic to inflate the layout for each product
+//		int resultFromActivity = savedInstanceState.getInt("Product");
+		
+		
+		setContentView(R.layout.product_one);
+
+>>>>>>> 32e643920fe5f292d1eeba3fea26099304f4d647
 	}
 	
 	@Override
