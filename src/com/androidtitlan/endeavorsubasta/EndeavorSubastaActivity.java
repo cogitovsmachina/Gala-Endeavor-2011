@@ -147,22 +147,22 @@ public class EndeavorSubastaActivity extends Activity {
     /**
      * Methods for each product, binded on main.xml
      */
-    public void goToproductOne(View v){
+    public void goToProductOne(View v){
     	Intent i = new Intent(this, ProductActivity.class);
     	i.putExtra("Product", 1);
     	startActivity(i);
     }
-    public void goToproductTwo(View v){
+    public void goToProductTwo(View v){
     	Intent i = new Intent(this, ProductActivity.class);
     	i.putExtra("Product", 2);
     	startActivity(i);
     }
-    public void goToproductThree(View v){
+    public void goToProductThree(View v){
     	Intent i = new Intent(this, ProductActivity.class);
     	i.putExtra("Product", 3);
     	startActivity(i);
     }
-    public void goToproductFour(View v){
+    public void goToProductFour(View v){
     	Intent i = new Intent(this, ProductActivity.class);
     	i.putExtra("Product", 4);
     	startActivity(i);
@@ -177,17 +177,17 @@ public class EndeavorSubastaActivity extends Activity {
     	i.putExtra("Product", 6);
     	startActivity(i);
     }
-    public void goToproductSeven(View v){
+    public void goToProductSeven(View v){
     	Intent i = new Intent(this, ProductActivity.class);
     	i.putExtra("Product", 7);
     	startActivity(i);
     }
-    public void goToproductEight(View v){
+    public void goToProductEight(View v){
     	Intent i = new Intent(this, ProductActivity.class);
     	i.putExtra("Product", 8);
     	startActivity(i);
     }
-    public void goToproductNine(View v){
+    public void goToProductNine(View v){
     	Intent i = new Intent(this, ProductActivity.class);
     	i.putExtra("Product", 9);
     	startActivity(i);

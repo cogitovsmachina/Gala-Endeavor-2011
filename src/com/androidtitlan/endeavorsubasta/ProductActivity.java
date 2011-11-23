@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.androidtitlan.endeavorsubasta.ui.Dialog;
 
@@ -20,13 +21,80 @@ public class ProductActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		//TODO: Implement the needed logic to inflate the layout for each product
-		int resultFromActivity = savedInstanceState.getInt("Product");
-		
-		
-		setContentView(R.layout.productlayout);
-
+		/*
+		 * TextViews dinamicos de Nombre del ultimo bidder y precio actual
+		 */
+		final TextView ofertante;
+		final TextView precioActual;
+		/*
+		 * Inflado especifico del layout para cada producto
+		 */
+		int selectedProduct = savedInstanceState.getInt("Product");
+		switch(selectedProduct){
+		case 1:
+			/*setContentView(R.layout.product_one);
+			ofertante=(TextView)findViewById(R.id.bidder_1);
+			precioActual=(TextView)findViewById(R.id.price_1);
+			*/
+			break;
+		case 2:
+			/*setContentView(R.layout.product_two);
+			ofertante=(TextView)findViewById(R.id.bidder_2);
+			precioActual=(TextView)findViewById(R.id.price_2);
+			*/
+			break;
+		case 3:
+			/*setContentView(R.layout.product_three);
+			ofertante=(TextView)findViewById(R.id.bidder_3);
+			precioActual=(TextView)findViewById(R.id.price_3);
+			*/
+			break;
+		case 4:
+			/*setContentView(R.layout.product_four);
+			ofertante=(TextView)findViewById(R.id.bidder_4);
+			precioActual=(TextView)findViewById(R.id.price_4);
+			*/
+			break;
+		case 5:
+			/*setContentView(R.layout.product_five);
+			ofertante=(TextView)findViewById(R.id.bidder_5);
+			precioActual=(TextView)findViewById(R.id.price_5);
+			*/
+			break;
+		case 6:
+			/*setContentView(R.layout.product_six);
+			ofertante=(TextView)findViewById(R.id.bidder_6);
+			precioActual=(TextView)findViewById(R.id.price_6);
+			*/
+			break;
+		case 7:
+			/*setContentView(R.layout.product_seven);
+			ofertante=(TextView)findViewById(R.id.bidder_7);
+			precioActual=(TextView)findViewById(R.id.price_7);
+			*/
+			break;
+		case 8:
+			/*setContentView(R.layout.product_eight);
+			ofertante=(TextView)findViewById(R.id.bidder_8);
+			precioActual=(TextView)findViewById(R.id.price_8);
+			*/
+			break;
+		case 9:
+			/*setContentView(R.layout.product_nine);
+			ofertante=(TextView)findViewById(R.id.bidder_9);
+			precioActual=(TextView)findViewById(R.id.price_9);
+			*/
+			break;
+		}
+		/*
+		 * TODO:Realizar conexion al server y obtener String de nombre del bidder y precio actual
+		 */
+		String bidderName;
+		int    price;
+		price=1000000;
+		bidderName="El exitoso Enrique Díaz";
+		//ofertante.setText(bidderName);
+		//precioActual.setText(Integer.toString(price));
 	}
 	
 	@Override

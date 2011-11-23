@@ -58,7 +58,7 @@
                             android:layout_width="550dp"
                             android:layout_height="350dp"
                             android:adjustViewBounds="true"
-                            android:onClick="goToProductActivity"
+                            android:onClick="goToProductTwo"
                             android:src="@drawable/producto2_collar" />
                     </LinearLayout>
                 </TableRow>
@@ -75,7 +75,7 @@
                     android:id="@+id/productThree"
                     android:layout_width="560dp"
                     android:layout_height="350dp"
-                    android:onClick="goToProductActivity"
+                    android:onClick="goToProductThree"
                     android:src="@drawable/producto3_collar" />
             </LinearLayout>
         </LinearLayout>
@@ -102,7 +102,7 @@
                         android:id="@+id/productFour"
                         android:layout_width="630dp"
                         android:layout_height="350dp"
-                        android:onClick="goToProductActivity"
+                        android:onClick="goToProductFour"
                         android:src="@drawable/producto4_moto" />
                 </LinearLayout>
 
@@ -117,7 +117,7 @@
                         android:id="@+id/productFive"
                         android:layout_width="650dp"
                         android:layout_height="350dp"
-                        android:onClick="goToProductActivity"
+                        android:onClick="goToProductFive"
                         android:src="@drawable/producto5_johnnie" />
                 </LinearLayout>
             </LinearLayout>
@@ -133,7 +133,7 @@
                     android:id="@+id/productSix"
                     android:layout_width="378dp"
                     android:layout_height="585dp"
-                    android:onClick="goToProductActivity"
+                    android:onClick="goToProductSix"
                     android:src="@drawable/producto6_bmw" />
             </LinearLayout>
         </LinearLayout>
@@ -161,7 +161,7 @@
                             android:id="@+id/productSeven"
                             android:layout_width="550dp"
                             android:layout_height="350dp"
-                            android:onClick="goToProductActivity"
+                            android:onClick="goToProductSeven"
                             android:src="@drawable/producto7_collar" />
                     </LinearLayout>
 
@@ -175,8 +175,7 @@
                             android:id="@+id/productEight"
                             android:layout_width="530dp"
                             android:layout_height="350dp"
-                            android:onClick="goToProductActivity"
-                            android:src="@drawable/producto8_collar" />
+                            android:onClick="goToProductEight" />
                     </LinearLayout>
                 </TableRow>
             </TableLayout>
@@ -192,7 +191,7 @@
                     android:id="@+id/productNine"
                     android:layout_width="550dp"
                     android:layout_height="350dp"
-                    android:onClick="goToProductActivity"
+                    android:onClick="goToProductNine"
                     android:src="@drawable/producto9_collar" />
             </LinearLayout>
         </LinearLayout>
