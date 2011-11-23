@@ -43,7 +43,7 @@
                             android:id="@+id/productOne"
                             android:layout_width="480dp"
                             android:layout_height="350dp"
-                            android:onClick="goToProductActivity"
+                            android:onClick="goToproductOne"
                             android:src="@drawable/producto1_reloj" />
                     </LinearLayout>
 

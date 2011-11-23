@@ -390,9 +390,9 @@ containing a value of this type.
         public static final int whats_on_countdown_title=0x7f0a0000;
     }
     public static final class string {
-        public static final int about_text=0x7f09001a;
-        public static final int about_title=0x7f090019;
-        public static final int accept=0x7f090015;
+        public static final int about_text=0x7f090016;
+        public static final int about_title=0x7f090015;
+        public static final int accept=0x7f090011;
         public static final int app_name=0x7f090000;
         public static final int btn_product1=0x7f090009;
         public static final int btn_product2=0x7f09000a;
@@ -400,25 +400,21 @@ containing a value of this type.
         public static final int btn_product4=0x7f09000c;
         public static final int btn_product5=0x7f09000d;
         public static final int btn_product6=0x7f09000e;
-        public static final int decline=0x7f090016;
+        public static final int decline=0x7f090012;
         public static final int description_about=0x7f090002;
         public static final int description_logo=0x7f090001;
-        public static final int eula_text=0x7f090014;
+        public static final int eula_text=0x7f090010;
         /**  ToS 
          */
-        public static final int eula_title=0x7f090013;
-        public static final int help=0x7f090017;
-        public static final int help_text=0x7f090018;
-        public static final int permission_write=0x7f090012;
+        public static final int eula_title=0x7f09000f;
+        public static final int help=0x7f090013;
+        public static final int help_text=0x7f090014;
         public static final int title_now_playing=0x7f090003;
         public static final int title_product1=0x7f090004;
         public static final int title_product2=0x7f090005;
         public static final int title_product3=0x7f090006;
         public static final int title_product4=0x7f090007;
         public static final int title_product6=0x7f090008;
-        public static final int whats_on_now_playing_title=0x7f090010;
-        public static final int whats_on_stream_title=0x7f09000f;
-        public static final int whats_on_thank_you_title=0x7f090011;
     }
     public static final class style {
         /**  used for more complex list items, e.g. those with stars aligned to the top-right 

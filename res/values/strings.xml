@@ -22,18 +22,6 @@
     <string name="btn_product6">Producto 6</string>
 
 
-    <plurals name="whats_on_countdown_title">
-        <item quantity="zero"><xliff:g id="remaining_time">%2$s</xliff:g>\npara Cena de Gala Endeavor 2011</item>
-        <item quantity="one"><xliff:g id="number_of_days">%1$s</xliff:g> dia, <xliff:g id="remaining_time">%2$s</xliff:g>\npara Cena de Gala Endeavor 2011</item>
-        <item quantity="other"><xliff:g id="number_of_days">%1$s</xliff:g> dias, <xliff:g id="remaining_time">%2$s</xliff:g>\npara Cena de Gala Endeavor 2011</item>
-    </plurals>
-
-    <string name="whats_on_stream_title">Sigue el\nHashtag</string>
-    <string name="whats_on_now_playing_title">Ahora</string>
-    <string name="whats_on_thank_you_title">¡Gracias por asistir!</string>
-
-    <string name="permission_write">Modify Google I/O schedule data</string>
-
 
     <!-- ToS -->
     <string name="eula_title">Titulo de EULA.</string>
@@ -42,9 +30,16 @@
     <string name="accept">Aceptar</string>
     <string name="decline">Declinar</string>
 
-  	<string name="help">Ayuda</string>
+  	<string name="help">¿Cómo funciona?</string>
   	
-  	<string name="help_text">Aquí va el texto de ayuda.</string>
+  	<string name="help_text">
+  	    Todos los artículos estarán expuestos durante el evento en la zona de coctel. Podrás ir pujando
+  	    y monitoreando en tiempo real el precio de cada uno de los objetos a través de 70 tablets 
+  	    Motorola Xoom®, que estarán disponibles en tu mesa y a lo largo del evento. Al cierre de la 
+  	    subasta cada representante de marca hará entrega de los objetos subastados a los ganadores.
+  	    \n\nPodrás hacer tu pago con tarjetas de crédito American Express®, Visa® o Mastercard® o con tarjeta
+  	    de débito Visa® o Mastercard®.
+  	</string>
   	    
         
 	<string name="about_title">Acerca de</string>

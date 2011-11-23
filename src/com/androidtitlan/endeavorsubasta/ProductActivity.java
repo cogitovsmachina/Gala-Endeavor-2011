@@ -20,7 +20,13 @@ public class ProductActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		//TODO: Implement the needed logic to inflate the layout for each product
+		int resultFromActivity = savedInstanceState.getInt("Product");
+		
+		
 		setContentView(R.layout.productlayout);
+
 	}
 	
 	@Override
