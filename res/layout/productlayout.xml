@@ -4,103 +4,35 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="500dp"
-        android:layout_height="130dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="90dp"
-        android:text="Ofertar"
-        android:onClick="openBiddingDialog" />
-
-    <Button
-        android:id="@+id/productimage"
-        android:layout_width="300dp"
-        android:layout_height="500dp"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="33dp"
-        android:text="Button" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_alignTop="@+id/productimage"
-        android:layout_marginTop="39dp"
-        android:text="Precio actual:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_marginLeft="31dp"
-        android:layout_toRightOf="@+id/textView2"
-        android:text="$1300.00"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/productimage"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="31dp"
-        android:text="Inició en: $100.00"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_marginLeft="57dp"
-        android:layout_toRightOf="@+id/textView3"
-        android:text="Oferente:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/TextView01"
-        android:layout_alignRight="@+id/button1"
-        android:layout_marginRight="25dp"
-        android:text="Bobby"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Ofertar"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
-
-    <LinearLayout
-        android:id="@+id/vertical_slider_seeker"
-        android:layout_width="wrap_content"
-        android:layout_height="600dip"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="90dp"
-        android:padding="15dip" >
+ 
 
         <com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar
             android:id="@+id/SeekBar02"
             android:layout_width="50dip"
             android:layout_height="fill_parent"
+            android:layout_margin="15dp"
             android:progressDrawable="@drawable/progress_vertical"
             android:thumb="@drawable/seek_thumb_wide"
-            android:layout_margin="15dp"
-            android:thumbOffset="8dp"
-            />
-    </LinearLayout>
+            android:thumbOffset="8dp" />
+
+    <Button
+        android:id="@+id/productimage"
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="26dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="500dp"
+        android:layout_height="130dp"
+        android:layout_below="@+id/productimage"
+        android:layout_marginLeft="34dp"
+        android:layout_toRightOf="@+id/productimage"
+        android:onClick="openBiddingDialog"
+        android:text="Ofertar" />
 
 </RelativeLayout>

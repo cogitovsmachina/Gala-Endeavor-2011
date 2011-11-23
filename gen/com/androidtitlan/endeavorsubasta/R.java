@@ -315,8 +315,7 @@ containing a value of this type.
         public static final int window_background_home=0x7f020063;
     }
     public static final class id {
-        public static final int SeekBar02=0x7f08002d;
-        public static final int TextView01=0x7f080029;
+        public static final int SeekBar02=0x7f080024;
         public static final int actionbar_compat=0x7f080000;
         public static final int actionbar_compat_container=0x7f080001;
         public static final int actionbar_compat_logo=0x7f080002;
@@ -325,7 +324,7 @@ containing a value of this type.
         public static final int bidderpass=0x7f080010;
         public static final int blocks_now=0x7f08000c;
         public static final int blocks_ruler=0x7f08000b;
-        public static final int button1=0x7f080024;
+        public static final int button1=0x7f080026;
         public static final int cancel=0x7f080016;
         public static final int colorstrip=0x7f08000d;
         public static final int dialog_discard_confirm=0x7f080009;
@@ -336,8 +335,8 @@ containing a value of this type.
         public static final int fragment_vendor_detail=0x7f080007;
         public static final int fragment_vendors=0x7f080006;
         public static final int layout_root=0x7f08000e;
-        public static final int menu_about=0x7f080031;
-        public static final int menu_help=0x7f080030;
+        public static final int menu_about=0x7f08002a;
+        public static final int menu_help=0x7f080029;
         public static final int menu_refresh_progress=0x7f080008;
         public static final int next=0x7f080022;
         public static final int previous=0x7f080017;
@@ -355,16 +354,10 @@ containing a value of this type.
         public static final int registro_bidderpass=0x7f080014;
         public static final int registro_bidderusername=0x7f080012;
         public static final int search=0x7f080011;
-        public static final int splash=0x7f08002e;
+        public static final int splash=0x7f080027;
         public static final int startdialog=0x7f080023;
-        public static final int tab_label=0x7f08002f;
+        public static final int tab_label=0x7f080028;
         public static final int termsandconditions=0x7f080015;
-        public static final int textView1=0x7f080028;
-        public static final int textView2=0x7f080026;
-        public static final int textView3=0x7f080027;
-        public static final int textView4=0x7f08002a;
-        public static final int textView5=0x7f08002b;
-        public static final int vertical_slider_seeker=0x7f08002c;
     }
     public static final class integer {
         public static final int fling_animation_duration=0x7f060000;
