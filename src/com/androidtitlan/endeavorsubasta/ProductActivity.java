@@ -21,12 +21,12 @@ public class ProductActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		/*
+		/**
 		 * TextViews dinamicos de Nombre del ultimo bidder y precio actual
 		 */
 		TextView ofertante=null;
 		TextView precioActual=null;
-		/*
+		/**
 		 * Inflado especifico del layout para cada producto
 		 */
 		Bundle extras = getIntent().getExtras();
@@ -79,7 +79,7 @@ public class ProductActivity extends Activity {
 			precioActual=(TextView)findViewById(R.id.price_9);
 			break;
 		}
-		/*
+		/**
 		 * TODO:Realizar conexion al server y obtener String de nombre del bidder y precio actual
 		 */
 		String bidderName;
@@ -104,8 +104,8 @@ public class ProductActivity extends Activity {
 		case (MY_CUSTOM_DIALOG): {
 			if (resultCode == Activity.RESULT_OK) {
 				Log.d("ANDROID_DIALOG","Coming back from BiddingDialog...");
-				String fullName = data.getStringExtra(BiddingDialog.NAME_RESULT_FROM_DIALOG);
-				Log.d("ANDROID_DIALOG", "User entered: " + fullName);
+				String userName = data.getStringExtra(BiddingDialog.USERNAME_RESULT_FROM_DIALOG);
+				Log.d("ANDROID_DIALOG", "User entered: " + userName);
 //				Toast.makeText(this, "Gracias, " +fullName, Toast.LENGTH_SHORT).show();
 
 		}
