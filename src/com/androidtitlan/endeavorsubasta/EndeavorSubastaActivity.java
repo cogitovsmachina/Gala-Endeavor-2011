@@ -167,12 +167,12 @@ public class EndeavorSubastaActivity extends Activity {
     	i.putExtra("Product", 4);
     	startActivity(i);
     }
-    public void goToproductFive(View v){
+    public void goToProductFive(View v){
     	Intent i = new Intent(this, ProductActivity.class);
     	i.putExtra("Product", 5);
     	startActivity(i);
     }
-    public void goToproductSix(View v){
+    public void goToProductSix(View v){
     	Intent i = new Intent(this, ProductActivity.class);
     	i.putExtra("Product", 6);
     	startActivity(i);

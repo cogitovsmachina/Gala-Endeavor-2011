@@ -3,7 +3,6 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="horizontal" >
-
     <ImageView
         android:id="@+id/previous"
         android:layout_width="0dp"
@@ -13,26 +12,21 @@
         android:adjustViewBounds="true"
         android:clickable="true"
         android:src="@drawable/button_previous" />
-
     <ViewFlipper
         android:id="@+id/flipper"
         android:layout_width="0dp"
         android:layout_height="fill_parent"
         android:layout_weight="90" >
-
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical" >
-
             <TableLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="50"
                 android:stretchColumns="*" >
-
                 <TableRow >
-
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
@@ -43,7 +37,7 @@
                             android:id="@+id/productOne"
                             android:layout_width="480dp"
                             android:layout_height="350dp"
-                            android:onClick="goToproductOne"
+                            android:onClick="goToProductOne"
                             android:src="@drawable/producto1_reloj" />
                     </LinearLayout>
 
@@ -69,8 +63,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="50"
                 android:gravity="center"
-                android:orientation="horizontal" >
-
+                android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/productThree"
                     android:layout_width="560dp"
@@ -79,25 +72,21 @@
                     android:src="@drawable/producto3_collar" />
             </LinearLayout>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="horizontal" >
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
-                android:layout_weight="70"
+                android:layout_weight="60"
                 android:orientation="vertical" >
-
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="0dp"
                     android:layout_weight="50"
                     android:gravity="center"
                     android:orientation="horizontal" >
-
                     <ImageView
                         android:id="@+id/productFour"
                         android:layout_width="630dp"
@@ -105,14 +94,12 @@
                         android:onClick="goToProductFour"
                         android:src="@drawable/producto4_moto" />
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="0dp"
                     android:layout_weight="50"
                     android:gravity="center"
                     android:orientation="horizontal" >
-
                     <ImageView
                         android:id="@+id/productFive"
                         android:layout_width="650dp"
@@ -121,14 +108,12 @@
                         android:src="@drawable/producto5_johnnie" />
                 </LinearLayout>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
-                android:layout_weight="30"
+                android:layout_weight="40"
                 android:gravity="center"
                 android:orientation="horizontal" >
-
                 <ImageView
                     android:id="@+id/productSix"
                     android:layout_width="378dp"
@@ -147,16 +132,13 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="50"
-                android:stretchColumns="*" >
-
-                <TableRow >
-
+                android:stretchColumns="*">
+                <TableRow>
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:orientation="horizontal" >
-
                         <ImageView
                             android:id="@+id/productSeven"
                             android:layout_width="550dp"
@@ -164,14 +146,12 @@
                             android:onClick="goToProductSeven"
                             android:src="@drawable/producto7_collar" />
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:gravity="center"
                         android:orientation="horizontal" >
-
-                        <ImageView
+                        <ImageView android:src="@drawable/producto8_collar"
                             android:id="@+id/productEight"
                             android:layout_width="530dp"
                             android:layout_height="350dp"
@@ -179,14 +159,12 @@
                     </LinearLayout>
                 </TableRow>
             </TableLayout>
-
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="50"
                 android:gravity="center"
                 android:orientation="horizontal" >
-
                 <ImageView
                     android:id="@+id/productNine"
                     android:layout_width="550dp"
