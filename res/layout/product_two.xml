@@ -34,5 +34,10 @@
         android:layout_toRightOf="@+id/productimage"
         android:onClick="openBiddingDialog"
         android:src="@drawable/offer_button"/>
-
+	<TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/bidder_2"/>
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/price_2"/>
 </RelativeLayout>

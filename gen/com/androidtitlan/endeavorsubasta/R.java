@@ -249,6 +249,7 @@ containing a value of this type.
         public static final int ic_menu_help_holo_light=0x7f020021;
         public static final int ic_menu_info_details=0x7f020022;
         public static final int info_icon=0x7f020023;
+<<<<<<< HEAD
         public static final int inicio_en=0x7f020024;
         public static final int offer_button=0x7f020025;
         public static final int pane_under_thickbar_background=0x7f020026;
@@ -322,6 +323,78 @@ containing a value of this type.
         public static final int whats_on_separator=0x7f02006a;
         public static final int window_background=0x7f02006b;
         public static final int window_background_home=0x7f02006c;
+=======
+        public static final int offer_button=0x7f020024;
+        public static final int pane_under_thickbar_background=0x7f020025;
+        public static final int panel_button_background=0x7f020026;
+        public static final int panel_button_focused_holo=0x7f020027;
+        public static final int panel_button_pressed_holo=0x7f020028;
+        public static final int pantalla_splash=0x7f020029;
+        public static final int product_activity_necklace2=0x7f02002a;
+        public static final int product_activity_necklace7=0x7f02002b;
+        public static final int product_activity_necklace8=0x7f02002c;
+        public static final int product_activity_necklace9=0x7f02002d;
+        public static final int product_activity_watch1=0x7f02002e;
+        public static final int producto1_reloj=0x7f02002f;
+        public static final int producto1_reloj_selected=0x7f020030;
+        public static final int producto1_reloj_unselected=0x7f020031;
+        public static final int producto2_collar=0x7f020032;
+        public static final int producto2_collar_selected=0x7f020033;
+        public static final int producto2_collar_unselected=0x7f020034;
+        public static final int producto3_collar=0x7f020035;
+        public static final int producto3_collar_selected=0x7f020036;
+        public static final int producto3_collar_unselected=0x7f020037;
+        public static final int producto4_moto=0x7f020038;
+        public static final int producto4_moto_selected=0x7f020039;
+        public static final int producto4_moto_unselected=0x7f02003a;
+        public static final int producto5_johnnie=0x7f02003b;
+        public static final int producto5_johnnie_selected=0x7f02003c;
+        public static final int producto5_johnnie_unselected=0x7f02003d;
+        public static final int producto6_bmw=0x7f02003e;
+        public static final int producto6_bmw_selected=0x7f02003f;
+        public static final int producto6_bmw_unselected=0x7f020040;
+        public static final int producto7_collar=0x7f020041;
+        public static final int producto7_collar_selected=0x7f020042;
+        public static final int producto7_collar_unselected=0x7f020043;
+        public static final int producto8_collar=0x7f020044;
+        public static final int producto8_collar_selected=0x7f020045;
+        public static final int producto8_collar_unselected=0x7f020046;
+        public static final int producto9_collar=0x7f020047;
+        public static final int producto9_collar_selected=0x7f020048;
+        public static final int producto9_collar_unselected=0x7f020049;
+        public static final int progress_vertical=0x7f02004a;
+        public static final int seek_thumb=0x7f02004b;
+        public static final int seek_thumb_normal=0x7f02004c;
+        public static final int seek_thumb_normal_wide=0x7f02004d;
+        public static final int seek_thumb_pressed=0x7f02004e;
+        public static final int seek_thumb_pressed_wide=0x7f02004f;
+        public static final int seek_thumb_selected=0x7f020050;
+        public static final int seek_thumb_selected_wide=0x7f020051;
+        public static final int seek_thumb_wide=0x7f020052;
+        public static final int tab_background=0x7f020053;
+        public static final int tab_indicator=0x7f020054;
+        public static final int tab_off_background=0x7f020055;
+        public static final int tab_selected=0x7f020056;
+        public static final int tab_selected_focused=0x7f020057;
+        public static final int tab_selected_pressed=0x7f020058;
+        public static final int tab_unselected=0x7f020059;
+        public static final int tab_unselected_focused=0x7f02005a;
+        public static final int tab_unselected_pressed=0x7f02005b;
+        public static final int thickbar_left_background_default=0x7f02005c;
+        public static final int thickbar_left_background_interactive=0x7f02005d;
+        public static final int thickbar_left_background_pressed=0x7f02005e;
+        public static final int thickbar_right_background=0x7f02005f;
+        public static final int thickbar_shadow=0x7f020060;
+        public static final int track_dropdown_arrow_dark=0x7f020061;
+        public static final int track_dropdown_arrow_light=0x7f020062;
+        public static final int whats_on_background=0x7f020063;
+        public static final int whats_on_button=0x7f020064;
+        public static final int whats_on_button_default=0x7f020065;
+        public static final int whats_on_button_pressed=0x7f020066;
+        public static final int whats_on_separator=0x7f020067;
+        public static final int window_background=0x7f020068;
+        public static final int window_background_home=0x7f020069;
+>>>>>>> 05fabf4fd76a90f14acad48a65f38c46ea82ce53
     }
     public static final class id {
         public static final int SeekBar02=0x7f080024;
@@ -329,10 +402,20 @@ containing a value of this type.
         public static final int actionbar_compat_container=0x7f080001;
         public static final int actionbar_compat_logo=0x7f080002;
         public static final int actionbar_compat_text=0x7f080003;
+        public static final int bidder_1=0x7f08002f;
+        public static final int bidder_2=0x7f080037;
+        public static final int bidder_3=0x7f080035;
+        public static final int bidder_4=0x7f08002b;
+        public static final int bidder_5=0x7f080029;
+        public static final int bidder_6=0x7f080033;
+        public static final int bidder_7=0x7f080031;
+        public static final int bidder_8=0x7f080027;
+        public static final int bidder_9=0x7f08002d;
         public static final int biddername=0x7f08000f;
         public static final int bidderpass=0x7f080010;
         public static final int blocks_now=0x7f08000c;
         public static final int blocks_ruler=0x7f08000b;
+        public static final int button1=0x7f080039;
         public static final int cancel=0x7f080016;
         public static final int colorstrip=0x7f08000d;
         public static final int dialog_discard_confirm=0x7f080009;
@@ -344,12 +427,26 @@ containing a value of this type.
         public static final int fragment_vendors=0x7f080006;
         public static final int imageView1=0x7f080028;
         public static final int layout_root=0x7f08000e;
+<<<<<<< HEAD
         public static final int menu_about=0x7f08002c;
         public static final int menu_help=0x7f08002b;
+=======
+        public static final int menu_about=0x7f08003d;
+        public static final int menu_help=0x7f08003c;
+>>>>>>> 05fabf4fd76a90f14acad48a65f38c46ea82ce53
         public static final int menu_refresh_progress=0x7f080008;
         public static final int next=0x7f080022;
         public static final int offer_button=0x7f080026;
         public static final int previous=0x7f080017;
+        public static final int price_1=0x7f080030;
+        public static final int price_2=0x7f080038;
+        public static final int price_3=0x7f080036;
+        public static final int price_4=0x7f08002c;
+        public static final int price_5=0x7f08002a;
+        public static final int price_6=0x7f080034;
+        public static final int price_7=0x7f080032;
+        public static final int price_8=0x7f080028;
+        public static final int price_9=0x7f08002e;
         public static final int productEight=0x7f080020;
         public static final int productFive=0x7f08001d;
         public static final int productFour=0x7f08001c;
@@ -364,9 +461,15 @@ containing a value of this type.
         public static final int registro_bidderpass=0x7f080014;
         public static final int registro_bidderusername=0x7f080012;
         public static final int search=0x7f080011;
+<<<<<<< HEAD
         public static final int splash=0x7f080029;
         public static final int startdialog=0x7f080023;
         public static final int tab_label=0x7f08002a;
+=======
+        public static final int splash=0x7f08003a;
+        public static final int startdialog=0x7f080023;
+        public static final int tab_label=0x7f08003b;
+>>>>>>> 05fabf4fd76a90f14acad48a65f38c46ea82ce53
         public static final int termsandconditions=0x7f080015;
         public static final int title=0x7f080027;
     }
@@ -391,8 +494,9 @@ containing a value of this type.
         public static final int product_six=0x7f03000c;
         public static final int product_three=0x7f03000d;
         public static final int product_two=0x7f03000e;
-        public static final int splash=0x7f03000f;
-        public static final int tab_indicator=0x7f030010;
+        public static final int productlayout=0x7f03000f;
+        public static final int splash=0x7f030010;
+        public static final int tab_indicator=0x7f030011;
     }
     public static final class menu {
         public static final int home_menu_items=0x7f0c0000;
