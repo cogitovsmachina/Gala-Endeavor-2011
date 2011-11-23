@@ -2,15 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="horizontal" >
 
     <com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar
         android:id="@+id/SeekBar02"
         android:layout_width="50dip"
-        android:layout_height="fill_parent"
+        android:layout_height="400dp"
         android:layout_margin="15dp"
         android:progressDrawable="@drawable/progress_vertical"
         android:thumb="@drawable/seek_thumb_wide"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
         android:thumbOffset="8dp" />
 
     <ImageView
@@ -19,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="76dp"
+        android:layout_marginLeft="75dp"
         android:layout_marginTop="25dp"
         android:src="@drawable/product_activity_watch1" />
 
@@ -28,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/productimage"
-        android:layout_marginLeft="106dp"
+        android:layout_marginLeft="79dp"
         android:layout_toRightOf="@+id/productimage"
         android:onClick="openBiddingDialog"
         android:src="@drawable/offer_button" />
@@ -38,5 +41,31 @@
     <TextView android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:id="@+id/price_1"/>
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/offer_button"
+        android:layout_alignTop="@+id/productimage"
+        android:src="@drawable/titulo_prendamex"
+        android:paddingBottom="20dp" />
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="145dp"
+        android:src="@drawable/inicio_en" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/title"
+        android:layout_marginLeft="37dp"
+        android:layout_toRightOf="@+id/title"
+        android:src="@drawable/precio_actual" />
 
 </RelativeLayout>
