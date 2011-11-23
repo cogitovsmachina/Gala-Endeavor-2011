@@ -22,10 +22,10 @@ public class ProductActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		
 		//TODO: Implement the needed logic to inflate the layout for each product
-		int resultFromActivity = savedInstanceState.getInt("Product");
+//		int resultFromActivity = savedInstanceState.getInt("Product");
 		
 		
-		setContentView(R.layout.productlayout);
+		setContentView(R.layout.product_one);
 
 	}
 	
