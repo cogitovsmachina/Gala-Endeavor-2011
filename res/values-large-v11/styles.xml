@@ -1,19 +1,11 @@
 <resources>
     <style name="Theme.IOSched.Home" parent="style/Theme.IOSched">
-        <item name="android:windowBackground">@drawable/window_background_home</item>
         <item name="android:actionBarStyle">@null</item>
     </style>
 
     <style name="ListItemContainerBase">
         <item name="android:minHeight">?android:attr/listPreferredItemHeight</item>
         <item name="android:background">?android:attr/activatedBackgroundIndicator</item>
-    </style>
-
-    <style name="WhatsOnStaticItem" parent="style/WhatsOnItemBase">
-        <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/body_text_1</item>
-        <item name="android:maxLines">2</item>
     </style>
 
     <!-- body content -->

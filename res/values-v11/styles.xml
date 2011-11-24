@@ -1,15 +1,9 @@
 <resources>
     <!-- Start with the Holographic Light theme -->
     <style name="Theme.IOSched" parent="android:style/Theme.Holo">
-        <item name="android:windowBackground">@drawable/window_background</item>
-
         <!-- custom attributes -->
         <item name="textHeaderMaxLines">@integer/text_header_max_lines</item>
         <item name="trackAbstractMaxLines">@integer/track_abstract_max_lines</item>
-    </style>
-
-    <style name="Theme.IOSched.Home" parent="style/Theme.IOSched">
-        <item name="android:windowBackground">@drawable/window_background_home</item>
     </style>
 
 </resources>

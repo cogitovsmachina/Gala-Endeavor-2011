@@ -44,6 +44,20 @@ public class Dialog {
                             dialog.dismiss();
                         }
                     });
-about.show();		
+		about.show();		
+	}
+	
+	public static void showMoreInfo(Activity activity, String title, String contents) {
+		AlertDialog.Builder moar = new AlertDialog.Builder(activity)
+        .setTitle(title)
+        .setIcon(android.R.drawable.ic_dialog_info)
+        .setMessage(contents)
+        .setPositiveButton("Continuar",
+                    new android.content.DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+		moar.show();		
 	}
 }

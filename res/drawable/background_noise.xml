@@ -1,6 +1,0 @@
-<!-- 
-Here goes the background tile of all the style ;) 
--->
-<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/background"
-    android:tileMode="repeat" />

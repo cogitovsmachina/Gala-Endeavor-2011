@@ -1,31 +1,45 @@
 package com.androidtitlan.endeavorsubasta;
 
+import java.text.NumberFormat;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.androidtitlan.endeavorsubasta.ui.Dialog;
+import com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar;
+import com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar.OnSeekBarChangeListener;
 
 public class ProductActivity extends Activity {
 	
 	private static final int MY_CUSTOM_DIALOG = 0;
-
+	private static final int MAXIMUM_BID_AMOUNT = 10000;
+	private int activeProduct;
+	/**
+	 * TextViews dinamicos de Nombre del ultimo bidder y precio actual
+	 */
+	TextView ofertante=null;
+	TextView precioActual=null;
+	TextView precioInicial=null;
+	VerticalSeekBar vsk = null;
+	TextView seekBarSlave = null;
+	TextView yourBid = null;
+	int actualPrice, userBid;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		/**
-		 * TextViews dinamicos de Nombre del ultimo bidder y precio actual
-		 */
-		TextView ofertante=null;
-		TextView precioActual=null;
 		/**
 		 * Inflado especifico del layout para cada producto
 		 */
@@ -34,60 +48,129 @@ public class ProductActivity extends Activity {
 		switch(selectedProduct){
 		case 1:
 			setContentView(R.layout.product_one);
+			setTitle("El Grande Reverso");
+			vsk=(VerticalSeekBar)findViewById(R.id.seekbar1);
+			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave1);
+			yourBid=(TextView)findViewById(R.id.offer1);
+			precioInicial=(TextView)findViewById(R.id.initial_price_1);
 			ofertante=(TextView)findViewById(R.id.bidder_1);
 			precioActual=(TextView)findViewById(R.id.price_1);
+			activeProduct=1;
 			break;
 		case 2:
 			setContentView(R.layout.product_two);
+			setTitle("Collar Oro Rojo y Oro Blanco");
+			vsk=(VerticalSeekBar)findViewById(R.id.seekbar2);
+			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave2);
+			yourBid=(TextView)findViewById(R.id.offer2);
+			precioInicial=(TextView)findViewById(R.id.initial_price_2);
 			ofertante=(TextView)findViewById(R.id.bidder_2);
 			precioActual=(TextView)findViewById(R.id.price_2);
-			
+			activeProduct=2;
 			break;
 		case 3:
 			setContentView(R.layout.product_three);
+			setTitle("Collar Infinito Rosé");
+			vsk=(VerticalSeekBar)findViewById(R.id.seekbar3);
+			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave3);
+			yourBid=(TextView)findViewById(R.id.offer3);
+			precioInicial=(TextView)findViewById(R.id.initial_price_3);
 			ofertante=(TextView)findViewById(R.id.bidder_3);
 			precioActual=(TextView)findViewById(R.id.price_3);
+			activeProduct=3;
 			break;
 		case 4:
 			setContentView(R.layout.product_four);
+			setTitle("Margie");
+			vsk=(VerticalSeekBar)findViewById(R.id.seekbar4);
+			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave4);
+			yourBid=(TextView)findViewById(R.id.offer4);
+			precioInicial=(TextView)findViewById(R.id.initial_price_4);
 			ofertante=(TextView)findViewById(R.id.bidder_4);
 			precioActual=(TextView)findViewById(R.id.price_4);
+			activeProduct=4;
 			break;
 		case 5:
 			setContentView(R.layout.product_five);
+			setTitle("Johnnie Walker Blue Label: King George V Edition");
+			vsk=(VerticalSeekBar)findViewById(R.id.seekbar5);
+			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave5);
+			yourBid=(TextView)findViewById(R.id.offer5);
+			precioInicial=(TextView)findViewById(R.id.initial_price_5);
 			ofertante=(TextView)findViewById(R.id.bidder_5);
 			precioActual=(TextView)findViewById(R.id.price_5);
+			activeProduct=5;
 			break;
 		case 6:
 			setContentView(R.layout.product_six);
+			setTitle("528iA Lujo (Automático)");
+			vsk=(VerticalSeekBar)findViewById(R.id.seekbar6);
+			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave6);
+			yourBid=(TextView)findViewById(R.id.offer6);
+			precioInicial=(TextView)findViewById(R.id.initial_price_6);
 			ofertante=(TextView)findViewById(R.id.bidder_6);
 			precioActual=(TextView)findViewById(R.id.price_6);
+			activeProduct=6;
 			break;
 		case 7:
 			setContentView(R.layout.product_seven);
+			setTitle("Subasta de Oro");
+			vsk=(VerticalSeekBar)findViewById(R.id.seekbar7);
+			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave7);
+			yourBid=(TextView)findViewById(R.id.offer7);
+			precioInicial=(TextView)findViewById(R.id.initial_price_7);
 			ofertante=(TextView)findViewById(R.id.bidder_7);
 			precioActual=(TextView)findViewById(R.id.price_7);
+			activeProduct=7;
 			break;
 		case 8:
 			setContentView(R.layout.product_eight);
+			setTitle("Subasta de Oro");
+			vsk=(VerticalSeekBar)findViewById(R.id.seekbar8);
+			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave8);
+			yourBid=(TextView)findViewById(R.id.offer8);
+			precioInicial=(TextView)findViewById(R.id.initial_price_8);
 			ofertante=(TextView)findViewById(R.id.bidder_8);
 			precioActual=(TextView)findViewById(R.id.price_8);
+			activeProduct=8;
 			break;
 		case 9:
 			setContentView(R.layout.product_nine);
+			setTitle("Subasta de Oro");
+			vsk=(VerticalSeekBar)findViewById(R.id.seekbar9);
+			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave9);
+			yourBid=(TextView)findViewById(R.id.offer9);
+			precioInicial=(TextView)findViewById(R.id.initial_price_9);
 			ofertante=(TextView)findViewById(R.id.bidder_9);
 			precioActual=(TextView)findViewById(R.id.price_9);
+			activeProduct=9;
 			break;
 		}
 		/**
 		 * TODO:Realizar conexion al server y obtener String de nombre del bidder y precio actual
 		 */
+		actualPrice = 100000000;
+		String initialPrice="100000.00";
+		String sActualPrice=Integer.toString(actualPrice);
+        precioInicial.setText(darFormato(initialPrice));
+        precioActual.setText(darFormato(sActualPrice));
+        
+            
 		String bidderName;
-		int    price;
-		price=1000000;
-		bidderName="El exitoso Enrique Díaz";
+		bidderName="Genghis Khan";
 		ofertante.setText(bidderName);
-		precioActual.setText(Integer.toString(price));
+		vsk.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
+			@Override
+			public void onStopTrackingTouch(VerticalSeekBar seekBar) {				
+			}
+			@Override
+			public void onStartTrackingTouch(VerticalSeekBar seekBar) {				
+			}
+			@Override
+			public void onProgressChanged(VerticalSeekBar seekBar, int progress, boolean fromUser) {
+				updateSeekBarSlave(progress);
+			}
+		});
 	}
 	
 	@Override
@@ -128,6 +211,10 @@ public class ProductActivity extends Activity {
      * This is a method binded with the Button Onclick property
      */
     public void openBiddingDialog(View v){
+    	if(userBid<=actualPrice){
+    		Toast.makeText(getApplicationContext(), "Por favor haga una oferta mayor a la actual.", Toast.LENGTH_LONG).show();
+    		return;
+    	}
     	Intent intent = new Intent(this, BiddingDialog.class);
     	startActivityForResult(intent, MY_CUSTOM_DIALOG);    
     	}
@@ -152,5 +239,73 @@ public class ProductActivity extends Activity {
         	default:
                 return super.onOptionsItemSelected(item);
         }
-    }  
+    }
+    
+    public String darFormato(String s){
+    	String cleanString = s.toString().replaceAll("[$,.]", "");
+        double parsed = Double.parseDouble(cleanString);
+        String formated = NumberFormat.getCurrencyInstance().format((parsed/100));
+        return formated;
+    }
+    
+    public void moreInfoOnProduct(View v){
+    	String title=null, contents=null;
+    	switch(activeProduct){
+    	case(1):
+    		title="El Grande Reverso";
+    		contents="El Grande Reverso luce una edición inédita de 30 x 48.5 mm y se caracteriza por su esfera plateada de espléndida sobriedad ornamentada con dígitos tradicionales del estilo Art Deco y un doble acabado: mientras el rectángulo del centro presenta un motivo guilloqueado con Clous de París, la parte exterior enarbola un acabado satinado. Ésta delicada alternancia ornamental se repite en el contador del segundero pequeño situado a las 6 horas. El Grande Reverso está animado por el nuevo Calibre 976, visible a través del fondo de cristal de zafiro. Posee todas las características de los movimientos robustos y precisos desarrollados por la manufactura Jaeger-LeCoultre y está equipado con un volante de inercia variable que palpita con una frecuencia de 28,800 alternancias por hora.";
+    		break;
+    	case(2):
+    		title="Collar Peyrelongue";
+    		contents="Collar Oro Rojo y Blanco\n\nKilataje Oro: 18K\nKilataje Diamantes: 1.64 ct";
+    		break;
+    	case(3):
+    		title="Collar Infinito Rosé";
+    		contents="Collar de la Colección Infinito Elite Rosé\n\nPlata .925\nBaño de Oro Rosa de 22K\nZirconias montadas en Pavé";
+    		break;
+    	case(4):
+    		title="Margie";
+    		contents="La Margie es una motocicleta tipo Bobber de cuadro rígido, con suspensión frontal tipo Springer, asiento en piel terminado a mano, Motor 125 cc de 4 tiempos, de 4 velocidades y 7.5 caballos de fuerza y una velocidad de más de 100km/hr.\nLas Margies son motocicletas urbanas con cambio semiautomático en tipo Shifter y Jockey haciéndola totalmente clásica, esto aunado a una suspensión de resorte trasero fabricado en acero pulido y cromado montado en un asiento de inyección de poliuretano con base de gel para reducir el impacto en la columna.\nCuenta con llanta delantera de 18 pulgadas con freno de disco y atrás llanta de 15 Pulgadas con freno de tambor.\nEncendido eléctrico y de patada, batería de seis celdas libre de mantenimiento.";
+    		break;
+    	case(5):
+    		title="Johnnie Walker Blue Label";
+    		contents="Johnnie Walker Blue Label: King George V Edition, celebra la primera Orden Real dada a la compañia John Walker and Sons Ltda., para proveer Scotch whisky a la Casa Real Británica, en 1934. Haciendo honor a su herencia, ésta exquisita mezcla ha sido hecha a mano utilizando las técnicas de la época, y usando whiskies de las destilerías que operaban durante el reinado de George V.\n\nCaracterísticas:\n-Olfato: un aroma inicial profundamente ahumado seguido de una dulce y afrutada sensación (a manzanas, peras, bananas) propia de las maltas; que desemboca en una complejidad rica en frutos secos y especiados (uvas, pasas, higos, canela).\n-Paladar: suave, con una rica y afrutada dulzura. Calienta el paladar con sutiles sabores a madera de sándalo y humo.\n-Sabor: fuerte, complejo, rico y suave.\n-Sensación final: cálido en la boca con un prolongado final rico en turba.\n-Con Agua: libera nuevos sabores más frescos y afrutados, y deja una sensación ahumada en el paladar.";
+    		break;
+    	case(6):
+    		title="528iA de Lujo";
+    		contents="Alpine White/Leather Dakota Cinnamon Brown\nChasis:C859775\n\nValor comercial: 56,300 USD\n*El tiempo de entrega del coche será de al menos 15 días.";
+    		break;
+    	case(7):
+    		title="Subasta de Oro";
+    		contents="Collar de Oro Tipo Cartier\nKilataje: 14K.\nPeso: 28.3 grs.";
+    		break;
+    	case(8):
+    		title="Subasta de Oro";
+    		contents="Collar de Oro Torsal\nKilataje: 10K. Peso: 116 grs.";
+    		break;
+    	case(9):
+    		title="Subasta de Oro";
+    		contents="Collar de Oro Barbado\nKilataje: 10K.\nPeso: 120 grs.";
+    		break;
+    	}
+    	Dialog.showMoreInfo(this, title, contents);
+    }
+    
+    public void updateSeekBarSlave(int progress){
+    	int bid=MAXIMUM_BID_AMOUNT*progress;
+    	String sBid = darFormato(Integer.toString(bid));
+    	seekBarSlave.setText("+"+sBid);
+    	
+    	int textOffset=(int) (5.35*progress);
+    	textOffset=598-textOffset;
+    	Resources r = getResources();
+    	float topPx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, textOffset, r.getDisplayMetrics());
+    	float rightPx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 6, r.getDisplayMetrics());
+    	LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+    	lp.setMargins(0, (int)topPx, (int)rightPx, 0);
+    	seekBarSlave.setLayoutParams(lp);
+    	
+    	userBid=actualPrice+bid;
+    	yourBid.setText(darFormato(Integer.toString(userBid)));
+    }
 }

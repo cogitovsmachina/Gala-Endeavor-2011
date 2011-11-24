@@ -2,42 +2,158 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-
- 
-
-        <com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar
-            android:id="@+id/SeekBar02"
-            android:layout_width="50dip"
-            android:layout_height="fill_parent"
-            android:layout_margin="15dp"
-            android:progressDrawable="@drawable/progress_vertical"
-            android:thumb="@drawable/seek_thumb_wide"
-            android:thumbOffset="8dp" />
-
-    <Button
-        android:id="@+id/productimage"
-        android:layout_width="500dp"
-        android:layout_height="500dp"
+    android:orientation="horizontal">
+    <LinearLayout android:id="@+id/product_image3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="84dp"
-        android:layout_marginTop="26dp"
-        android:text="Button" />
-
-    <ImageView
-        android:id="@+id/offer_button"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="33dp"
-        android:layout_toRightOf="@+id/productimage"
-        android:onClick="openBiddingDialog"
-        android:src="@drawable/offer_button"/>
-	<TextView android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="50dp">
+       	<ImageView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="40dp"
+	        android:src="@drawable/product_activity_necklace3"
+	        android:layout_marginBottom="10dp"/>
+       	<ImageView android:src="@drawable/logo_necklace3"
+       	    android:layout_height="wrap_content"
+       	    android:layout_width="wrap_content"
+       	    android:layout_gravity="center_horizontal"
+       	    android:layout_marginBottom="10dp"/>
+	    <ImageView android:src="@drawable/button_moreinfo"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:onClick="moreInfoOnProduct"
+	        android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/product_image3"
+        android:layout_marginLeft="50dp">
+       	<ImageView android:id="@+id/title3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/title_necklace3"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginBottom="20dp"/>
+	    <LinearLayout android:id="@+id/containerPrices3"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_width="wrap_content"
+	        android:layout_below="@id/title3"
+	        android:orientation="horizontal"
+	        android:layout_marginBottom="20dp">
+	        <LinearLayout android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:orientation="vertical"
+		        android:layout_marginRight="15dp">
+			    <ImageView android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:src="@drawable/texto_inicio"
+			        android:layout_marginBottom="5dp"/>
+		        <TextView android:layout_height="wrap_content"
+			        android:layout_width="wrap_content"
+			        android:id="@+id/initial_price_3"
+			        android:background="@drawable/barra_inicio"
+			        android:gravity="center"
+			        android:textColor="#000"
+			        android:textSize="20dp"/>
+	   		</LinearLayout>
+	   		<LinearLayout android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:orientation="vertical"
+		        android:layout_marginLeft="15dp">
+			    <ImageView android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:src="@drawable/texto_precio_actual"
+			        android:layout_marginBottom="5dp"/>
+		        <TextView android:layout_height="wrap_content"
+			        android:layout_width="wrap_content"
+			        android:id="@+id/price_3"
+			        android:background="@drawable/barra_precio_actual"
+			        android:gravity="center"
+			        android:textColor="#000"
+			        android:textSize="20dp"/>
+	   		</LinearLayout>
+	    </LinearLayout>
+	    <LinearLayout android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	     	android:layout_below="@id/containerPrices3"
+	     	android:layout_centerHorizontal="true"
+	     	android:layout_marginTop="50dp"
+	     	android:id="@+id/last_bidder3">
+	       	<ImageView android:src="@drawable/text_ultimo_ofertante"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		     	android:id="@+id/bidderTitle3"
+		     	android:layout_gravity="center_horizontal"/>
+		    <TextView android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:id="@+id/bidder_3"
+		        android:textColor="#fff"
+				android:textSize="25dp"
+				android:gravity="center"
+				android:layout_gravity="center_horizontal"/>
+	    </LinearLayout>
+	    <ImageView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/dotted_line"
+	        android:layout_below="@id/last_bidder3"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="35dp"/>
+	    <LinearLayout android:layout_height="wrap_content"
+		        android:layout_width="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:orientation="horizontal"
+		        android:layout_above="@+id/offer_button"
+		        android:layout_marginBottom="20dp">
+			    <ImageView android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:src="@drawable/texto_tuoferta"
+			        android:layout_gravity="center_vertical"
+			        android:layout_marginRight="5dp"/>
+		        <TextView android:layout_height="wrap_content"
+			        android:layout_width="wrap_content"
+			        android:id="@+id/offer3"
+			        android:background="@drawable/barra_tuoferta"
+			        android:gravity="center"
+			        android:textColor="#000"
+			        android:textSize="20dp"/>
+	   		</LinearLayout>
+	    <ImageView
+	        android:id="@+id/offer_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginBottom="55dp"
+	        android:onClick="openBiddingDialog"
+	        android:src="@drawable/bidding_button"/>
+    </RelativeLayout>
+    <LinearLayout android:layout_height="fill_parent"
         android:layout_width="wrap_content"
-        android:id="@+id/bidder_3"/>
-    <TextView android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/price_3"/>
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:layout_centerVertical="true">
+        <TextView android:layout_toLeftOf="@+id/seekbar3"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_marginRight="6dp"
+	        android:textColor="#089bb2"
+	        android:textSize="25dp"
+	        android:textStyle="bold"
+	        android:layout_marginTop="598dp"        
+	        android:id="@+id/seekBarSlave3"/><!-- 63 max / 598 min -->
+		<com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar
+	        android:id="@+id/seekbar3"
+	        android:layout_width="70dip"
+	        android:layout_height="586dp"
+	        android:progressDrawable="@drawable/progress_vertical"
+	        android:thumb="@drawable/seekbar_thumb"
+	        android:thumbOffset="15dp"
+	        android:background="@drawable/seekbar_gray"
+	        android:layout_gravity="center_vertical"/>
+    </LinearLayout>
 </RelativeLayout>

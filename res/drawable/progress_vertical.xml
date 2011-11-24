@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@android:id/background" >
+    <!-- <item android:id="@android:id/background" >
+        <bitmap android:src="@drawable/seekbar_gray"/>
         <shape>
             <corners android:radius="5dip" />
             <gradient
-                    android:startColor="#ff9d9e9d"
-                    android:centerColor="#ff5a5d5a"
+                    android:startColor="#c9d0d9"
+                    android:centerColor="#afb8c4"
                     android:centerX="0.75"
-                    android:endColor="#ff747674"
+                    android:endColor="#fdfdfd"
                     android:angle="0"
             />
         </shape>
     </item>
     <item android:id="@android:id/secondaryProgress" >
         <clip android:clipOrientation="vertical" android:gravity="bottom" >
+            <bitmap android:src="@drawable/seekbar_gray"/>
             <shape>
                 <corners android:radius="5dip" />
                 <gradient
@@ -26,20 +28,22 @@
                 />
             </shape>
         </clip>
-    </item>
+    </item> -->
 
     <item android:id="@android:id/progress" >
+        
         <clip android:clipOrientation="vertical" android:gravity="bottom" >
+            <bitmap android:src="@drawable/seekbar_blue"/><!-- 
             <shape>
                 <corners android:radius="5dip" />
                 <gradient
-                        android:startColor="#ffffd300"
-                        android:centerColor="#ffffb600"
+                        android:startColor="#09b7c5"
+                        android:centerColor="#0793a5"
                         android:centerX="0.75"
-                        android:endColor="#ffffcb00"
+                        android:endColor="#0ee9ed"
                         android:angle="0"
                 />
-            </shape>
+            </shape> -->
         </clip>
     </item>
 

@@ -1,6 +1,0 @@
-<selector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:exitFadeDuration="@android:integer/config_mediumAnimTime">
-    <item android:state_pressed="true" android:drawable="@drawable/panel_button_pressed_holo" />
-    <item android:state_selected="true" android:drawable="@drawable/panel_button_focused_holo" />
-    <item android:drawable="@android:color/transparent" />
-</selector>

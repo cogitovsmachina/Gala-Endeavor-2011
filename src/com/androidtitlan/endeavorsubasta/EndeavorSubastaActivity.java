@@ -108,8 +108,9 @@ public class EndeavorSubastaActivity extends Activity {
 	@Override
 	protected void onStart() {
 	    super.onStart();
-	    ActionBar actionBar = this.getActionBar();
-	    actionBar.setDisplayHomeAsUpEnabled(true);
+	    ActionBar ab = getActionBar();
+	      ab.setDisplayUseLogoEnabled(true);
+	      setTitle("Gala Endeavor 2011");
 	}
 	    
     /**
