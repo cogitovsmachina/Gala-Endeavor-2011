@@ -65,7 +65,7 @@ public class VerticalSeekBar extends AbsVerticalSeekBar {
         super(context, attrs, defStyle);
     }
 
-    @Override
+    
     void onProgressRefresh(float scale, boolean fromUser) {
         super.onProgressRefresh(scale, fromUser);
 
@@ -86,14 +86,14 @@ public class VerticalSeekBar extends AbsVerticalSeekBar {
         mOnSeekBarChangeListener = l;
     }
 
-    @Override
+    
     void onStartTrackingTouch() {
         if (mOnSeekBarChangeListener != null) {
             mOnSeekBarChangeListener.onStartTrackingTouch(this);
         }
     }
 
-    @Override
+    
     void onStopTrackingTouch() {
         if (mOnSeekBarChangeListener != null) {
             mOnSeekBarChangeListener.onStopTrackingTouch(this);

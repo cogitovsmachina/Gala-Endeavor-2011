@@ -1,9 +1,4 @@
 <resources>
     <!-- Start with the Holographic Light theme -->
-    <style name="Theme.IOSched" parent="android:style/Theme.Holo">
-        <!-- custom attributes -->
-        <item name="textHeaderMaxLines">@integer/text_header_max_lines</item>
-        <item name="trackAbstractMaxLines">@integer/track_abstract_max_lines</item>
-    </style>
-
+   
 </resources>

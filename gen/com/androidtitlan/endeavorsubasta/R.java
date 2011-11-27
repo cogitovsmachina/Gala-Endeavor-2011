@@ -550,22 +550,9 @@ containing a value of this type.
         /**  a simple list item is one whose container and content are the same view 
          */
         public static final int SimpleListItem=0x7f0b0004;
-        public static final int TextBody=0x7f0b000b;
-        /**  body content 
-         */
-        public static final int TextHeader=0x7f0b0007;
-        public static final int TextHeader2=0x7f0b0009;
-        public static final int TextHeader3=0x7f0b000a;
-        /**  body content 
-         */
-        public static final int TextHeaderSub=0x7f0b0008;
         /**  Base application theme is the default theme. 
          */
         public static final int Theme=0x7f0b0000;
-        /**  Start with the Holographic Light theme 
-         */
-        public static final int Theme_IOSched=0x7f0b000c;
-        public static final int Theme_IOSched_Home=0x7f0b000d;
     }
     public static final class styleable {
         /** Attributes that can be used with a AppTheme.

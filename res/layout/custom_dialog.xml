@@ -1,91 +1,144 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_root"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="10dp">
-    <LinearLayout android:orientation="horizontal"
-    	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content">
-    	<LinearLayout android:orientation="vertical"
-	    	android:layout_width="wrap_content"
-	    	android:layout_height="wrap_content"
-	    	android:id="@+id/login">
-	    	<EditText 
-		        android:id="@+id/biddername"
-		        android:hint="Nombre de usuario"
-		        android:layout_width="300dp"
-		        android:layout_height="wrap_content"/>
-		    <TableLayout android:layout_width="fill_parent"
-		    	android:layout_height="wrap_content">
-		    	<TableRow>
-		    		<Button 
-				        android:id="@+id/search" 
-				        android:layout_width="wrap_content"
-				        android:layout_height="fill_parent" 
-				        android:text="Aceptar"
-				        android:layout_weight="1.0"
-				        android:onClick="returnNamefromBiddingDialog"
-				        android:layout_gravity="center_horizontal"/>
-				    <Button 
-				        android:layout_width="wrap_content"
-				        android:layout_height="wrap_content" 
-				        android:text="Cancelar"
-				        android:onClick="cancelBiddingDialog"
-				        android:layout_gravity="center_horizontal"/>
-		    	</TableRow>
-		    </TableLayout>
-	    </LinearLayout>
-	    <Button android:id="@+id/midButton" 
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content" 
-	        android:text="Registro"
-	        android:onClick="cambioEntreRegistroLogin"
-	        android:layout_gravity="center_vertical"/>
-	    <!-- <View android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingresa tu nombre de usuario"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/biddername"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Ejemplo:usuario123" />
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow >
+
+                    <Button
+                        android:id="@+id/search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1.0"
+                        android:onClick="returnNamefromBiddingDialog"
+                        android:text="Aceptar" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="cancelBiddingDialog"
+                        android:text="Cancelar" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/midButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:onClick="cambioEntreRegistroLogin"
+            android:text="Registro" />
+        <!--
+             <View android:layout_height="fill_parent"
 	        android:background="@drawable/gradientline"
 	        android:layout_width="1dp"
-	        android:layout_margin="10dp"/>-->
-	    <LinearLayout android:orientation="vertical"
-	    	android:id="@+id/registro"
-	    	android:visibility="gone"
-	    	android:layout_width="wrap_content"
-	    	android:layout_height="wrap_content">
-	    	<EditText android:id="@+id/registro_bidderusername"
-		        android:hint="Nombre de Usuario"
-		        android:layout_width="300dp"
-		        android:layout_height="wrap_content"/>
-		    <EditText android:id="@+id/registro_biddername"
-		        android:hint="Nombre Completo"
-		        android:layout_width="300dp"
-		        android:layout_height="wrap_content"/>
-		    <EditText android:id="@+id/registro_biddertable"
-		        android:hint="Número de mesa"
-		        android:layout_width="300dp"
-		        android:layout_height="wrap_content"/>
-		    <CheckBox 
-		        android:id="@+id/termsandconditions"
-		    	android:layout_width="300dp"
-		    	android:layout_height="wrap_content"
-		    	android:checked="false"
-		    	android:text="Acepto los términos y condiciones"/>
-		    <TableLayout android:layout_width="fill_parent"
-		    	android:layout_height="wrap_content">
-		    	<TableRow>
-		    		<Button 
-				        android:layout_width="wrap_content"
-				        android:layout_height="fill_parent" 
-				        android:text="Aceptar"
-				        android:onClick="registerNewUser"
-				        android:layout_gravity="center_horizontal"/>
-				    <Button 
-				        android:layout_width="wrap_content"
-				        android:layout_height="wrap_content" 
-				        android:text="Cancelar"
-				        android:onClick="cancelBiddingDialog"
-				        android:layout_gravity="center_horizontal"/>
-		    	</TableRow>
-		    </TableLayout>
-	    </LinearLayout>
+	        android:layout_margin="10dp"/>
+        -->
+
+        <LinearLayout
+            android:id="@+id/registro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingresa tu nombre de usuario"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/registro_bidderusername"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Ejemplo:usuario123" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingresa tu nombre completo"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/registro_biddername"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Ejemplo:Carlos Guerrero Macías" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingresa tu número de mesa"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/registro_biddertable"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Ejemplo:70" />
+
+            <CheckBox
+                android:id="@+id/termsandconditions"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Acepto los términos y condiciones" />
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="registerNewUser"
+                        android:text="Aceptar" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:onClick="cancelBiddingDialog"
+                        android:text="Cancelar" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>

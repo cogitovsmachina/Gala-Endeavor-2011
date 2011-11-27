@@ -1,27 +1,7 @@
 <resources>
-    <style name="Theme.IOSched.Home" parent="style/Theme.IOSched">
-        <item name="android:actionBarStyle">@null</item>
-    </style>
-
     <style name="ListItemContainerBase">
         <item name="android:minHeight">?android:attr/listPreferredItemHeight</item>
         <item name="android:background">?android:attr/activatedBackgroundIndicator</item>
     </style>
 
-    <!-- body content -->
-
-    <style name="TextHeaderSub">
-        <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:textColor">@color/body_text_2</item>
-        <item name="android:textIsSelectable">true</item>
-    </style>
-
-    <style name="TextBody">
-        <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="android:typeface">serif</item>
-        <item name="android:lineSpacingMultiplier">1.3</item>
-        <item name="android:textColor">@color/body_text_1</item>
-        <item name="android:textIsSelectable">true</item>
-    </style>
 </resources>
