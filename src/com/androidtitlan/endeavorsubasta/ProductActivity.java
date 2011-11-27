@@ -160,13 +160,13 @@ public class ProductActivity extends Activity {
 		bidderName="Genghis Khan";
 		ofertante.setText(bidderName);
 		vsk.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
-			@Override
+			
 			public void onStopTrackingTouch(VerticalSeekBar seekBar) {				
 			}
-			@Override
+			
 			public void onStartTrackingTouch(VerticalSeekBar seekBar) {				
 			}
-			@Override
+			
 			public void onProgressChanged(VerticalSeekBar seekBar, int progress, boolean fromUser) {
 				updateSeekBarSlave(progress);
 			}
