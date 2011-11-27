@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +36,7 @@ public class ProductActivity extends Activity {
 	VerticalSeekBar vsk = null;
 	TextView seekBarSlave = null;
 	TextView yourBid = null;
+	ImageView seekBarTextImage = null;
 	int actualPrice, userBid;
 
 	@Override
@@ -49,6 +51,7 @@ public class ProductActivity extends Activity {
 		case 1:
 			setContentView(R.layout.product_one);
 			setTitle("El Grande Reverso");
+			seekBarTextImage=(ImageView)findViewById(R.id.image_textodeslice1);
 			vsk=(VerticalSeekBar)findViewById(R.id.seekbar1);
 			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave1);
 			yourBid=(TextView)findViewById(R.id.offer1);
@@ -60,6 +63,7 @@ public class ProductActivity extends Activity {
 		case 2:
 			setContentView(R.layout.product_two);
 			setTitle("Collar Oro Rojo y Oro Blanco");
+			seekBarTextImage=(ImageView)findViewById(R.id.image_textodeslice2);
 			vsk=(VerticalSeekBar)findViewById(R.id.seekbar2);
 			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave2);
 			yourBid=(TextView)findViewById(R.id.offer2);
@@ -71,6 +75,7 @@ public class ProductActivity extends Activity {
 		case 3:
 			setContentView(R.layout.product_three);
 			setTitle("Collar Infinito Rosé");
+			seekBarTextImage=(ImageView)findViewById(R.id.image_textodeslice3);
 			vsk=(VerticalSeekBar)findViewById(R.id.seekbar3);
 			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave3);
 			yourBid=(TextView)findViewById(R.id.offer3);
@@ -82,6 +87,7 @@ public class ProductActivity extends Activity {
 		case 4:
 			setContentView(R.layout.product_four);
 			setTitle("Margie");
+			seekBarTextImage=(ImageView)findViewById(R.id.image_textodeslice4);
 			vsk=(VerticalSeekBar)findViewById(R.id.seekbar4);
 			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave4);
 			yourBid=(TextView)findViewById(R.id.offer4);
@@ -92,6 +98,7 @@ public class ProductActivity extends Activity {
 			break;
 		case 5:
 			setContentView(R.layout.product_five);
+			seekBarTextImage=(ImageView)findViewById(R.id.image_textodeslice5);
 			setTitle("Johnnie Walker Blue Label: King George V Edition");
 			vsk=(VerticalSeekBar)findViewById(R.id.seekbar5);
 			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave5);
@@ -104,6 +111,7 @@ public class ProductActivity extends Activity {
 		case 6:
 			setContentView(R.layout.product_six);
 			setTitle("528iA Lujo (Automático)");
+			seekBarTextImage=(ImageView)findViewById(R.id.image_textodeslice6);
 			vsk=(VerticalSeekBar)findViewById(R.id.seekbar6);
 			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave6);
 			yourBid=(TextView)findViewById(R.id.offer6);
@@ -115,6 +123,7 @@ public class ProductActivity extends Activity {
 		case 7:
 			setContentView(R.layout.product_seven);
 			setTitle("Subasta de Oro");
+			seekBarTextImage=(ImageView)findViewById(R.id.image_textodeslice7);
 			vsk=(VerticalSeekBar)findViewById(R.id.seekbar7);
 			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave7);
 			yourBid=(TextView)findViewById(R.id.offer7);
@@ -126,6 +135,7 @@ public class ProductActivity extends Activity {
 		case 8:
 			setContentView(R.layout.product_eight);
 			setTitle("Subasta de Oro");
+			seekBarTextImage=(ImageView)findViewById(R.id.image_textodeslice8);
 			vsk=(VerticalSeekBar)findViewById(R.id.seekbar8);
 			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave8);
 			yourBid=(TextView)findViewById(R.id.offer8);
@@ -137,6 +147,7 @@ public class ProductActivity extends Activity {
 		case 9:
 			setContentView(R.layout.product_nine);
 			setTitle("Subasta de Oro");
+			seekBarTextImage=(ImageView)findViewById(R.id.image_textodeslice9);
 			vsk=(VerticalSeekBar)findViewById(R.id.seekbar9);
 			seekBarSlave=(TextView)findViewById(R.id.seekBarSlave9);
 			yourBid=(TextView)findViewById(R.id.offer9);
@@ -150,10 +161,9 @@ public class ProductActivity extends Activity {
 		 * TODO:Realizar conexion al server y obtener String de nombre del bidder y precio actual
 		 */
 		actualPrice = 100000000;
-		String initialPrice="100000.00";
 		String sActualPrice=Integer.toString(actualPrice);
-        precioInicial.setText(darFormato(initialPrice));
-        precioActual.setText(darFormato(sActualPrice));
+        precioInicial.setText(setInitialPrice(activeProduct)+" USD");
+        precioActual.setText(darFormato(sActualPrice)+" USD");
         
             
 		String bidderName;
@@ -291,10 +301,35 @@ public class ProductActivity extends Activity {
     	Dialog.showMoreInfo(this, title, contents);
     }
     
+    public String setInitialPrice(int product){
+    	switch(product){
+    	case 1:
+    		return darFormato("7855.00");
+    	case 2:
+    		return darFormato("8500.00");
+    	case 3:
+    		return darFormato("2500.00");
+    	case 4:
+    		return darFormato("12000.00");
+    	case 5:
+    		return darFormato("615.00");
+    	case 6:
+    		return darFormato("46531.00");
+    	case 7:
+    		return darFormato("1425.00");
+    	case 8:
+    		return darFormato("3600.00");
+    	case 9:
+    		return darFormato("3980.00");
+    	}
+    	return "???";
+    }
+    
     public void updateSeekBarSlave(int progress){
     	int bid=MAXIMUM_BID_AMOUNT*progress;
     	String sBid = darFormato(Integer.toString(bid));
     	seekBarSlave.setText("+"+sBid);
+    	seekBarTextImage.setVisibility(8);
     	
     	int textOffset=(int) (5.35*progress);
     	textOffset=598-textOffset;
@@ -306,6 +341,6 @@ public class ProductActivity extends Activity {
     	seekBarSlave.setLayoutParams(lp);
     	
     	userBid=actualPrice+bid;
-    	yourBid.setText(darFormato(Integer.toString(userBid)));
+    	yourBid.setText(darFormato(Integer.toString(userBid))+" USD");
     }
 }
