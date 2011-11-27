@@ -22,6 +22,6 @@
             	  android:screenOrientation="landscape"/>
         <activity android:label="Inicie Sesión o Regístrese"
             	android:name=".BiddingDialog" 
-            	android:theme="@android:style/Theme.Dialog"/>
+            	android:theme="@style/DialogTheme"/>
     </application>
 </manifest>

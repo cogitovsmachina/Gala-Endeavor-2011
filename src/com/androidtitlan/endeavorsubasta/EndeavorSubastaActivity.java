@@ -114,8 +114,8 @@ public class EndeavorSubastaActivity extends Activity {
 	      ab.setDisplayUseLogoEnabled(true);
 	      setTitle("Gala Endeavor 2011");
 	}
-	    
-    /**
+
+	/**
      * This is a method binded with the Button Onclick property
      */
     public void goToProductActivity(View v){

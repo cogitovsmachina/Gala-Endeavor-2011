@@ -1,6 +1,9 @@
 <resources>
     <!-- Base application theme is the default theme. -->
-    <style name="Theme" parent="android:style/Theme" />
+    <style name="Theme" parent="android:style/Theme"/>
+    
+    <style name="DialogTheme" parent="android:style/Theme.Translucent">
+    </style>
 
     <style name="ListItemTitle">
         <item name="android:textStyle">bold</item>

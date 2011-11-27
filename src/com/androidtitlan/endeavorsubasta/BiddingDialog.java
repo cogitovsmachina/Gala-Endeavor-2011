@@ -2,12 +2,15 @@ package com.androidtitlan.endeavorsubasta;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.View;
-import android.widget.Button;
+import android.view.Window;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 
@@ -22,23 +25,16 @@ public class BiddingDialog extends Activity {
 	
 	private EditText nameEdit, nameRegistroEdit, userNameEdit, tableNumberEdit;
 	private CheckBox acceptedTermsAndConditions;
-	private LinearLayout registro, login;
-	private Button cambiador;
+	private RelativeLayout registro, login;
+	private LinearLayout container;
 	private boolean layoutIsLogin=true;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
+	requestWindowFeature(Window.FEATURE_NO_TITLE);
 	setContentView(R.layout.custom_dialog);
 	nameEdit = (EditText)findViewById(R.id.biddername);
-	nameRegistroEdit = (EditText)findViewById(R.id.registro_biddername);
-	userNameEdit = (EditText)findViewById(R.id.registro_bidderusername);
-	tableNumberEdit = (EditText)findViewById(R.id.registro_biddertable);
-	acceptedTermsAndConditions = (CheckBox)findViewById(R.id.termsandconditions);
-	
-	registro=(LinearLayout)findViewById(R.id.registro);
-	login=(LinearLayout)findViewById(R.id.login);
-	cambiador=(Button)findViewById(R.id.midButton);
 	}
 	
     /**
@@ -83,12 +79,14 @@ public class BiddingDialog extends Activity {
 	
 	public void cambioEntreRegistroLogin(View v){
 		if(layoutIsLogin){
-			registro.setVisibility(VISIBLE);
-			login.setVisibility(GONE);
+			setContentView(R.layout.custom_dialog_register);
+			nameRegistroEdit = (EditText)findViewById(R.id.registro_biddername);
+			userNameEdit = (EditText)findViewById(R.id.registro_bidderusername);
+			tableNumberEdit = (EditText)findViewById(R.id.registro_biddertable);
+			acceptedTermsAndConditions = (CheckBox)findViewById(R.id.termsandconditions);
 			layoutIsLogin=false;
 		}else{
-			registro.setVisibility(GONE);
-			login.setVisibility(VISIBLE);
+			setContentView(R.layout.custom_dialog);
 			layoutIsLogin=true;
 		}
 	}

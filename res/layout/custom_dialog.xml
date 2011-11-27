@@ -1,144 +1,70 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout_root"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:padding="10dp" >
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <LinearLayout
-            android:id="@+id/login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ingresa tu nombre de usuario"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/biddername"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:hint="Ejemplo:usuario123" />
-
-            <TableLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" >
-
-                <TableRow >
-
-                    <Button
-                        android:id="@+id/search"
-                        android:layout_width="wrap_content"
-                        android:layout_height="fill_parent"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_weight="1.0"
-                        android:onClick="returnNamefromBiddingDialog"
-                        android:text="Aceptar" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:onClick="cancelBiddingDialog"
-                        android:text="Cancelar" />
-                </TableRow>
-            </TableLayout>
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/midButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:onClick="cambioEntreRegistroLogin"
-            android:text="Registro" />
-        <!--
-             <View android:layout_height="fill_parent"
-	        android:background="@drawable/gradientline"
-	        android:layout_width="1dp"
-	        android:layout_margin="10dp"/>
-        -->
-
-        <LinearLayout
-            android:id="@+id/registro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ingresa tu nombre de usuario"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/registro_bidderusername"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:hint="Ejemplo:usuario123" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ingresa tu nombre completo"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/registro_biddername"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:hint="Ejemplo:Carlos Guerrero Macías" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ingresa tu número de mesa"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/registro_biddertable"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:hint="Ejemplo:70" />
-
-            <CheckBox
-                android:id="@+id/termsandconditions"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:checked="false"
-                android:text="Acepto los términos y condiciones" />
-
-            <TableLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" >
-
-                <TableRow >
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="fill_parent"
-                        android:layout_gravity="center_horizontal"
-                        android:onClick="registerNewUser"
-                        android:text="Aceptar" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:onClick="cancelBiddingDialog"
-                        android:text="Cancelar" />
-                </TableRow>
-            </TableLayout>
-        </LinearLayout>
-    </LinearLayout>
-
+    android:orientation="horizontal"
+    android:padding="30dp"
+    android:layout_width="430dp"
+    android:layout_height="265dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="100dp"
+    android:background="@drawable/bg_login">
+	<RelativeLayout android:layout_width="fill_parent"
+    	android:layout_height="fill_parent">
+    	<LinearLayout android:orientation="horizontal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:id="@+id/tabs">
+    		<ImageView android:src="@drawable/iniciar_sesion"
+    			android:layout_width="130dp"
+    			android:layout_height="25dp"
+    			android:clickable="true"
+    			android:id="@+id/iniciar_sesion"
+    			android:onClick="cambioEntreRegistroLogin"/>
+    		<ImageView android:src="@drawable/registrarme"
+    			android:layout_width="130dp"
+    			android:layout_height="25dp"
+    			android:clickable="true"
+    			android:layout_marginTop="2dp"
+    			android:layout_marginLeft="75dp"
+    			android:id="@+id/registrarme"
+    			android:onClick="cambioEntreRegistroLogin"/>
+    	</LinearLayout>
+    	<ImageView android:layout_width="140dp"
+        	android:layout_height="20dp"
+        	android:src="@drawable/ingresa_nickname"
+        	android:id="@+id/texto_ingresa"
+	        android:layout_marginTop="35dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_below="@id/tabs"/>
+	    <EditText android:id="@+id/biddername"
+	    	android:layout_marginLeft="3dp"
+	    	android:layout_below="@id/texto_ingresa"
+	        android:layout_width="364dp"
+	        android:background="@drawable/bg_text"
+	        android:layout_height="wrap_content"
+	        android:hint="Ejemplo: usuario123"
+	        android:textColor="#fff"
+	        android:maxLength="20"
+	    	android:textColorHint="#C2C2C2"
+	    	android:paddingLeft="12dp"
+	    	android:paddingRight="12dp"
+	    	android:singleLine="true"/>
+	    <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true">
+	            <ImageView android:layout_width="195dp"
+	                android:layout_height="48dp"
+	                android:layout_gravity="center"
+	                android:layout_weight="58"
+	                android:layout_marginTop="1dp"
+	                android:onClick="returnNamefromBiddingDialog"
+	                android:src="@drawable/btn_dialog_ofertar"/>
+	            <ImageView android:layout_width="140dp"
+	                android:layout_height="48dp"
+	                android:layout_gravity="center"
+	                android:layout_weight="42"
+	                android:onClick="cancelBiddingDialog"
+	                android:src="@drawable/btn_dialog_cancelar"/>
+	    </LinearLayout>
+	</RelativeLayout>
 </LinearLayout>
