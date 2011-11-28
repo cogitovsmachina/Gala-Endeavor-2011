@@ -9,12 +9,12 @@ import java.util.List;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
-import com.androidtitlan.endeavorsubasta.util.resources;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
+
+import com.androidtitlan.endeavorsubasta.util.resources;
 
 //TODO: Implement GSON library to receive data from server
 //import com.google.gson.Gson;

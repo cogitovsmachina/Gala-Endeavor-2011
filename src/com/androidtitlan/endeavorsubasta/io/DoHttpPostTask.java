@@ -1,54 +1,37 @@
 package com.androidtitlan.endeavorsubasta.io;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
+import com.androidtitlan.endeavorsubasta.BiddingDialog;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.StatusLine;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
-
-import com.androidtitlan.endeavorsubasta.util.resources;
-
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.widget.Toast;
 
 public class DoHttpPostTask extends AsyncTask<String, String, String> {
-	@Override
-	protected void onPreExecute() {
-		
-		super.onPreExecute();
-	}
-
-	private HashMap<String, String> mData = null;// post data
-	private String user;
-	private String nombre;
-	private String mesa;
+	private ProgressDialog dialog;
+	private Activity activity;
 	private String mUser;
 	private String mNombre;
 	private String mMesa;
-
+	private Activity mActivity;
+	
 	/**
 	 * constructor
 	 */
-//	public DoHttpPostTask(HashMap<String, String> data) {
-//		mData = data;
-//	}
-	public DoHttpPostTask(String user, String nombre, String mesa){
+	public DoHttpPostTask(String user, String nombre, String mesa, Activity activity){
 		mUser = user;
 		mNombre = nombre;
 		mMesa = mesa;
+		mActivity = activity;
 	}
+
+	@Override
+	protected void onPreExecute() {
+		super.onPreExecute();
+	}
+
 
 	/**
 	 * background
@@ -70,6 +53,8 @@ public class DoHttpPostTask extends AsyncTask<String, String, String> {
      */
     @Override
     protected void onPostExecute(String result) {
-        // something...
+    	Toast.makeText(mActivity, "Se ha enviado tu registro al servidor, gracias.", Toast.LENGTH_LONG).show();
     }
+
+
 }

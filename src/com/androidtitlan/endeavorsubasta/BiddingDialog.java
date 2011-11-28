@@ -1,16 +1,8 @@
 package com.androidtitlan.endeavorsubasta;
 
-import java.util.HashMap;
-
-import com.androidtitlan.endeavorsubasta.io.DoHttpPostTask;
-import com.androidtitlan.endeavorsubasta.util.resources;
-
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.Window;
 import android.widget.CheckBox;
@@ -18,6 +10,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.androidtitlan.endeavorsubasta.io.DoHttpPostTask;
+import com.androidtitlan.endeavorsubasta.util.resources;
 
 public class BiddingDialog extends Activity {
 	public static final String USERNAME_RESULT_FROM_DIALOG = "USERNAME";
@@ -84,16 +79,7 @@ public class BiddingDialog extends Activity {
 		userName = userNameEdit.getText().toString();
 		fullName = nameRegistroEdit.getText().toString();
 		tableNumber = tableNumberEdit.getText().toString();
-		Toast.makeText(this, ""+userName+", "+fullName+", "+tableNumber, Toast.LENGTH_SHORT).show();
-		 
-		HashMap<String, String> data = new HashMap<String, String>();
-		
-		data.put("username", ""+userName);
-		data.put("fullname", ""+fullName);
-		data.put("tablenumber", ""+tableNumber);
-		
-//		new DoHttpPostTask(data).execute(resources.TEST_URL);
-		new DoHttpPostTask(userName, fullName, tableNumber).execute(resources.TEST_URL);
+		new DoHttpPostTask(userName, fullName, tableNumber, this).execute(resources.TEST_URL);
 		finish();
 	}
 

@@ -9,23 +9,25 @@ import java.util.List;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.StatusLine;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
+import android.widget.Toast;
 
 public class Network {
 
-	private Context context;
+	private static Context context;
 	private InputStream inputStream;
 
 	public Network(Context context) {
 		this.context = context;
-
 	}
 
 	/*
@@ -82,6 +84,14 @@ public class Network {
 
 		httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 		HttpResponse response = httpclient.execute(httppost);
+		
+		StatusLine statusLine = response.getStatusLine();
+        if(statusLine.getStatusCode() == HttpURLConnection.HTTP_CREATED){
+            byte[] result = EntityUtils.toByteArray(response.getEntity());
+            String str = new String(result, "UTF-8");
+			Toast.makeText( context, "Los datos se han enviado correctamente:\n" +str, Toast.LENGTH_LONG).show();
+        }
+		
 		InputStream out = response.getEntity().getContent();
 
 		return out;
