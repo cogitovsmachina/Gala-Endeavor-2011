@@ -38,6 +38,7 @@ public class ProductActivity extends Activity {
 	TextView yourBid = null;
 	ImageView seekBarTextImage = null;
 	int actualPrice, userBid;
+	String bidderName;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -165,8 +166,6 @@ public class ProductActivity extends Activity {
         precioInicial.setText(setInitialPrice(activeProduct)+" USD");
         precioActual.setText(darFormato(sActualPrice)+" USD");
         
-            
-		String bidderName;
 		bidderName="Genghis Khan";
 		ofertante.setText(bidderName);
 		vsk.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
