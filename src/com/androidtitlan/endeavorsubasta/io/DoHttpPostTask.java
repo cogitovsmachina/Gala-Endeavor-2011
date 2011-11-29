@@ -1,11 +1,7 @@
 package com.androidtitlan.endeavorsubasta.io;
 
-import com.androidtitlan.endeavorsubasta.BiddingDialog;
-
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
@@ -53,7 +49,7 @@ public class DoHttpPostTask extends AsyncTask<String, String, String> {
      */
     @Override
     protected void onPostExecute(String result) {
-    	Toast.makeText(mActivity, "Se ha enviado tu registro al servidor, gracias.", Toast.LENGTH_LONG).show();
+//    	Toast.makeText(mActivity, "Se ha enviado tu registro al servidor, gracias.", Toast.LENGTH_LONG).show();
     }
 
 

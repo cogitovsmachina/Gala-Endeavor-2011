@@ -3,6 +3,7 @@ package com.androidtitlan.endeavorsubasta;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.CheckBox;
@@ -11,8 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.androidtitlan.endeavorsubasta.io.DoBiddingTask;
 import com.androidtitlan.endeavorsubasta.io.DoHttpPostTask;
-import com.androidtitlan.endeavorsubasta.util.resources;
+import com.androidtitlan.endeavorsubasta.util.Resources;
 
 public class BiddingDialog extends Activity {
 	public static final String USERNAME_RESULT_FROM_DIALOG = "USERNAME";
@@ -54,6 +56,9 @@ public class BiddingDialog extends Activity {
 		resultIntent.putExtra(USERNAME_RESULT_FROM_DIALOG, nameEdit.getText()
 				.toString());
 		setResult(Activity.RESULT_OK, resultIntent);
+		
+		userName = nameEdit.getText().toString();
+		new DoBiddingTask(userName, "USD $1000").execute(Resources.TEST_URL);
 		finish();
 	}
 
@@ -79,7 +84,9 @@ public class BiddingDialog extends Activity {
 		userName = userNameEdit.getText().toString();
 		fullName = nameRegistroEdit.getText().toString();
 		tableNumber = tableNumberEdit.getText().toString();
-		new DoHttpPostTask(userName, fullName, tableNumber, this).execute(resources.TEST_URL);
+//		new DoHttpPostTask(userName, fullName, tableNumber, this).execute(resources.TEST_URL);
+		Log.d("Client_HTTP", Resources.URL_SUBASTA+"creaUsuario/");
+		new DoHttpPostTask(userName, fullName, tableNumber, this).execute(Resources.URL_SUBASTA+"creaUsuario/");
 		finish();
 	}
 

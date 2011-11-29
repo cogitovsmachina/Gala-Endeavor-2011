@@ -1,6 +1,6 @@
 package com.androidtitlan.endeavorsubasta.io;
 
-import static com.androidtitlan.endeavorsubasta.util.resources.URL_SUBASTA;
+import static com.androidtitlan.endeavorsubasta.util.Resources.URL_SUBASTA;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.androidtitlan.endeavorsubasta.util.resources;
+import com.androidtitlan.endeavorsubasta.util.Resources;
 
 //TODO: Implement GSON library to receive data from server
 //import com.google.gson.Gson;
@@ -36,19 +36,31 @@ public class WebServices extends Network {
 		String ansHttpPost = null;
 
 		List<NameValuePair> params = new ArrayList<NameValuePair>(2);
-		Log.d("Client_HTTP", "URL: " + URL_SUBASTA + "creaUsuario/");
+	
 
 		params.add(new BasicNameValuePair("user", user));
 		params.add(new BasicNameValuePair("nombre", nombre));
 		params.add(new BasicNameValuePair("mesa", mesa));
-		Log.d("Client HTTP", "A punto de hacer la petici—n POST");
-		
-		
-		ansHttpPost = inputStreamToString(doHttpPost(resources.TEST_URL, params));
-//		ansHttpPost = inputStreamToString(doHttpPost(URL_SUBASTA
-//				+ "creaUsuario/", params));
-		Log.d("Client_HTTP", "petici—n POST ejecutada: " + ansHttpPost);
+				
+		ansHttpPost = inputStreamToString(doHttpPost(URL_SUBASTA + "creaUsuario/", params));
 
 		return ansHttpPost;
+	}
+	
+	public static String sendBidding(String user, String bid) throws IOException{
+		String response = null;
+		
+		List<NameValuePair> params = new ArrayList<NameValuePair>(1);
+		
+		params.add(new BasicNameValuePair("user", user));
+		params.add(new BasicNameValuePair("bid", bid));
+		
+		/*
+		 * Change for server ip
+		 */
+		response = inputStreamToString(doHttpPost(Resources.TEST_URL, params));
+		
+		return response;
+		
 	}
 }
