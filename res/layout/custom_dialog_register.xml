@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="30dp"
+    android:paddingBottom="30dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="23dp"
     android:layout_width="430dp"
     android:layout_height="425dp"
     android:layout_gravity="center_horizontal"
-    android:layout_marginTop="10dp"
     android:background="@drawable/bg_registro">
 	<RelativeLayout android:layout_width="fill_parent"
     	android:layout_height="fill_parent">
