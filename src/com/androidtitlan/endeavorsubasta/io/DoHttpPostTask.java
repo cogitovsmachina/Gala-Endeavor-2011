@@ -1,11 +1,14 @@
 package com.androidtitlan.endeavorsubasta.io;
 
+import com.androidtitlan.galaendeavor.pojo.ResponseFromHttpPost;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-public class DoHttpPostTask extends AsyncTask<String, String, String> {
+public class DoHttpPostTask extends
+		AsyncTask<String, String, ResponseFromHttpPost> {
 	private ProgressDialog dialog;
 	private Activity activity;
 	private String mUser;
@@ -18,14 +21,12 @@ public class DoHttpPostTask extends AsyncTask<String, String, String> {
 	/**
 	 * constructor
 	 */
-	public DoHttpPostTask(String user, String nombre, String mesa, String bid,
-			String product, Activity activity) {
+	public DoHttpPostTask(String user, String nombre, String mesa,
+			Activity activity) {
 		mUser = user;
 		mNombre = nombre;
 		mMesa = mesa;
 		mActivity = activity;
-		mBid = bid;
-		mProduct = product;
 	}
 
 	@Override
@@ -38,23 +39,37 @@ public class DoHttpPostTask extends AsyncTask<String, String, String> {
 	 */
 
 	@Override
-	protected String doInBackground(String... params) {
+	protected ResponseFromHttpPost doInBackground(String... params) {
+		ResponseFromHttpPost response = null;
 		try {
-			WebServices.createUser(mUser, mNombre, mMesa, mBid, mProduct);
+			response = WebServices.createUser(mUser, mNombre, mMesa);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return null;
+		return response;
 	}
 
 	/**
 	 * on getting result
 	 */
-	@Override
-	protected void onPostExecute(String result) {
-		// Toast.makeText(mActivity,
-		// "Se ha enviado tu registro al servidor, gracias.",
-		// Toast.LENGTH_LONG).show();
+
+	protected void onPostExecute(ResponseFromHttpPost response) {
+		if (response.getStatusCode() == 200) {
+			Toast.makeText(mActivity, "Se ha creado el usuario.",
+					Toast.LENGTH_LONG).show();
+		}
+		if (response.getStatusCode() == 400) {
+			Toast.makeText(
+					mActivity,
+					"Tu formulario no ha podido ser enviado, intenta nuevamente",
+					Toast.LENGTH_LONG).show();
+		}
+		if (response.getStatusCode() == 500) {
+			Toast.makeText(mActivity,
+					"El usuario ya existe, intenta con otro usuario",
+					Toast.LENGTH_LONG).show();
+
+		}
 	}
 
 }

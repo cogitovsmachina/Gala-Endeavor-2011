@@ -9,17 +9,16 @@ import java.util.List;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
-import org.apache.http.StatusLine;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.EntityUtils;
+
+import com.androidtitlan.galaendeavor.pojo.ResponseFromHttpPost;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
-import android.widget.Toast;
 
 public class Network {
 
@@ -76,7 +75,7 @@ public class Network {
 		return inputStream;
 	}
 
-	protected static InputStream doHttpPost(String urlString,
+	protected static ResponseFromHttpPost doHttpPost(String urlString,
 			List<NameValuePair> nameValuePairs) throws IOException {
 
 		DefaultHttpClient httpclient = new DefaultHttpClient();
@@ -93,8 +92,11 @@ public class Network {
 //        }
 		
 		InputStream out = response.getEntity().getContent();
-
-		return out;
+		int statusCode = response.getStatusLine().getStatusCode();
+		
+		return new ResponseFromHttpPost(out, statusCode);
+		
+//		return out;
 	}
 
 	protected boolean isOnline() {

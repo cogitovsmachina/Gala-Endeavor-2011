@@ -59,7 +59,11 @@ public class BiddingDialog extends Activity {
 
 	public void registerNewUser(View v){
 		if( (!acceptedTermsAndConditions.isChecked())){
+<<<<<<< HEAD
 			Toast.makeText(this, "Por favor, acepte los términos y condiciones", Toast.LENGTH_SHORT).show();
+=======
+			Toast.makeText(this, "Por favor, acepte los t�rminos y condiciones", Toast.LENGTH_SHORT).show();
+>>>>>>> c837d92ebbcb8b9df5e7583e1318930c7c83c994
 			return;
 		}
 		if(nameRegistroEdit.getText().toString().equals("")){
@@ -70,6 +74,7 @@ public class BiddingDialog extends Activity {
 			Toast.makeText(this, "Por favor, escriba su nombre de usuario", Toast.LENGTH_SHORT).show();
 			return;
 		}
+<<<<<<< HEAD
 		String tableNum=tableNumberEdit.getText().toString();
 		if(tableNum.equals("")){
 			Toast.makeText(this, "Por favor, escriba el número de su mesa", Toast.LENGTH_SHORT).show();
@@ -78,12 +83,17 @@ public class BiddingDialog extends Activity {
 		float tNum=Float.parseFloat(tableNum);
 		if(!((tNum<=70)&&(tNum>=1))){
 			Toast.makeText(this, "Por favor, escriba un número de mesa válido", Toast.LENGTH_SHORT).show();
+=======
+		if(tableNumberEdit.getText().toString().equals("")){
+			Toast.makeText(this, "Por favor, escriba el n�mero de su mesa", Toast.LENGTH_SHORT).show();
+>>>>>>> c837d92ebbcb8b9df5e7583e1318930c7c83c994
 			return;
 		}
 		//Assigning to variables
 		userName = userNameEdit.getText().toString();
 		fullName = nameRegistroEdit.getText().toString();
 		tableNumber = tableNumberEdit.getText().toString();
+<<<<<<< HEAD
 		new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), Integer.toString(product), this).execute(Resources.URL_SUBASTA);
 		Log.d("Client_HTTP", Resources.URL_SUBASTA+"creaUsuario/");
 		//new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), this).execute(Resources.URL_SUBASTA+"creaUsuario/");
@@ -91,6 +101,12 @@ public class BiddingDialog extends Activity {
 		 * Change to this in production server
 		 */
 //		new DoHttpPostTask(userName, fullName, tableNumber, "test", this).execute(Resources.URL_SUBASTA+"creaUsuario/");
+=======
+		String strCreaUsuario = Resources.URL_SUBASTA+"creaUsuario/";
+		Log.e(strCreaUsuario, "--------");
+
+		new DoHttpPostTask(userName, fullName, tableNumber, this).execute(Resources.URL_SUBASTA+"/creaUsuario/");
+>>>>>>> c837d92ebbcb8b9df5e7583e1318930c7c83c994
 		finish();
 	}
 
