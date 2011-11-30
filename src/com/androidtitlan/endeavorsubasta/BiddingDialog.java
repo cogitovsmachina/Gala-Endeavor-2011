@@ -23,6 +23,7 @@ public class BiddingDialog extends Activity {
 	public static final int GONE = 8;
 	
 	private int userBid;
+	private int product;
 
 	private EditText nameEdit, nameRegistroEdit, userNameEdit, tableNumberEdit;
 	private CheckBox acceptedTermsAndConditions;
@@ -39,6 +40,7 @@ public class BiddingDialog extends Activity {
 		nameEdit = (EditText) findViewById(R.id.biddername);
 		Bundle extras = getIntent().getExtras();
 		userBid=extras.getInt("Bid");
+		product=extras.getInt("Product");		
 	}
 
 	/**
@@ -77,7 +79,7 @@ public class BiddingDialog extends Activity {
 		userName = userNameEdit.getText().toString();
 		fullName = nameRegistroEdit.getText().toString();
 		tableNumber = tableNumberEdit.getText().toString();
-		new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), "here_goes_product", this).execute(Resources.TEST_URL);
+		new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), Integer.toString(product), this).execute(Resources.TEST_URL);
 		Log.d("Client_HTTP", Resources.URL_SUBASTA+"creaUsuario/");
 		//new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), this).execute(Resources.URL_SUBASTA+"creaUsuario/");
 		/*

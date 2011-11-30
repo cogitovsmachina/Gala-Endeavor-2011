@@ -207,6 +207,7 @@ public class ProductActivity extends Activity {
     	}
     	Intent intent = new Intent(this, BiddingDialog.class);
     	intent.putExtra("Bid", userBid);
+    	intent.putExtra("Product", activeProduct);
     	startActivity(intent);    
     	}
     
@@ -244,7 +245,7 @@ public class ProductActivity extends Activity {
     	switch(activeProduct){
     	case(1):
     		title="El Grande Reverso";
-    		contents="El Grande Reverso luce una edici�n in�dita de 30 x 48.5 mm y se caracteriza por su esfera plateada de espl�ndida sobriedad ornamentada con d�gitos tradicionales del estilo Art Deco y un doble acabado: mientras el rect�ngulo del centro presenta un motivo guilloqueado con Clous de Paris, la parte exterior enarbola un acabado satinado. Ésta delicada alternancia ornamental se repite en el contador del segundero pequeño situado a las 6 horas. El Grande Reverso está animado por el nuevo Calibre 976, visible a través del fondo de cristal de zafiro. Posee todas las características de los movimientos robustos y precisos desarrollados por la manufactura Jaeger-LeCoultre y está equipado con un volante de inercia variable que palpita con una frecuencia de 28,800 alternancias por hora.";
+    		contents="El Grande Reverso luce una edici�n in�dita de 30 x 48.5 mm y se caracteriza por su esfera plateada de espl�ndida sobriedad ornamentada con d�gitos tradicionales del estilo Art Deco y un doble acabado: mientras el rect�ngulo del centro presenta un motivo guilloqueado con Clous de Paris, la parte exterior enarbola un acabado satinado. Ésta delicada alternancia ornamental se repite en el contador del segundero pequeño situado a las 6 horas. El Grande Reverso está animado por el nuevo Calibre 976, visible a través del fondo de cristal de zafiro. Posee todas las características de los movimientos robustos y precisos desarrollados por la manufactura Jaeger-LeCoultre y está equipado con un volante de inercia variable que palpita con una frecuencia de 28,800 alternancias por hora.";
     		break;
     	case(2):
     		title="Collar Peyrelongue";
