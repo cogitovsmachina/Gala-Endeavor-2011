@@ -16,8 +16,7 @@
     			android:layout_width="130dp"
     			android:layout_height="25dp"
     			android:clickable="true"
-    			android:id="@+id/iniciar_sesion"
-    			android:onClick="cambioEntreRegistroLogin"/>
+    			android:id="@+id/iniciar_sesion"/>
     		<ImageView android:src="@drawable/registrarme"
     			android:layout_width="130dp"
     			android:layout_height="25dp"
