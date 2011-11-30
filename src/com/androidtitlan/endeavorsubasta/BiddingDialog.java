@@ -1,15 +1,12 @@
 package com.androidtitlan.endeavorsubasta;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.androidtitlan.endeavorsubasta.io.DoBiddingTask;
@@ -24,11 +21,11 @@ public class BiddingDialog extends Activity {
 
 	public static final int VISIBLE = 0;
 	public static final int GONE = 8;
+	
+	private int userBid;
 
 	private EditText nameEdit, nameRegistroEdit, userNameEdit, tableNumberEdit;
 	private CheckBox acceptedTermsAndConditions;
-	private RelativeLayout registro, login;
-	private LinearLayout container;
 	private boolean layoutIsLogin = true;
 	private String fullName;
 	private String tableNumber;
@@ -40,6 +37,8 @@ public class BiddingDialog extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.custom_dialog);
 		nameEdit = (EditText) findViewById(R.id.biddername);
+		Bundle extras = getIntent().getExtras();
+		userBid=extras.getInt("Bid");
 	}
 
 	/**
@@ -51,20 +50,14 @@ public class BiddingDialog extends Activity {
 					Toast.LENGTH_SHORT).show();
 			return;
 		}
-
-		Intent resultIntent = new Intent(this, BiddingDialog.class);
-		resultIntent.putExtra(USERNAME_RESULT_FROM_DIALOG, nameEdit.getText()
-				.toString());
-		setResult(Activity.RESULT_OK, resultIntent);
-		
 		userName = nameEdit.getText().toString();
-		new DoBiddingTask(userName, "USD $1000").execute(Resources.TEST_URL);
+		new DoBiddingTask(userName, Integer.toString(userBid)).execute(Resources.TEST_URL);
 		finish();
 	}
 
 	public void registerNewUser(View v){
 		if( (!acceptedTermsAndConditions.isChecked())){
-			Toast.makeText(this, "Por favor, acepte los tŽrminos y condiciones", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "Por favor, acepte los tï¿½rminos y condiciones", Toast.LENGTH_SHORT).show();
 			return;
 		}
 		if(nameRegistroEdit.getText().toString().equals("")){
@@ -76,7 +69,7 @@ public class BiddingDialog extends Activity {
 			return;
 		}
 		if(tableNumberEdit.getText().toString().equals("")){
-			Toast.makeText(this, "Por favor, escriba el nœmero de su mesa", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "Por favor, escriba el nï¿½mero de su mesa", Toast.LENGTH_SHORT).show();
 			return;
 		}
 		
@@ -86,7 +79,7 @@ public class BiddingDialog extends Activity {
 		tableNumber = tableNumberEdit.getText().toString();
 //		new DoHttpPostTask(userName, fullName, tableNumber, this).execute(resources.TEST_URL);
 		Log.d("Client_HTTP", Resources.URL_SUBASTA+"creaUsuario/");
-		new DoHttpPostTask(userName, fullName, tableNumber, this).execute(Resources.URL_SUBASTA+"creaUsuario/");
+		new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), this).execute(Resources.URL_SUBASTA+"creaUsuario/");
 		finish();
 	}
 

@@ -24,7 +24,6 @@ import com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar.OnSeekBarChangeListe
 
 public class ProductActivity extends Activity {
 	
-	private static final int MY_CUSTOM_DIALOG = 0;
 	private static final int MAXIMUM_BID_AMOUNT = 10000;
 	private int activeProduct;
 	/**
@@ -188,24 +187,6 @@ public class ProductActivity extends Activity {
 	    ActionBar actionBar = this.getActionBar();
 	    actionBar.setDisplayHomeAsUpEnabled(true);
 	}
-	
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		switch(requestCode) {
-		case (MY_CUSTOM_DIALOG): {
-			if (resultCode == Activity.RESULT_OK) {
-				Log.d("ANDROID_DIALOG","Coming back from BiddingDialog...");
-				String userName = data.getStringExtra(BiddingDialog.USERNAME_RESULT_FROM_DIALOG);
-				Log.d("ANDROID_DIALOG", "User entered: " + userName);
-//				Toast.makeText(this, "Gracias, " +fullName, Toast.LENGTH_SHORT).show();
-
-		}
-			break;
-		}
-		
-		}
-	}
 		
 	 /**
      * Inflating the Action Bar menu with MenuInflater instance and using the method inflate.
@@ -225,7 +206,8 @@ public class ProductActivity extends Activity {
     		return;
     	}
     	Intent intent = new Intent(this, BiddingDialog.class);
-    	startActivityForResult(intent, MY_CUSTOM_DIALOG);    
+    	intent.putExtra("Bid", userBid);
+    	startActivity(intent);    
     	}
     
     
