@@ -30,7 +30,7 @@ public class WebServices extends Network {
 				.getDefaultSharedPreferences(context);
 	}
 
-	public static String createUser(String user, String nombre, String mesa)
+	public static String createUser(String user, String nombre, String mesa, String bid)
 			throws IOException {
 
 		String ansHttpPost = null;
@@ -41,9 +41,10 @@ public class WebServices extends Network {
 		params.add(new BasicNameValuePair("user", user));
 		params.add(new BasicNameValuePair("nombre", nombre));
 		params.add(new BasicNameValuePair("mesa", mesa));
+		params.add(new BasicNameValuePair("bid", bid));
 				
-		ansHttpPost = inputStreamToString(doHttpPost(URL_SUBASTA + "creaUsuario/", params));
-
+//		ansHttpPost = inputStreamToString(doHttpPost(URL_SUBASTA + "creaUsuario/", params));
+		ansHttpPost = inputStreamToString(doHttpPost(Resources.TEST_URL, params));
 		return ansHttpPost;
 	}
 	

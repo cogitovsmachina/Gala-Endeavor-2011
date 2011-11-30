@@ -77,9 +77,13 @@ public class BiddingDialog extends Activity {
 		userName = userNameEdit.getText().toString();
 		fullName = nameRegistroEdit.getText().toString();
 		tableNumber = tableNumberEdit.getText().toString();
-//		new DoHttpPostTask(userName, fullName, tableNumber, this).execute(resources.TEST_URL);
+		new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), this).execute(Resources.TEST_URL);
 		Log.d("Client_HTTP", Resources.URL_SUBASTA+"creaUsuario/");
-		new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), this).execute(Resources.URL_SUBASTA+"creaUsuario/");
+		//new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), this).execute(Resources.URL_SUBASTA+"creaUsuario/");
+		/*
+		 * Change to this in production server
+		 */
+//		new DoHttpPostTask(userName, fullName, tableNumber, "test", this).execute(Resources.URL_SUBASTA+"creaUsuario/");
 		finish();
 	}
 

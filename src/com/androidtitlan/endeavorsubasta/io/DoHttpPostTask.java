@@ -12,15 +12,17 @@ public class DoHttpPostTask extends AsyncTask<String, String, String> {
 	private String mNombre;
 	private String mMesa;
 	private Activity mActivity;
+	private String mBid;
 	
 	/**
 	 * constructor
 	 */
-	public DoHttpPostTask(String user, String nombre, String mesa, Activity activity){
+	public DoHttpPostTask(String user, String nombre, String mesa, String bid, Activity activity){
 		mUser = user;
 		mNombre = nombre;
 		mMesa = mesa;
 		mActivity = activity;
+		mBid = bid;
 	}
 
 	@Override
@@ -36,7 +38,7 @@ public class DoHttpPostTask extends AsyncTask<String, String, String> {
 	@Override
     protected String doInBackground(String... params) {
 		try {
-			WebServices.createUser(mUser, mNombre, mMesa);
+			WebServices.createUser(mUser, mNombre, mMesa, mBid);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
