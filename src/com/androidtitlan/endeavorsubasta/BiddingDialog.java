@@ -77,7 +77,7 @@ public class BiddingDialog extends Activity {
 		userName = userNameEdit.getText().toString();
 		fullName = nameRegistroEdit.getText().toString();
 		tableNumber = tableNumberEdit.getText().toString();
-		new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), this).execute(Resources.TEST_URL);
+		new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), "here_goes_product", this).execute(Resources.TEST_URL);
 		Log.d("Client_HTTP", Resources.URL_SUBASTA+"creaUsuario/");
 		//new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), this).execute(Resources.URL_SUBASTA+"creaUsuario/");
 		/*

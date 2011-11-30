@@ -13,16 +13,19 @@ public class DoHttpPostTask extends AsyncTask<String, String, String> {
 	private String mMesa;
 	private Activity mActivity;
 	private String mBid;
-	
+	private String mProduct;
+
 	/**
 	 * constructor
 	 */
-	public DoHttpPostTask(String user, String nombre, String mesa, String bid, Activity activity){
+	public DoHttpPostTask(String user, String nombre, String mesa, String bid,
+			String product, Activity activity) {
 		mUser = user;
 		mNombre = nombre;
 		mMesa = mesa;
 		mActivity = activity;
 		mBid = bid;
+		mProduct = product;
 	}
 
 	@Override
@@ -30,29 +33,28 @@ public class DoHttpPostTask extends AsyncTask<String, String, String> {
 		super.onPreExecute();
 	}
 
-
 	/**
 	 * background
 	 */
 
 	@Override
-    protected String doInBackground(String... params) {
+	protected String doInBackground(String... params) {
 		try {
-			WebServices.createUser(mUser, mNombre, mMesa, mBid);
+			WebServices.createUser(mUser, mNombre, mMesa, mBid, mProduct);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
-            
 
-    /**
-     * on getting result
-     */
-    @Override
-    protected void onPostExecute(String result) {
-//    	Toast.makeText(mActivity, "Se ha enviado tu registro al servidor, gracias.", Toast.LENGTH_LONG).show();
-    }
-
+	/**
+	 * on getting result
+	 */
+	@Override
+	protected void onPostExecute(String result) {
+		// Toast.makeText(mActivity,
+		// "Se ha enviado tu registro al servidor, gracias.",
+		// Toast.LENGTH_LONG).show();
+	}
 
 }
