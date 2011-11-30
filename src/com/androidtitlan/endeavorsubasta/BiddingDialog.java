@@ -59,7 +59,7 @@ public class BiddingDialog extends Activity {
 
 	public void registerNewUser(View v){
 		if( (!acceptedTermsAndConditions.isChecked())){
-			Toast.makeText(this, "Por favor, acepte los tï¿½rminos y condiciones", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "Por favor, acepte los tŽrminos y condiciones", Toast.LENGTH_SHORT).show();
 			return;
 		}
 		if(nameRegistroEdit.getText().toString().equals("")){
@@ -71,7 +71,7 @@ public class BiddingDialog extends Activity {
 			return;
 		}
 		if(tableNumberEdit.getText().toString().equals("")){
-			Toast.makeText(this, "Por favor, escriba el nï¿½mero de su mesa", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "Por favor, escriba el nœmero de su mesa", Toast.LENGTH_SHORT).show();
 			return;
 		}
 		
@@ -79,13 +79,10 @@ public class BiddingDialog extends Activity {
 		userName = userNameEdit.getText().toString();
 		fullName = nameRegistroEdit.getText().toString();
 		tableNumber = tableNumberEdit.getText().toString();
-		new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), Integer.toString(product), this).execute(Resources.TEST_URL);
-		Log.d("Client_HTTP", Resources.URL_SUBASTA+"creaUsuario/");
-		//new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), this).execute(Resources.URL_SUBASTA+"creaUsuario/");
-		/*
-		 * Change to this in production server
-		 */
-//		new DoHttpPostTask(userName, fullName, tableNumber, "test", this).execute(Resources.URL_SUBASTA+"creaUsuario/");
+		String strCreaUsuario = Resources.URL_SUBASTA+"creaUsuario/";
+		Log.e(strCreaUsuario, "--------");
+
+		new DoHttpPostTask(userName, fullName, tableNumber, this).execute(Resources.URL_SUBASTA+"/creaUsuario/");
 		finish();
 	}
 

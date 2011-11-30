@@ -15,6 +15,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 
 import com.androidtitlan.endeavorsubasta.util.Resources;
+import com.androidtitlan.galaendeavor.pojo.ResponseFromHttpPost;
 
 //TODO: Implement GSON library to receive data from server
 //import com.google.gson.Gson;
@@ -30,24 +31,23 @@ public class WebServices extends Network {
 				.getDefaultSharedPreferences(context);
 	}
 
-	public static String createUser(String user, String nombre, String mesa, String bid, String product)
+	public static ResponseFromHttpPost createUser(String usuario, String nombre, String mesa)
 			throws IOException {
 
-		String ansHttpPost = null;
+		ResponseFromHttpPost ansHttpPost = null;
 
 		List<NameValuePair> params = new ArrayList<NameValuePair>(2);
 	
 
-		params.add(new BasicNameValuePair("user", user));
+		params.add(new BasicNameValuePair("usuario", usuario));
 		params.add(new BasicNameValuePair("nombre", nombre));
 		params.add(new BasicNameValuePair("mesa", mesa));
-		params.add(new BasicNameValuePair("bid", bid));
-		params.add(new BasicNameValuePair("product", product));
-
 				
-//		ansHttpPost = inputStreamToString(doHttpPost(URL_SUBASTA + "creaUsuario/", params));
-		ansHttpPost = inputStreamToString(doHttpPost(Resources.TEST_URL, params));
+		ansHttpPost = doHttpPost(URL_SUBASTA + "creaUsuario/", params);
+		
+		
 		return ansHttpPost;
+		//( ansHttpPost.getData() );
 	}
 	
 	public static String sendBidding(String user, String bid) throws IOException{
@@ -61,7 +61,7 @@ public class WebServices extends Network {
 		/*
 		 * Change for server ip
 		 */
-		response = inputStreamToString(doHttpPost(Resources.TEST_URL, params));
+//		response = inputStreamToString(doHttpPost(Resources.TEST_URL, params));
 		
 		return response;
 		
