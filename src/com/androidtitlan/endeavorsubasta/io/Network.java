@@ -83,20 +83,11 @@ public class Network {
 
 		httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 		HttpResponse response = httpclient.execute(httppost);
-		
-//		StatusLine statusLine = response.getStatusLine();
-//        if(statusLine.getStatusCode() == HttpURLConnection.HTTP_CREATED){
-//            byte[] result = EntityUtils.toByteArray(response.getEntity());
-//            String str = new String(result, "UTF-8");
-////			Toast.makeText( context, "Los datos se han enviado correctamente:\n" +str, Toast.LENGTH_LONG).show();
-//        }
-		
+
 		InputStream out = response.getEntity().getContent();
 		int statusCode = response.getStatusLine().getStatusCode();
-		
+
 		return new ResponseFromHttpPost(out, statusCode);
-		
-//		return out;
 	}
 
 	protected boolean isOnline() {

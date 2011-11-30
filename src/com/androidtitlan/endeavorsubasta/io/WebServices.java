@@ -31,39 +31,36 @@ public class WebServices extends Network {
 				.getDefaultSharedPreferences(context);
 	}
 
-	public static ResponseFromHttpPost createUser(String usuario, String nombre, String mesa)
-			throws IOException {
+	public static ResponseFromHttpPost createUser(String usuario,
+			String nombre, String mesa) throws IOException {
 
 		ResponseFromHttpPost ansHttpPost = null;
 
 		List<NameValuePair> params = new ArrayList<NameValuePair>(2);
-	
 
 		params.add(new BasicNameValuePair("usuario", usuario));
 		params.add(new BasicNameValuePair("nombre", nombre));
 		params.add(new BasicNameValuePair("mesa", mesa));
-				
+
 		ansHttpPost = doHttpPost(URL_SUBASTA + "creaUsuario/", params);
-		
-		
+
 		return ansHttpPost;
-		//( ansHttpPost.getData() );
+		// ( ansHttpPost.getData() );
 	}
-	
-	public static String sendBidding(String user, String bid) throws IOException{
-		String response = null;
-		
+
+	public static ResponseFromHttpPost sendBidding(String usuario, String producto,
+			String precio) throws IOException {
+		ResponseFromHttpPost response = null;
+
 		List<NameValuePair> params = new ArrayList<NameValuePair>(1);
-		
-		params.add(new BasicNameValuePair("user", user));
-		params.add(new BasicNameValuePair("bid", bid));
-		
-		/*
-		 * Change for server ip
-		 */
-//		response = inputStreamToString(doHttpPost(Resources.TEST_URL, params));
-		
+
+		params.add(new BasicNameValuePair("usuario", usuario));
+		params.add(new BasicNameValuePair("producto", producto));
+		params.add(new BasicNameValuePair("precio", precio));
+
+		response = doHttpPost(URL_SUBASTA + "pujaProducto/", params);
+
 		return response;
-		
+
 	}
 }
