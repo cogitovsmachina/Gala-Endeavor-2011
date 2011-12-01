@@ -98,7 +98,8 @@
 	        android:layout_width="300dp"
 	        android:layout_height="wrap_content"
 	        android:checked="false"
-	        android:text="Acepto los términos y condiciones"
+	        android:textSize="10dp"
+	        android:text="Al ofertar me comprometo a pagar el monto ingresado"
 	        android:layout_centerHorizontal="true"/>
 	    <LinearLayout android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"

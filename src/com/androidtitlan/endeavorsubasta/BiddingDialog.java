@@ -172,6 +172,7 @@ public class BiddingDialog extends Activity {
 			layoutIsLogin = false;
 		} else {
 			setContentView(R.layout.custom_dialog);
+			nameEdit = (EditText) findViewById(R.id.biddername);
 			layoutIsLogin = true;
 		}
 	}
