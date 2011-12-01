@@ -1,8 +1,7 @@
 package com.androidtitlan.galaendeavor.pojo;
 
 public class Productos {
-	int id_producto;
-	String usuario;
-	String precio;
-
+	public int id_producto;
+	public String usuario;
+	public String precio;
 }

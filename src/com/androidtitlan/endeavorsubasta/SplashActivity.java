@@ -1,5 +1,7 @@
 package com.androidtitlan.endeavorsubasta;
 
+import com.androidtitlan.endeavorsubasta.io.UpdateService;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,7 +20,7 @@ public class SplashActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 	      setContentView(R.layout.splash);
-	      
+	      startService(new Intent(this, UpdateService.class));
 	      Animation anim = AnimationUtils.loadAnimation(SplashActivity.this, R.anim.splashin);
 	      final Animation anim2 = AnimationUtils.loadAnimation(SplashActivity.this, R.anim.splashout);
 	      final LinearLayout splash=(LinearLayout)findViewById(R.id.splash);

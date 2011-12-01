@@ -3,18 +3,15 @@ package com.androidtitlan.endeavorsubasta.io;
 import com.androidtitlan.galaendeavor.pojo.ResponseFromHttpPost;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
 public class DoBiddingTask extends AsyncTask<String, String, ResponseFromHttpPost> {
-	private ProgressDialog dialog;
-	private Activity activity;
 	private String mUser;
-	private String mNombre;
-	private String mMesa;
 	private Activity mActivity;
-	private String mBid;
 	private String mPrice;
 	private String mProduct;
 	
@@ -33,11 +30,6 @@ public class DoBiddingTask extends AsyncTask<String, String, ResponseFromHttpPos
 		super.onPreExecute();
 	}
 
-
-	/**
-	 * background
-	 */
-
 	@Override
     protected ResponseFromHttpPost doInBackground(String... params) {
 		ResponseFromHttpPost response = null;
@@ -55,20 +47,51 @@ public class DoBiddingTask extends AsyncTask<String, String, ResponseFromHttpPos
      */
     
     protected void onPostExecute(ResponseFromHttpPost response) {
-    	if (response.getStatusCode() == 200) {
-			Toast.makeText(mActivity, "Se ha enviado la oferta al servidor.",
-					Toast.LENGTH_LONG).show();
+    	//AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
+    	try {
+			if (response.getStatusCode() == 200) {
+				/*builder.setMessage("Se ha enviado la oferta al servidor")
+				.setCancelable(false)
+				.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						dialog.cancel();
+					}
+				});*/
+				Toast.makeText(mActivity, "Se ha enviado la oferta al servidor", Toast.LENGTH_LONG).show();
+			}
+			if (response.getStatusCode() == 400) {
+				/*builder.setMessage("Tu oferta no ha podido ser enviada, intenta nuevamente")
+				.setCancelable(false)
+				.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						dialog.cancel();
+					}
+				});*/
+				Toast.makeText(mActivity, "Tu oferta no ha podido ser enviada, intenta nuevamente", Toast.LENGTH_LONG).show();
+			}
+			if (response.getStatusCode() == 500) {
+				/*builder.setMessage("El usuario no existe verifica tu nombre de usuario")
+				.setCancelable(false)
+				.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						dialog.cancel();
+					}
+				});*/
+				Toast.makeText(mActivity, "El usuario no existe verifica tu nombre de usuario", Toast.LENGTH_LONG).show();
+			}
+		} catch (NullPointerException e) {
+			/*builder.setMessage("No hay conexion al servidor")
+			.setCancelable(false)
+			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					dialog.cancel();
+				}
+			});*/
+			Toast.makeText(mActivity, "No hay conexion al servidor", Toast.LENGTH_LONG).show();
+			e.printStackTrace();
 		}
-		if (response.getStatusCode() == 400) {
-			Toast.makeText(
-					mActivity,
-					"Tu oferta no ha podido ser enviada, intenta nuevamente.",
-					Toast.LENGTH_LONG).show();
-		}
-		if (response.getStatusCode() == 500) {
-			Toast.makeText(mActivity,
-					"El usuario no existe verifica tu nombre de usuario.",
-					Toast.LENGTH_LONG).show();
-    }
+    	/*AlertDialog alertDialog = builder.create();
+		alertDialog.show();
+		return;*/
     }
 }

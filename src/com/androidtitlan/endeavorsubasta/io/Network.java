@@ -70,7 +70,7 @@ public class Network {
 				inputStream = httpConn.getInputStream();
 			}
 		} catch (Exception ex) {
-			throw new IOException("Error connecting" + ex);
+			throw new IOException("Error connecting " + ex);
 		}
 		return inputStream;
 	}

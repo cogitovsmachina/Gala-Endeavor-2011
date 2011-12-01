@@ -1,13 +1,25 @@
 package com.androidtitlan.endeavorsubasta;
 
 import java.text.NumberFormat;
+import java.util.StringTokenizer;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.util.Log;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.Message;
+import android.os.Messenger;
+import android.os.RemoteException;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,14 +30,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.androidtitlan.endeavorsubasta.io.UpdateService;
 import com.androidtitlan.endeavorsubasta.ui.Dialog;
 import com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar;
 import com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar.OnSeekBarChangeListener;
 
 public class ProductActivity extends Activity {
 	
-	private static final int MAXIMUM_BID_AMOUNT = 10000;
-	private int activeProduct;
 	/**
 	 * TextViews dinamicos de Nombre del ultimo bidder y precio actual
 	 */
@@ -36,12 +47,62 @@ public class ProductActivity extends Activity {
 	TextView seekBarSlave = null;
 	TextView yourBid = null;
 	ImageView seekBarTextImage = null;
-	int actualPrice, userBid;
+	long actualPrice, userBid;
 	String bidderName;
+	
+	private static final int MAXIMUM_BID_AMOUNT = 10000;
+	private int activeProduct;
+	Messenger mService = null;
+    boolean mIsBound;
+    final Messenger mMessenger = new Messenger(new IncomingHandler());
+    Timer tmr=new Timer();
+    
+    String fromService;
+    
+    class IncomingHandler extends Handler {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+            case UpdateService.MSG_SET_STRING_VALUE:
+                fromService = msg.getData().getString("Bid");
+                StringTokenizer tk = new StringTokenizer(fromService, "%$%");
+        		String sActualPrice=tk.nextToken();
+        		bidderName=tk.nextToken();
+        		long tempActualPrice = (long)Float.parseFloat(sActualPrice);
+        		if(tempActualPrice!=0){
+        			actualPrice=tempActualPrice;
+	                precioActual.setText(darFormato(sActualPrice)+" USD");
+	        		ofertante.setText(bidderName);
+        		}
+                break;
+            case UpdateService.MSG_SET_BOOL_VALUE:
+            	setContentView(R.layout.end_layout);
+            default:
+                super.handleMessage(msg);
+            }
+        }
+    }
+    private ServiceConnection mConnection = new ServiceConnection() {
+        public void onServiceConnected(ComponentName className, IBinder service) {
+            mService = new Messenger(service);
+            try {
+                Message msg = Message.obtain(null, UpdateService.MSG_REGISTER_CLIENT);
+                msg.replyTo = mMessenger;
+                mService.send(msg);
+            } catch (RemoteException e) {
+            }
+        }
+
+        public void onServiceDisconnected(ComponentName className) {
+            mService = null;
+        }
+    };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		doBindService();
+		tmr.schedule(new TimerTask(){ public void run(){sendInts();}}, 500);
 		/**
 		 * Inflado especifico del layout para cada producto
 		 */
@@ -157,15 +218,10 @@ public class ProductActivity extends Activity {
 			activeProduct=9;
 			break;
 		}
-		/**
-		 * TODO:Realizar conexion al server y obtener String de nombre del bidder y precio actual
-		 */
-		actualPrice = 100000000;
-		String sActualPrice=Integer.toString(actualPrice);
+		actualPrice = initialPrice(activeProduct);
         precioInicial.setText(setInitialPrice(activeProduct)+" USD");
-        precioActual.setText(darFormato(sActualPrice)+" USD");
-        
-		bidderName="Genghis Khan";
+        precioActual.setText(setInitialPrice(activeProduct)+" USD");
+        bidderName="Nadie ha ofertado";
 		ofertante.setText(bidderName);
 		vsk.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
 			
@@ -179,13 +235,33 @@ public class ProductActivity extends Activity {
 				updateSeekBarSlave(progress);
 			}
 		});
-	}
+	}	
 	
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		doBindService();
+		tmr.schedule(new TimerTask() {
+			
+			@Override
+			public void run() {
+				sendInts();
+			}
+		}, 500);
+	}
+
 	@Override
 	protected void onStart() {
 	    super.onStart();
 	    ActionBar actionBar = this.getActionBar();
 	    actionBar.setDisplayHomeAsUpEnabled(true);
+	}
+	
+	@Override
+	protected void onStop(){
+		sendAliveToService(UpdateService.DEAD);
+		doUnbindService();
+		super.onStop();
 	}
 		
 	 /**
@@ -202,7 +278,16 @@ public class ProductActivity extends Activity {
      */
     public void openBiddingDialog(View v){
     	if(userBid<=actualPrice){
-    		Toast.makeText(getApplicationContext(), "Por favor haga una oferta mayor a la actual.", Toast.LENGTH_LONG).show();
+    		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setMessage("Por favor, haga una oferta mayor a la actual")
+			.setCancelable(false)
+			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					dialog.cancel();
+				}
+			});
+			AlertDialog alertDialog = builder.create();
+			alertDialog.show();
     		return;
     	}
     	Intent intent = new Intent(this, BiddingDialog.class);
@@ -307,6 +392,30 @@ public class ProductActivity extends Activity {
     	return "???";
     }
     
+    public long initialPrice(int product){
+    	switch(product){
+    	case 1:
+    		return 7855;
+    	case 2:
+    		return 8500;
+    	case 3:
+    		return 2500;
+    	case 4:
+    		return 12000;
+    	case 5:
+    		return 615;
+    	case 6:
+    		return 46531;
+    	case 7:
+    		return 1425;
+    	case 8:
+    		return 3600;
+    	case 9:
+    		return 3980;
+    	}
+    	return 0;
+    }
+    
     public void updateSeekBarSlave(int progress){
     	int bid=MAXIMUM_BID_AMOUNT*progress;
     	String sBid = darFormato(Integer.toString(bid));
@@ -322,7 +431,57 @@ public class ProductActivity extends Activity {
     	lp.setMargins(0, (int)topPx, (int)rightPx, 0);
     	seekBarSlave.setLayoutParams(lp);
     	
-    	userBid=actualPrice+bid;
-    	yourBid.setText(darFormato(Integer.toString(userBid))+" USD");
+    	userBid=actualPrice+(bid/100);
+    	yourBid.setText(darFormato(Long.toString(userBid*100))+" USD");
+    }
+    
+    void doBindService() {
+        bindService(new Intent(this, UpdateService.class), mConnection, Context.BIND_AUTO_CREATE);
+        mIsBound = true;
+    }
+    void doUnbindService() {
+        if (mIsBound) {
+            if (mService != null) {
+                try {
+                    Message msg = Message.obtain(null, UpdateService.MSG_UNREGISTER_CLIENT);
+                    msg.replyTo = mMessenger;
+                    mService.send(msg);
+                } catch (RemoteException e) {
+                }
+            }
+            unbindService(mConnection);
+            mIsBound = false;
+        }
+    }
+    
+    private void sendAliveToService(int intvaluetosend) {
+        if (mService != null) {
+            try {
+            	Bundle b = new Bundle();
+                b.putInt("Alive", intvaluetosend);
+                Message msg = Message.obtain(null, UpdateService.MSG_SET_INT_VALUE);
+                msg.setData(b);
+                mService.send(msg);
+            } catch (RemoteException e) {
+            }
+        }
+    }
+    
+    private void sendProdNumToService(int intvaluetosend) {
+        if (mService != null) {
+            try {
+            	Bundle b = new Bundle();
+                b.putInt("Product", intvaluetosend);
+                Message msg = Message.obtain(null, UpdateService.MSG_SET_INT_VALUE);
+                msg.setData(b);
+                mService.send(msg);
+            } catch (RemoteException e) {
+            }
+        }
+    }
+    
+    public void sendInts(){
+    	sendAliveToService(UpdateService.ALIVE);
+    	sendProdNumToService(activeProduct);
     }
 }

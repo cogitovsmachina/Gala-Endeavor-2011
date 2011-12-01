@@ -1,6 +1,8 @@
 package com.androidtitlan.endeavorsubasta;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,7 +24,7 @@ public class BiddingDialog extends Activity {
 	public static final int VISIBLE = 0;
 	public static final int GONE = 8;
 
-	private int userBid;
+	private long userBid;
 	private int product;
 
 	private EditText nameEdit, nameRegistroEdit, userNameEdit, tableNumberEdit;
@@ -39,7 +41,7 @@ public class BiddingDialog extends Activity {
 		setContentView(R.layout.custom_dialog);
 		nameEdit = (EditText) findViewById(R.id.biddername);
 		Bundle extras = getIntent().getExtras();
-		userBid = extras.getInt("Bid");
+		userBid = extras.getLong("Bid");
 		product = extras.getInt("Product");
 	}
 
@@ -48,15 +50,23 @@ public class BiddingDialog extends Activity {
 	 */
 	public void returnNamefromBiddingDialog(View v) {
 		if (nameEdit.getText().toString().equals("")) {
-			Toast.makeText(this, "Por favor, escriba su nombre de usuario",
-					Toast.LENGTH_SHORT).show();
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setMessage("Por favor, escriba su nombre de usuario")
+			.setCancelable(false)
+			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					dialog.cancel();
+				}
+			});
+			AlertDialog alertDialog = builder.create();
+			alertDialog.show();
 			return;
 		}
 		userName = nameEdit.getText().toString();
 		new DoBiddingTask(userName, Integer.toString(product),
-				Integer.toString(userBid), this).execute(Resources.URL_SUBASTA
+				Long.toString(userBid), this).execute(Resources.URL_SUBASTA
 				+ "pujaProducto/");
-		Log.e(Resources.APP_NAME, "Puja enviada");
+		Log.e(Resources.APP_NAME, "Puja enviada: "+userName+" puj√≥ $"+Long.toString(userBid));
 
 		finish();
 	}
@@ -64,22 +74,55 @@ public class BiddingDialog extends Activity {
 
 	public void registerNewUser(View v){
 		if( (!acceptedTermsAndConditions.isChecked())){
-			Toast.makeText(this, "Por favor, acepte los t√©rminos y condiciones", Toast.LENGTH_SHORT).show();
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setMessage("Por favor, acepte los t√©rminos y condiciones")
+			.setCancelable(false)
+			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					dialog.cancel();
+				}
+			});
+			AlertDialog alertDialog = builder.create();
+			alertDialog.show();
 			return;
 		}
 		if (nameRegistroEdit.getText().toString().equals("")) {
-			Toast.makeText(this, "Por favor, escriba su nombre",
-					Toast.LENGTH_SHORT).show();
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setMessage("Por favor, escriba su nombre")
+			.setCancelable(false)
+			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					dialog.cancel();
+				}
+			});
+			AlertDialog alertDialog = builder.create();
+			alertDialog.show();
 			return;
 		}
 		if (userNameEdit.getText().toString().equals("")) {
-			Toast.makeText(this, "Por favor, escriba su nombre de usuario",
-					Toast.LENGTH_SHORT).show();
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setMessage("Por favor, escriba su nombre de usuario")
+			.setCancelable(false)
+			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					dialog.cancel();
+				}
+			});
+			AlertDialog alertDialog = builder.create();
+			alertDialog.show();
 			return;
 		}
 		if (tableNumberEdit.getText().toString().equals("")) {
-			Toast.makeText(this, "Por favor, escriba el número de su mesa",
-					Toast.LENGTH_SHORT).show();
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setMessage("Por favor, escriba el n√∫mero de su mesa")
+			.setCancelable(false)
+			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					dialog.cancel();
+				}
+			});
+			AlertDialog alertDialog = builder.create();
+			alertDialog.show();
 			return;
 		}
 
@@ -87,15 +130,19 @@ public class BiddingDialog extends Activity {
 		userName = userNameEdit.getText().toString();
 		fullName = nameRegistroEdit.getText().toString();
 		tableNumber = tableNumberEdit.getText().toString();
-		String strCreaUsuario = Resources.URL_SUBASTA + "creaUsuario/";
 		String tableNum=tableNumberEdit.getText().toString();
-		if(tableNum.equals("")){
-			Toast.makeText(this, "Por favor, escriba el número de su mesa", Toast.LENGTH_SHORT).show();
-			return;
-		}
 		float tNum=Float.parseFloat(tableNum);
 		if(!((tNum<=70)&&(tNum>=1))){
-			Toast.makeText(this, "Por favor, escriba un número de mesa válido", Toast.LENGTH_SHORT).show();
+			AlertDialog.Builder builder = new AlertDialog.Builder(this);
+			builder.setMessage("Por favor, escriba un n√∫mero de mesa v√°lido")
+			.setCancelable(false)
+			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					dialog.cancel();
+				}
+			});
+			AlertDialog alertDialog = builder.create();
+			alertDialog.show();
 			return;
 		}
 		//Assigning to variables
@@ -103,7 +150,7 @@ public class BiddingDialog extends Activity {
 		fullName = nameRegistroEdit.getText().toString();
 		tableNumber = tableNumberEdit.getText().toString();
 		
-		new DoHttpPostTask(userName, fullName, tableNumber, Integer.toString(userBid), Integer.toString(product), this).execute(Resources.URL_SUBASTA);
+		new DoHttpPostTask(userName, fullName, tableNumber, Long.toString(userBid), Integer.toString(product), this).execute(Resources.URL_SUBASTA);
 
 
 		/*

@@ -6,5 +6,5 @@ import java.util.List;
 public class PullProductos {
 
 	public boolean alive;
-	List <Productos> productos = new ArrayList <Productos> ();
+	public List <Productos> productos = new ArrayList <Productos> ();
 }
