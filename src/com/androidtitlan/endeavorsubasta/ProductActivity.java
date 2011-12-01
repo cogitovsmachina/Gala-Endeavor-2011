@@ -107,7 +107,11 @@ public class ProductActivity extends Activity {
 		 * Inflado especifico del layout para cada producto
 		 */
 		Bundle extras = getIntent().getExtras();
-		int selectedProduct = extras.getInt("Product");
+		activeProduct=extras.getInt("Product");
+		startUI(1, activeProduct);
+	}	
+	
+	private void startUI(int x, int selectedProduct) {
 		switch(selectedProduct){
 		case 1:
 			setContentView(R.layout.product_one);
@@ -219,12 +223,8 @@ public class ProductActivity extends Activity {
 			break;
 		}
 		actualPrice = initialPrice(activeProduct);
-        precioInicial.setText(setInitialPrice(activeProduct)+" USD");
-        precioActual.setText(setInitialPrice(activeProduct)+" USD");
-        bidderName="Nadie ha ofertado";
-		ofertante.setText(bidderName);
+        precioInicial.setText(setInitialPrice(activeProduct)+" USD");       
 		vsk.setOnSeekBarChangeListener(new OnSeekBarChangeListener(){
-			
 			public void onStopTrackingTouch(VerticalSeekBar seekBar) {				
 			}
 			
@@ -235,8 +235,16 @@ public class ProductActivity extends Activity {
 				updateSeekBarSlave(progress);
 			}
 		});
-	}	
-	
+		if(x==1){
+			bidderName="Nadie ha ofertado";
+			precioActual.setText(setInitialPrice(activeProduct)+" USD");
+			ofertante.setText(bidderName);
+		}
+		if(x==2){
+			sendProdNumToService(activeProduct);
+		}
+	}
+
 	@Override
 	protected void onRestart() {
 		super.onRestart();
@@ -293,6 +301,8 @@ public class ProductActivity extends Activity {
     	Intent intent = new Intent(this, BiddingDialog.class);
     	intent.putExtra("Bid", userBid);
     	intent.putExtra("Product", activeProduct);
+    	startUI(2, activeProduct);
+    	userBid=0;
     	startActivity(intent);    
     	}
     

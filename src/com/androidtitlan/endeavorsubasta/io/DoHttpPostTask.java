@@ -148,9 +148,5 @@ public class DoHttpPostTask extends
 			e.printStackTrace();*/
 			Toast.makeText(mActivity, "No hay conexion al servidor", Toast.LENGTH_LONG).show();
 		}
-
-		
-		
 	}
-
 }
