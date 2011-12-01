@@ -3,6 +3,7 @@ package com.androidtitlan.endeavorsubasta.io;
 import static com.androidtitlan.endeavorsubasta.util.Resources.URL_SUBASTA;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,10 +13,10 @@ import org.apache.http.message.BasicNameValuePair;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.util.Log;
 
-import com.androidtitlan.endeavorsubasta.util.Resources;
+import com.androidtitlan.galaendeavor.pojo.PullProductos;
 import com.androidtitlan.galaendeavor.pojo.ResponseFromHttpPost;
+import com.google.gson.Gson;
 
 //TODO: Implement GSON library to receive data from server
 //import com.google.gson.Gson;
@@ -63,4 +64,18 @@ public class WebServices extends Network {
 		return response;
 
 	}
+	
+	public static PullProductos pullProductos () throws IOException{
+		
+		String ansHttpGet = null;
+		Gson gson = new Gson();
+		
+		PullProductos productos = null;
+		ansHttpGet = inputStreamToString( doHttpGet(URL_SUBASTA  + "pullProducto/") ) ;
+		if (ansHttpGet !=null ){
+			productos = gson.fromJson(ansHttpGet, PullProductos.class);
+		}
+		
+		return productos;
+	} 
 }

@@ -7,7 +7,7 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-public class DoBiddingTask extends AsyncTask<String, String, String> {
+public class DoBiddingTask extends AsyncTask<String, String, ResponseFromHttpPost> {
 	private ProgressDialog dialog;
 	private Activity activity;
 	private String mUser;
@@ -21,10 +21,11 @@ public class DoBiddingTask extends AsyncTask<String, String, String> {
 	/**
 	 * constructor
 	 */
-	public DoBiddingTask(String user, String price, String product){
+	public DoBiddingTask(String user, String price, String product, Activity activity){
 		mUser = user;
 		mProduct = product;
 		mPrice = price;
+		mActivity = activity;
 	}
 
 	@Override
@@ -41,7 +42,7 @@ public class DoBiddingTask extends AsyncTask<String, String, String> {
     protected ResponseFromHttpPost doInBackground(String... params) {
 		ResponseFromHttpPost response = null;
 		try {
-			WebServices.sendBidding(mUser, mPrice, mProduct);
+			response = WebServices.sendBidding(mUser, mPrice, mProduct);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -43,7 +43,7 @@ public class Network {
 		return out.toString();
 	}
 
-	protected InputStream doHttpGet(String urlString) throws IOException {
+	protected static InputStream doHttpGet(String urlString) throws IOException {
 
 		InputStream inputStream = null;
 		int response = -1;
