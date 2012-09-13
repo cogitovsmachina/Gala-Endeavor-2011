@@ -31,7 +31,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidtitlan.endeavorsubasta.io.UpdateService;
+import com.androidtitlan.endeavorsubasta.ui.BiddingDialog;
 import com.androidtitlan.endeavorsubasta.ui.Dialog;
+import com.androidtitlan.endeavorsubasta.ui.EndeavorSubastaActivity;
 import com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar;
 import com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar.OnSeekBarChangeListener;
 

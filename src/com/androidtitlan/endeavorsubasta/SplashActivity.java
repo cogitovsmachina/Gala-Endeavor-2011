@@ -1,6 +1,7 @@
 package com.androidtitlan.endeavorsubasta;
 
 import com.androidtitlan.endeavorsubasta.io.UpdateService;
+import com.androidtitlan.endeavorsubasta.ui.EndeavorSubastaActivity;
 
 import android.app.Activity;
 import android.content.Intent;

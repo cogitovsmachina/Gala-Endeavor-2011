@@ -31,17 +31,6 @@ public class FirstProductFragment extends Fragment {
 
 		View myFragmentView = inflater.inflate(R.layout.first_fragment,
 				container, false);
-		// gridView = (GridView) myFragmentView.findViewById(R.id.gridview);
-		// gridView.setAdapter(new ImageAdapter(getActivity()));
-		// gridView.setOnItemClickListener(new OnItemClickListener() {
-		//
-		// public void onItemClick(AdapterView<?> parent, View view,
-		// int position, long id) {
-		// Intent intent = new Intent(getActivity(), ProductDetail.class);
-		// startActivity(intent);
-		// }
-		//
-		// });
 
 		return myFragmentView;
 	}

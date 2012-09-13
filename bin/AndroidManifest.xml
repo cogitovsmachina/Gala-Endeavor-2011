@@ -12,11 +12,11 @@
             </intent-filter>
         </activity>
         <activity android:label="@string/app_name"
-            android:name=".EndeavorSubastaActivity" android:screenOrientation="landscape"/>
+            android:name=".ui.EndeavorSubastaActivity" android:screenOrientation="landscape"/>
         <activity android:label="Producto n"
             android:name=".ProductActivity" android:screenOrientation="landscape"/>
         <activity android:label="Inicie Sesión o Regístrese"
-            android:name=".BiddingDialog" android:theme="@style/DialogTheme"/>
+            android:name=".ui.BiddingDialog" android:theme="@style/DialogTheme"/>
         <service android:name="com.androidtitlan.endeavorsubasta.io.UpdateService"/>
     </application>
 </manifest>

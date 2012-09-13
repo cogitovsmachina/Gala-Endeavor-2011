@@ -529,7 +529,9 @@ containing a value of this type.
         public static final int product_six=0x7f03000d;
         public static final int product_three=0x7f03000e;
         public static final int product_two=0x7f03000f;
-        public static final int splash=0x7f030010;
+        public static final int second_fragment=0x7f030010;
+        public static final int splash=0x7f030011;
+        public static final int third_fragment=0x7f030012;
     }
     public static final class menu {
         public static final int home_menu_items=0x7f0c0000;

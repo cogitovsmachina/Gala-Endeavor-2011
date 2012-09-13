@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="60"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/productFour"
+                android:layout_width="630dp"
+                android:layout_height="350dp"
+                android:onClick="goToProductFour"
+                android:src="@drawable/producto4_moto" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/productFive"
+                android:layout_width="650dp"
+                android:layout_height="350dp"
+                android:onClick="goToProductFive"
+                android:src="@drawable/producto5_johnnie" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="40"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/productSix"
+            android:layout_width="378dp"
+            android:layout_height="585dp"
+            android:onClick="goToProductSix"
+            android:src="@drawable/producto6_bmw" />
+    </LinearLayout>
+
+</LinearLayout>
