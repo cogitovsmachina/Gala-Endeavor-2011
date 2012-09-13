@@ -27,7 +27,7 @@
                         android:id="@+id/productSeven"
                         android:layout_width="550dp"
                         android:layout_height="350dp"
-                        android:onClick="goToProductSeven"
+                        android:onClick="goToProductActivity"
                         android:src="@drawable/producto7_collar" />
                 </LinearLayout>
 
@@ -41,7 +41,7 @@
                         android:id="@+id/productEight"
                         android:layout_width="530dp"
                         android:layout_height="350dp"
-                        android:onClick="goToProductEight"
+                        android:onClick="goToProductActivity"
                         android:src="@drawable/producto8_collar" />
                 </LinearLayout>
             </TableRow>
@@ -58,7 +58,7 @@
                 android:id="@+id/productNine"
                 android:layout_width="550dp"
                 android:layout_height="350dp"
-                android:onClick="goToProductNine"
+                android:onClick="goToProductActivity"
                 android:src="@drawable/producto9_collar" />
         </LinearLayout>
     </LinearLayout>

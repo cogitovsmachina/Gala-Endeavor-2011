@@ -22,7 +22,7 @@
                     android:id="@+id/productOne"
                     android:layout_width="480dp"
                     android:layout_height="350dp"
-                    android:onClick="goToProductOne"
+                    android:onClick="goToProductActivity"
                     android:src="@drawable/producto1_reloj" />
             </LinearLayout>
 
@@ -37,7 +37,7 @@
                     android:layout_width="550dp"
                     android:layout_height="350dp"
                     android:adjustViewBounds="true"
-                    android:onClick="goToProductTwo"
+                    android:onClick="goToProductActivity"
                     android:src="@drawable/producto2_collar" />
             </LinearLayout>
         </TableRow>
@@ -54,7 +54,7 @@
             android:id="@+id/productThree"
             android:layout_width="560dp"
             android:layout_height="350dp"
-            android:onClick="goToProductThree"
+            android:onClick="goToProductActivity"
             android:src="@drawable/producto3_collar" />
     </LinearLayout>
 

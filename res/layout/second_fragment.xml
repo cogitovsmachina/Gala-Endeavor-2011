@@ -21,7 +21,7 @@
                 android:id="@+id/productFour"
                 android:layout_width="630dp"
                 android:layout_height="350dp"
-                android:onClick="goToProductFour"
+                android:onClick="goToProductActivity"
                 android:src="@drawable/producto4_moto" />
         </LinearLayout>
 
@@ -36,7 +36,7 @@
                 android:id="@+id/productFive"
                 android:layout_width="650dp"
                 android:layout_height="350dp"
-                android:onClick="goToProductFive"
+                android:onClick="goToProductActivity"
                 android:src="@drawable/producto5_johnnie" />
         </LinearLayout>
     </LinearLayout>
@@ -52,7 +52,7 @@
             android:id="@+id/productSix"
             android:layout_width="378dp"
             android:layout_height="585dp"
-            android:onClick="goToProductSix"
+            android:onClick="goToProductActivity"
             android:src="@drawable/producto6_bmw" />
     </LinearLayout>
 
