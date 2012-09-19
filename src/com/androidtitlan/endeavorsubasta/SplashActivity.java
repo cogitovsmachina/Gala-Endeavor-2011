@@ -1,16 +1,13 @@
 package com.androidtitlan.endeavorsubasta;
 
-import com.androidtitlan.endeavorsubasta.io.UpdateService;
-import com.androidtitlan.endeavorsubasta.ui.EndeavorSubastaActivity;
-
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
+
+import com.androidtitlan.endeavorsubasta.io.UpdateService;
+import com.androidtitlan.endeavorsubasta.ui.HomeActivity;
 
 public class SplashActivity extends Activity {
 	/**
@@ -18,21 +15,16 @@ public class SplashActivity extends Activity {
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-	      setContentView(R.layout.splash);
-	      startService(new Intent(this, UpdateService.class));
-	      Animation anim = AnimationUtils.loadAnimation(SplashActivity.this, R.anim.splashin);
-	      final Animation anim2 = AnimationUtils.loadAnimation(SplashActivity.this, R.anim.splashout);
-	      final LinearLayout splash=(LinearLayout)findViewById(R.id.splash);
-	      splash.startAnimation(anim);	      
-	      splash.setOnClickListener(new View.OnClickListener() {
-			
-			public void onClick(View v) {
-				splash.startAnimation(anim2);
-				startActivity(new Intent(SplashActivity.this, EndeavorSubastaActivity.class));
-			}
-		});
+		ActionBar ab = getActionBar();
+		ab.hide();
+		setContentView(R.layout.splash);
+		startService(new Intent(this, UpdateService.class));
+	}
+
+	public void goToHomeActivity(View v) {
+		startActivity(new Intent(this, HomeActivity.class));
 	}
 
 	@Override
@@ -40,5 +32,5 @@ public class SplashActivity extends Activity {
 		finish();
 		super.onStop();
 	}
-	
+
 }

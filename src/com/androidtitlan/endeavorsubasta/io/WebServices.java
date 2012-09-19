@@ -13,6 +13,7 @@ import org.apache.http.message.BasicNameValuePair;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import com.androidtitlan.galaendeavor.pojo.PullProductos;
 import com.androidtitlan.galaendeavor.pojo.ResponseFromHttpPost;
@@ -49,8 +50,8 @@ public class WebServices extends Network {
 		// ( ansHttpPost.getData() );
 	}
 
-	public static ResponseFromHttpPost sendBidding(String usuario, String producto,
-			String precio) throws IOException {
+	public static ResponseFromHttpPost sendBidding(String usuario,
+			String producto, String precio) throws IOException {
 		ResponseFromHttpPost response = null;
 
 		List<NameValuePair> params = new ArrayList<NameValuePair>(1);
@@ -64,18 +65,20 @@ public class WebServices extends Network {
 		return response;
 
 	}
-	
-	public static PullProductos pullProductos () throws IOException{
-		
+
+	public static PullProductos pullProductos() throws IOException {
+
 		String ansHttpGet = null;
 		Gson gson = new Gson();
-		
+
 		PullProductos productos = null;
-		ansHttpGet = inputStreamToString( doHttpGet(URL_SUBASTA  + "pullProducto/") ) ;
-		if (ansHttpGet !=null ){
+		ansHttpGet = inputStreamToString(doHttpGet(URL_SUBASTA
+				+ "pullProducto/"));
+		Log.e("***", "answer: " + ansHttpGet);
+		if (ansHttpGet != null) {
 			productos = gson.fromJson(ansHttpGet, PullProductos.class);
 		}
-		
+
 		return productos;
-	} 
+	}
 }

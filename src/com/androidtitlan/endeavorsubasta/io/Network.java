@@ -29,7 +29,7 @@ public class Network {
 		this.context = context;
 	}
 
-	/*
+	/**
 	 * Method to build a InputStream to String
 	 */
 	protected static String inputStreamToString(InputStream in)
