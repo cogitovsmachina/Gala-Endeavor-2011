@@ -15,7 +15,7 @@ import android.os.Messenger;
 import android.os.RemoteException;
 import android.util.Log;
 
-import com.androidtitlan.galaendeavor.pojo.Productos;
+import com.androidtitlan.galaendeavor.pojo.Producto;
 import com.androidtitlan.galaendeavor.pojo.PullProductos;
 
 public class UpdateService extends Service {
@@ -105,15 +105,15 @@ public class UpdateService extends Service {
 		try {
 			catalogo = WebServices.pullProductos();
 
-			if (catalogo.alive == false) {
-				sendBool(true);
-				return;
-			}
+//			if (catalogo.alive == false) {
+//				sendBool(true);
+//				return;
+//			}
 
 			Log.i("Pull", "Se hizo pull de: " + Integer.toString(activeProduct));
-			Productos p = null;
+			Producto p = null;
 			for (int i = 0; i < 9; i++) {
-				Productos temp = catalogo.productos.get(i);
+				Producto temp = catalogo.productos.get(i);
 				if (temp.id_producto == activeProduct) {
 					p = temp;
 					break;

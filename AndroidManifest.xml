@@ -24,11 +24,13 @@
         <activity
             android:name=".ui.HomeActivity"
             android:label="@string/app_name"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Endeavor.Home" />
         <activity
             android:name=".ProductDetailActivity"
             android:label="Producto n"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.Endeavor.Home" />
         <activity
             android:name=".ui.BiddingDialog"
             android:label="Inicie Sesión o Regístrese"
@@ -36,6 +38,5 @@
 
         <service android:name="com.androidtitlan.endeavorsubasta.io.UpdateService" />
     </application>
-
 
 </manifest>

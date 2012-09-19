@@ -4,6 +4,7 @@ import static com.androidtitlan.endeavorsubasta.util.Resources.URL_SUBASTA;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,9 +16,11 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.androidtitlan.galaendeavor.pojo.Producto;
 import com.androidtitlan.galaendeavor.pojo.PullProductos;
 import com.androidtitlan.galaendeavor.pojo.ResponseFromHttpPost;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 //TODO: Implement GSON library to receive data from server
 //import com.google.gson.Gson;
@@ -71,14 +74,18 @@ public class WebServices extends Network {
 		String ansHttpGet = null;
 		Gson gson = new Gson();
 
-		PullProductos productos = null;
+		PullProductos ans = new PullProductos();
+		ArrayList<Producto> productos = null;
 		ansHttpGet = inputStreamToString(doHttpGet(URL_SUBASTA
 				+ "pullProducto/"));
 		Log.e("***", "answer: " + ansHttpGet);
 		if (ansHttpGet != null) {
-			productos = gson.fromJson(ansHttpGet, PullProductos.class);
+			Type listType = new TypeToken<ArrayList<Producto>>() {}.getType();
+			productos = gson.fromJson(ansHttpGet, listType);
 		}
 
-		return productos;
+		ans.productos = productos;
+		
+		return ans;
 	}
 }
