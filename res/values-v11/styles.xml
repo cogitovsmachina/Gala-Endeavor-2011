@@ -1,8 +1,9 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
     <!-- Start with the Holographic Light theme -->
     <style name="Theme.Endeavor" parent="android:style/Theme.Holo.Light">
         <item name="android:windowBackground">@drawable/window_background</item>
-       <item name="android:actionBarStyle">@style/ActionBar</item>  
+        <item name="android:actionBarStyle">@style/ActionBar</item>
 
         <!-- custom attributes -->
         <item name="textHeaderMaxLines">@integer/text_header_max_lines</item>
@@ -11,18 +12,19 @@
 
     <style name="Theme.Endeavor.Home" parent="style/Theme.Endeavor">
         <item name="android:windowBackground">@drawable/window_background_home</item>
-         <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="android:actionBarStyle">@style/ActionBar</item>
     </style>
 
     <style name="ActionBar" parent="android:style/Widget.Holo.Light.ActionBar">
-        <item name="android:background">@color/actionbar_background</item>
-        <item name="android:textColor">@color/accent_1</item>
-         <item name="android:titleTextStyle">@style/ActionBarText</item>
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:textColor">@color/actionbar_text</item>
+        <item name="android:titleTextStyle">@style/ActionBarText</item>
     </style>
 
     <style name="ActionBarText">
-        <item name="android:textColor">@color/accent_1</item>
+        <item name="android:textColor">@color/actionbar_text</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">18sp</item>
     </style>
+
 </resources>

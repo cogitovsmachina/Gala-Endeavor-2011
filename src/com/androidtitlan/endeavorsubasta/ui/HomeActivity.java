@@ -5,6 +5,8 @@ import java.util.List;
 
 import android.app.ActionBar;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -28,6 +30,7 @@ public class HomeActivity extends FragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.pager);
+		setActionBarCustomBackground();
 
 		ComplexPagerViewAdapter adapter = new ComplexPagerViewAdapter(this,
 				createFragments());
@@ -47,6 +50,18 @@ public class HomeActivity extends FragmentActivity {
 		return list;
 	}
 
+	/**
+	 * Dirty hack to get ActionBar filled with a tile programatically
+	 * */
+	private void setActionBarCustomBackground(){
+	final ActionBar actionBar = getActionBar();
+	BitmapDrawable background = new BitmapDrawable(
+			BitmapFactory.decodeResource(getResources(),
+					R.drawable.actionbar_tile));
+	background.setTileModeX(android.graphics.Shader.TileMode.REPEAT);
+	actionBar.setBackgroundDrawable(background);
+	}
+	
 	@Override
 	protected void onStart() {
 		super.onStart();

@@ -14,6 +14,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.res.Resources;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -100,10 +102,24 @@ public class ProductDetailActivity extends Activity {
 			mService = null;
 		}
 	};
+	
+	/**
+	 * Dirty hack to get ActionBar filled with a tile programatically
+	 * 
+	 * */
+	private void setActionBarCustomBackground(){
+	final ActionBar actionBar = getActionBar();
+	BitmapDrawable background = new BitmapDrawable(
+			BitmapFactory.decodeResource(getResources(),
+					R.drawable.actionbar_tile));
+	background.setTileModeX(android.graphics.Shader.TileMode.REPEAT);
+	actionBar.setBackgroundDrawable(background);
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setActionBarCustomBackground();
 		doBindService();
 		tmr.schedule(new TimerTask() {
 			public void run() {
