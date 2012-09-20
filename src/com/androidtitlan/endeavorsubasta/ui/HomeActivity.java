@@ -53,15 +53,15 @@ public class HomeActivity extends FragmentActivity {
 	/**
 	 * Dirty hack to get ActionBar filled with a tile programatically
 	 * */
-	private void setActionBarCustomBackground(){
-	final ActionBar actionBar = getActionBar();
-	BitmapDrawable background = new BitmapDrawable(
-			BitmapFactory.decodeResource(getResources(),
-					R.drawable.actionbar_tile));
-	background.setTileModeX(android.graphics.Shader.TileMode.REPEAT);
-	actionBar.setBackgroundDrawable(background);
+	private void setActionBarCustomBackground() {
+		final ActionBar actionBar = getActionBar();
+		BitmapDrawable background = new BitmapDrawable(
+				BitmapFactory.decodeResource(getResources(),
+						R.drawable.actionbar_tile));
+		background.setTileModeX(android.graphics.Shader.TileMode.REPEAT);
+		actionBar.setBackgroundDrawable(background);
 	}
-	
+
 	@Override
 	protected void onStart() {
 		super.onStart();
@@ -75,54 +75,53 @@ public class HomeActivity extends FragmentActivity {
 	 * 
 	 */
 	public void goToProductActivity(View v) {
-		// startActivity(new Intent(this, ProductActivity.class));
-		if (v.getId() == R.id.productOne) {
-			Log.e("***", "It works");
-			Intent i = new Intent(this, ProductDetailActivity.class);
+		Intent i = new Intent(this, ProductDetailActivity.class);
+		switch (v.getId()) {
+		case R.id.productOne:
 			i.putExtra("Product", 1);
 			startActivity(i);
-		}
-		if (v.getId() == R.id.productTwo) {
-			Intent i = new Intent(this, ProductDetailActivity.class);
+			break;
+		case R.id.productTwo:
 			i.putExtra("Product", 2);
 			startActivity(i);
-		}
-		if (v.getId() == R.id.productThree) {
-			Intent i = new Intent(this, ProductDetailActivity.class);
+			break;
+
+		case R.id.productThree:
 			i.putExtra("Product", 3);
 			startActivity(i);
-		}
-		if (v.getId() == R.id.productFour) {
-			Intent i = new Intent(this, ProductDetailActivity.class);
+			break;
+
+		case R.id.productFour:
 			i.putExtra("Product", 4);
 			startActivity(i);
-		}
-		if (v.getId() == R.id.productFive) {
-			Intent i = new Intent(this, ProductDetailActivity.class);
+			break;
+
+		case R.id.productFive:
 			i.putExtra("Product", 5);
 			startActivity(i);
-		}
-		if (v.getId() == R.id.productSix) {
-			Intent i = new Intent(this, ProductDetailActivity.class);
+			break;
+
+		case R.id.productSix:
 			i.putExtra("Product", 6);
 			startActivity(i);
-		}
-		if (v.getId() == R.id.productSeven) {
-			Intent i = new Intent(this, ProductDetailActivity.class);
+			break;
+
+		case R.id.productSeven:
 			i.putExtra("Product", 7);
 			startActivity(i);
-		}
-		if (v.getId() == R.id.productEight) {
-			Intent i = new Intent(this, ProductDetailActivity.class);
+			break;
+
+		case R.id.productEight:
 			i.putExtra("Product", 8);
 			startActivity(i);
-		}
-		if (v.getId() == R.id.productNine) {
-			Intent i = new Intent(this, ProductDetailActivity.class);
+			break;
+
+		case R.id.productNine:
 			i.putExtra("Product", 9);
 			startActivity(i);
-		}
+			break;
 
+		}
 	}
 
 	/**

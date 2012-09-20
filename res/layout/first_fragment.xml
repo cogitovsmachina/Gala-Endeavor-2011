@@ -2,47 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    >
-
-    <TableLayout
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="50"
-        android:stretchColumns="*" >
-
-        <TableRow>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:gravity="center"
-                android:orientation="horizontal" >
-
-                <ImageView
-                    android:id="@+id/productOne"
-                    android:layout_width="480dp"
-                    android:layout_height="350dp"
-                    android:onClick="goToProductActivity"
-                    android:src="@drawable/producto1_reloj" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:gravity="center"
-                android:orientation="horizontal" >
-
-                <ImageView
-                    android:id="@+id/productTwo"
-                    android:layout_width="550dp"
-                    android:layout_height="350dp"
-                    android:adjustViewBounds="true"
-                    android:onClick="goToProductActivity"
-                    android:src="@drawable/producto2_collar" />
-            </LinearLayout>
-        </TableRow>
-    </TableLayout>
+    android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -52,11 +12,25 @@
         android:orientation="horizontal" >
 
         <ImageView
-            android:id="@+id/productThree"
-            android:layout_width="560dp"
-            android:layout_height="350dp"
+            android:id="@+id/productOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:onClick="goToProductActivity"
-            android:src="@drawable/producto3_collar" />
+            android:src="@drawable/jaeger_lecoultre_reloj" />
+
+        <ImageView
+            android:id="@+id/productTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goToProductActivity"
+            android:src="@drawable/carlin_vestido" />
+
+        <ImageView
+            android:id="@+id/productThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goToProductActivity"
+            android:src="@drawable/berger_anillo" />
     </LinearLayout>
 
 </LinearLayout>
