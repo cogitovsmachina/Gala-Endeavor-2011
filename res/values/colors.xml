@@ -1,5 +1,6 @@
 <resources>
     <color name="actionbar_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
     
     <color name="home_font_color">#ffefece6</color>
 

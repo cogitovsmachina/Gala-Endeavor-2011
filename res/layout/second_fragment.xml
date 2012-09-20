@@ -1,59 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="horizontal" >
+    android:orientation="vertical" >
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="fill_parent"
-        android:layout_weight="60"
-        android:orientation="vertical" >
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="50"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <ImageView
-                android:id="@+id/productFour"
-                android:layout_width="630dp"
-                android:layout_height="350dp"
-                android:onClick="goToProductActivity"
-                android:src="@drawable/producto4_moto" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="50"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <ImageView
-                android:id="@+id/productFive"
-                android:layout_width="650dp"
-                android:layout_height="350dp"
-                android:onClick="goToProductActivity"
-                android:src="@drawable/producto5_johnnie" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="fill_parent"
-        android:layout_weight="40"
+        android:id="@+id/secondfragment_firstrow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
         android:gravity="center"
         android:orientation="horizontal" >
 
         <ImageView
-            android:id="@+id/productSix"
-            android:layout_width="378dp"
-            android:layout_height="585dp"
+            android:id="@+id/productSeven"
+            android:layout_width="361dp"
+            android:layout_height="280dp"
             android:onClick="goToProductActivity"
-            android:src="@drawable/producto6_bmw" />
+            android:src="@drawable/tane_escultura" />
+
+        <ImageView
+            android:id="@+id/productEight"
+            android:layout_width="361dp"
+            android:layout_height="280dp"
+            android:layout_margin="30dp"
+            android:onClick="goToProductActivity"
+            android:src="@drawable/galeriatoca_guitarra" />
+
+        <ImageView
+            android:id="@+id/productNine"
+            android:layout_width="361dp"
+            android:layout_height="280dp"
+            android:onClick="goToProductActivity"
+            android:src="@drawable/galeriatoca_malla" />
     </LinearLayout>
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/secondfragment_firstrow"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/productTen"
+            android:layout_width="361dp"
+            android:layout_height="280dp"
+            android:onClick="goToProductActivity"
+            android:src="@drawable/yurizatarain" />
+
+        <ImageView
+            android:id="@+id/productEleven"
+            android:layout_width="361dp"
+            android:layout_height="280dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:onClick="goToProductActivity"
+            android:src="@drawable/johniewalker" />
+
+        <ImageView
+            android:id="@+id/productTwelve"
+            android:layout_width="361dp"
+            android:layout_height="280dp"
+            android:onClick="goToProductActivity"
+            android:src="@drawable/gucci" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -3,6 +3,7 @@ package com.androidtitlan.endeavorsubasta.ui;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.animation.TimeInterpolator;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
@@ -23,8 +24,11 @@ import com.androidtitlan.endeavorsubasta.adapter.ComplexPagerViewAdapter;
 import com.androidtitlan.endeavorsubasta.fragments.FirstProductFragment;
 import com.androidtitlan.endeavorsubasta.fragments.SecondProductFragment;
 import com.androidtitlan.endeavorsubasta.fragments.ThirdProductFragment;
+import com.viewpagerindicator.CirclePageIndicator;
 
 public class HomeActivity extends FragmentActivity {
+
+	private CirclePageIndicator mIndicator;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,11 @@ public class HomeActivity extends FragmentActivity {
 		ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
 		viewPager.setAdapter(adapter);
 		viewPager.setCurrentItem(0);
+		
+//		CirclePageIndicator indicator = (CirclePageIndicator)findViewById(R.id.indicator);
+//        mIndicator = indicator;
+//        indicator.setViewPager(viewPager);
+//        indicator.setSnap(true);
 	}
 
 	private List<Fragment> createFragments() {
@@ -118,6 +127,34 @@ public class HomeActivity extends FragmentActivity {
 
 		case R.id.productNine:
 			i.putExtra("Product", 9);
+			startActivity(i);
+			break;
+		case R.id.productTen:
+			i.putExtra("Product", 10);
+			startActivity(i);
+			break;
+		case R.id.productEleven:
+			i.putExtra("Product", 11);
+			startActivity(i);
+			break;
+		case R.id.productTwelve:
+			i.putExtra("Product", 12);
+			startActivity(i);
+			break;
+		case R.id.productThirteen:
+			i.putExtra("Product", 13);
+			startActivity(i);
+			break;
+		case R.id.productFourteen:
+			i.putExtra("Product", 14);
+			startActivity(i);
+			break;
+		case R.id.productFifteen:
+			i.putExtra("Product", 15);
+			startActivity(i);
+			break;
+		case R.id.productSixteen:
+			i.putExtra("Product", 16);
 			startActivity(i);
 			break;
 

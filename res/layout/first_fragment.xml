@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <LinearLayout
-       	android:id="@+id/first_row"
+        android:id="@+id/first_row"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="20"
@@ -36,11 +36,12 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/second_row"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/first_row"
         android:layout_weight="20"
         android:gravity="center"
-        android:layout_below="@id/first_row"
         android:orientation="horizontal" >
 
         <ImageView
@@ -54,8 +55,8 @@
             android:id="@+id/productFive"
             android:layout_width="361dp"
             android:layout_height="280dp"
-            android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:onClick="goToProductActivity"
             android:src="@drawable/brioni_portapasaporte" />
 
