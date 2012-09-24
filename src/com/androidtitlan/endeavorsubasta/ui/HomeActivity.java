@@ -41,11 +41,12 @@ public class HomeActivity extends FragmentActivity {
 		ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
 		viewPager.setAdapter(adapter);
 		viewPager.setCurrentItem(0);
-		
-//		CirclePageIndicator indicator = (CirclePageIndicator)findViewById(R.id.indicator);
-//        mIndicator = indicator;
-//        indicator.setViewPager(viewPager);
-//        indicator.setSnap(true);
+
+		// CirclePageIndicator indicator =
+		// (CirclePageIndicator)findViewById(R.id.indicator);
+		// mIndicator = indicator;
+		// indicator.setViewPager(viewPager);
+		// indicator.setSnap(true);
 	}
 
 	private List<Fragment> createFragments() {

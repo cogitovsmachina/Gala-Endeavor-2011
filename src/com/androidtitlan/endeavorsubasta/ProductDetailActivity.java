@@ -53,7 +53,7 @@ public class ProductDetailActivity extends Activity {
 	long actualPrice, userBid;
 	String bidderName;
 
-	private static final int MAXIMUM_BID_AMOUNT = 10000;
+	private static final int MAXIMUM_BID_AMOUNT = 5000;
 	private int activeProduct;
 	Messenger mService = null;
 	boolean mIsBound;
@@ -245,7 +245,7 @@ public class ProductDetailActivity extends Activity {
 			activeProduct = 9;
 			break;
 		case 10:
-			setContentView(R.layout.product_nine);
+			setContentView(R.layout.product_ten);
 			setTitle(R.string.product_title10);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
 			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
@@ -258,7 +258,7 @@ public class ProductDetailActivity extends Activity {
 			break;
 
 		case 11:
-			setContentView(R.layout.product_nine);
+			setContentView(R.layout.product_eleven);
 			setTitle(R.string.product_title11);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
 			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
@@ -271,7 +271,7 @@ public class ProductDetailActivity extends Activity {
 			break;
 
 		case 12:
-			setContentView(R.layout.product_nine);
+			setContentView(R.layout.product_twelve);
 			setTitle(R.string.product_title12);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
 			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
@@ -283,7 +283,7 @@ public class ProductDetailActivity extends Activity {
 			activeProduct = 12;
 			break;
 		case 13:
-			setContentView(R.layout.product_nine);
+			setContentView(R.layout.product_thirteen);
 			setTitle(R.string.product_title13);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
 			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
@@ -295,7 +295,7 @@ public class ProductDetailActivity extends Activity {
 			activeProduct = 13;
 			break;
 		case 14:
-			setContentView(R.layout.product_nine);
+			setContentView(R.layout.product_fourteen);
 			setTitle(R.string.product_title14);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
 			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
@@ -307,7 +307,7 @@ public class ProductDetailActivity extends Activity {
 			activeProduct = 14;
 			break;
 		case 15:
-			setContentView(R.layout.product_nine);
+			setContentView(R.layout.product_fifteen);
 			setTitle(R.string.product_title15);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
 			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
@@ -319,7 +319,7 @@ public class ProductDetailActivity extends Activity {
 			activeProduct = 15;
 			break;
 		case 16:
-			setContentView(R.layout.product_nine);
+			setContentView(R.layout.product_sixteen);
 			setTitle(R.string.product_title16);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
 			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
@@ -448,44 +448,72 @@ public class ProductDetailActivity extends Activity {
 		return formated;
 	}
 
-	public void moreInfoOnProduct(View v) {
+	public void showProductInfo(View v) {
 		String title = null, contents = null;
 		switch (activeProduct) {
 		case (1):
-			title = "El Grande Reverso";
-			contents = "El Grande Reverso luce una edici�n in�dita de 30 x 48.5 mm y se caracteriza por su esfera plateada de espl�ndida sobriedad ornamentada con d�gitos tradicionales del estilo Art Deco y un doble acabado: mientras el rect�ngulo del centro presenta un motivo guilloqueado con Clous de Paris, la parte exterior enarbola un acabado satinado. Ésta delicada alternancia ornamental se repite en el contador del segundero pequeño situado a las 6 horas. El Grande Reverso está animado por el nuevo Calibre 976, visible a través del fondo de cristal de zafiro. Posee todas las características de los movimientos robustos y precisos desarrollados por la manufactura Jaeger-LeCoultre y está equipado con un volante de inercia variable que palpita con una frecuencia de 28,800 alternancias por hora.";
+			title = (String) getText(R.string.product_title1);
+			contents = (String) getText(R.string.product_abstract1);
 			break;
 		case (2):
-			title = "Collar Peyrelongue";
-			contents = "Collar Oro Rojo y Blanco\n\nKilataje Oro: 18K\nKilataje Diamantes: 1.64 ct";
+			title = (String) getText(R.string.product_title2);
+			contents = (String) getText(R.string.product_abstract2);
 			break;
 		case (3):
-			title = "Collar Infinito Rosé";
-			contents = "Collar de la Colección Infinito Elite Rosé\n\nPlata .925\nBaño de Oro Rosa de 22K\nZirconias montadas en Pavé";
+			title = (String) getText(R.string.product_title3);
+			contents = (String) getText(R.string.product_abstract3);
 			break;
 		case (4):
-			title = "Margie";
-			contents = "La Margie es una motocicleta tipo Bobber de cuadro rígido, con suspensión frontal tipo Springer, asiento en piel terminado a mano, Motor 125 cc de 4 tiempos, de 4 velocidades y 7.5 caballos de fuerza y una velocidad de más de 100km/hr.\nLas Margies son motocicletas urbanas con cambio semiautomático en tipo Shifter y Jockey haciéndola totalmente clásica, esto aunado a una suspensión de resorte trasero fabricado en acero pulido y cromado montado en un asiento de inyección de poliuretano con base de gel para reducir el impacto en la columna.\nCuenta con llanta delantera de 18 pulgadas con freno de disco y atrás llanta de 15 Pulgadas con freno de tambor.\nEncendido eléctrico y de patada, batería de seis celdas libre de mantenimiento.";
+			title = (String) getText(R.string.product_title4);
+			contents = (String) getText(R.string.product_abstract4);
 			break;
 		case (5):
-			title = "Johnnie Walker Blue Label";
-			contents = "Johnnie Walker Blue Label: King George V Edition, celebra la primera Orden Real dada a la compañia John Walker and Sons Ltda., para proveer Scotch whisky a la Casa Real Británica, en 1934. Haciendo honor a su herencia, ésta exquisita mezcla ha sido hecha a mano utilizando las técnicas de la época, y usando whiskies de las destilerías que operaban durante el reinado de George V.\n\nCaracterísticas:\n-Olfato: un aroma inicial profundamente ahumado seguido de una dulce y afrutada sensación (a manzanas, peras, bananas) propia de las maltas; que desemboca en una complejidad rica en frutos secos y especiados (uvas, pasas, higos, canela).\n-Paladar: suave, con una rica y afrutada dulzura. Calienta el paladar con sutiles sabores a madera de sándalo y humo.\n-Sabor: fuerte, complejo, rico y suave.\n-Sensación final: cálido en la boca con un prolongado final rico en turba.\n-Con Agua: libera nuevos sabores más frescos y afrutados, y deja una sensación ahumada en el paladar.";
+			title = (String) getText(R.string.product_title5);
+			contents = (String) getText(R.string.product_abstract5);
 			break;
 		case (6):
-			title = "528iA de Lujo";
-			contents = "Alpine White/Leather Dakota Cinnamon Brown\nChasis:C859775\n\nValor comercial: 56,300 USD\n*El tiempo de entrega del coche será de al menos 15 días.";
+			title = (String) getText(R.string.product_title6);
+			contents = (String) getText(R.string.product_abstract6);
 			break;
 		case (7):
-			title = "Subasta de Oro";
-			contents = "Collar de Oro Tipo Cartier\nKilataje: 14K.\nPeso: 28.3 grs.";
+			title = (String) getText(R.string.product_title7);
+			contents = (String) getText(R.string.product_abstract7);
 			break;
 		case (8):
-			title = "Subasta de Oro";
-			contents = "Collar de Oro Torsal\nKilataje: 10K. Peso: 116 grs.";
+			title = (String) getText(R.string.product_title8);
+			contents = (String) getText(R.string.product_abstract8);
 			break;
 		case (9):
-			title = "Subasta de Oro";
-			contents = "Collar de Oro Barbado\nKilataje: 10K.\nPeso: 120 grs.";
+			title = (String) getText(R.string.product_title9);
+			contents = (String) getText(R.string.product_abstract9);
+			break;
+		case (10):
+			title = (String) getText(R.string.product_title10);
+			contents = (String) getText(R.string.product_abstract10);
+			break;
+		case (11):
+			title = (String) getText(R.string.product_title11);
+			contents = (String) getText(R.string.product_abstract11);
+			break;
+		case (12):
+			title = (String) getText(R.string.product_title12);
+			contents = (String) getText(R.string.product_abstract12);
+			break;
+		case (13):
+			title = (String) getText(R.string.product_title13);
+			contents = (String) getText(R.string.product_abstract13);
+			break;
+		case (14):
+			title = (String) getText(R.string.product_title14);
+		contents = (String) getText(R.string.product_abstract14);
+			break;
+		case (15):
+			title = (String) getText(R.string.product_title15);
+			contents = (String) getText(R.string.product_abstract15);
+			break;
+		case (16):
+			title = (String) getText(R.string.product_title16);
+			contents = (String) getText(R.string.product_abstract16);
 			break;
 		}
 		Dialog.showMoreInfo(this, title, contents);
@@ -494,23 +522,37 @@ public class ProductDetailActivity extends Activity {
 	public String setInitialPrice(int product) {
 		switch (product) {
 		case 1:
-			return darFormato("7855.00");
+			return darFormato("7000.00");
 		case 2:
-			return darFormato("8500.00");
+			return darFormato("1100.00");
 		case 3:
-			return darFormato("2500.00");
+			return darFormato("3500.00");
 		case 4:
-			return darFormato("12000.00");
+			return darFormato("1100.00");
 		case 5:
-			return darFormato("615.00");
+			return darFormato("2550.00");
 		case 6:
-			return darFormato("46531.00");
+			return darFormato("10000.00");
 		case 7:
-			return darFormato("1425.00");
+			return darFormato("9000.00");
 		case 8:
-			return darFormato("3600.00");
+			return darFormato("11680.00");
 		case 9:
-			return darFormato("3980.00");
+			return darFormato("10220.00");
+		case 10:
+			return darFormato("8500.00");
+		case 11:
+			return darFormato("1230.00");
+		case 12:
+			return darFormato("900.00");
+		case 13:
+			return darFormato("2100.00");
+		case 14:
+			return darFormato("125500.00");
+		case 15:
+			return darFormato("1500.00");
+		case 16:
+			return darFormato("500.00");
 		}
 		return "???";
 	}
