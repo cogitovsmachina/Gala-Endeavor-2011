@@ -606,7 +606,7 @@ public class ProductDetailActivity extends Activity implements
 		int bid = MAXIMUM_BID_AMOUNT * progress;
 		String sBid = darFormato(Integer.toString(bid));
 		seekBarSlave.setText(sBid+" USD");
-		seekBarSlave.setTextSize(20);
+//		seekBarSlave.setTextSize(20);
 //		seekBarTextImage.setVisibility(8);
 
 //		int textOffset = (int) (5.35 * progress);
