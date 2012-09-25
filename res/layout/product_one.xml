@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
             android:src="@drawable/jaegerlecoultre_logo" />
 
         <ImageView
@@ -41,6 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/logo"
+            android:paddingBottom="30dp"
             android:src="@drawable/preciosalida_img" />
 
         <ImageView
@@ -48,18 +49,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/price_container"
+            android:paddingBottom="30dp"
             android:src="@drawable/ofertante_img" />
 
         <SeekBar
             android:id="@+id/seekbar"
-            android:layout_width="620dp"
+            android:layout_width="400dp"
             android:layout_height="55dp"
             android:layout_below="@id/offerer_container"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/empty_slider"
-            android:progressDrawable="@drawable/full_slider"
-            android:thumb="@drawable/seekbar_thumb"
-            android:thumbOffset="15dp" />
+            android:paddingBottom="30dp" />
 
         <ImageView
             android:id="@+id/my_offer"
@@ -69,13 +68,34 @@
             android:src="@drawable/tuoferta_img" />
 
         <TextView
+            android:id="@+id/bidder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/logo"
+            android:layout_alignRight="@+id/my_offer"
+            android:layout_centerVertical="true"
+            android:text="bidder"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/actionbar_text" />
+
+        <TextView
+            android:id="@+id/myoffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/my_offer"
+            android:layout_alignLeft="@+id/bidder"
+            android:layout_marginBottom="38dp"
+            android:text="bidder"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/actionbar_text" />
+
+        <TextView
             android:id="@+id/starting_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/price_container"
-            android:layout_alignParentLeft="true"
-            android:layout_marginBottom="23dp"
-            android:layout_marginLeft="105dp"
+            android:layout_alignLeft="@+id/logo"
+            android:layout_alignTop="@+id/price_container"
+            android:layout_marginTop="44dp"
             android:text="last price"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@color/actionbar_text" />
@@ -86,34 +106,19 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/starting_price"
             android:layout_alignBottom="@+id/starting_price"
-            android:layout_alignRight="@+id/logo"
-            android:layout_marginRight="45dp"
+            android:layout_alignRight="@+id/seekbar"
+            android:layout_toRightOf="@+id/bidder"
             android:text="last price"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@color/actionbar_text" />
 
-        <TextView
-            android:id="@+id/myoffer"
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/my_offer"
-            android:layout_marginBottom="29dp"
-            android:text="bidder"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/actionbar_text" />
-
-        <TextView
-            android:id="@+id/bidder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/offerer_container"
-            android:layout_alignParentLeft="true"
-            android:layout_marginBottom="29dp"
-            android:layout_marginLeft="31dp"
-            android:layout_toLeftOf="@+id/seekbar"
-            android:text="bidder"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/actionbar_text" />
+            android:layout_below="@id/seekbar"
+            android:layout_toRightOf="@id/my_offer"
+            android:onClick="openBiddingDialog"
+            android:src="@drawable/offer_button" />
 
     </RelativeLayout>
 
