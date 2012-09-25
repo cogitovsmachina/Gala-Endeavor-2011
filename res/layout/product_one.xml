@@ -106,7 +106,7 @@
             android:layout_alignLeft="@+id/starting_price"
             android:layout_alignRight="@+id/my_offer"
             android:layout_centerVertical="true"
-            android:text="bidder"
+            android:text="Nadie ha ofertado"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/actionbar_text" />
 
@@ -118,7 +118,7 @@
             android:layout_alignLeft="@+id/bidder"
             android:layout_alignRight="@+id/starting_price"
             android:layout_marginBottom="29dp"
-            android:text="My offer"
+            android:text="$ 0.00 USD"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/actionbar_text" />
 
