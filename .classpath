@@ -6,7 +6,7 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="lib" path="libs/libGoogleAnalytics.jar"/>
 	<classpathentry kind="lib" path="libs/gson-2.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/spy/Raku/POCs/Gala Endeavor/Samples/JakeWharton-Android-ViewPagerIndicator-8cd549f/library/bin/library.jar" sourcepath="/library/src"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/library"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK/library"/>
+	<classpathentry kind="src" path="/library"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

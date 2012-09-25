@@ -29,16 +29,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
 import com.androidtitlan.endeavorsubasta.io.UpdateService;
 import com.androidtitlan.endeavorsubasta.ui.BiddingDialog;
 import com.androidtitlan.endeavorsubasta.ui.Dialog;
 import com.androidtitlan.endeavorsubasta.ui.HomeActivity;
-import com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar;
-import com.androidtitlan.endeavorsubasta.ui.VerticalSeekBar.OnSeekBarChangeListener;
 
-public class ProductDetailActivity extends Activity {
+public class ProductDetailActivity extends Activity implements
+		android.widget.SeekBar.OnSeekBarChangeListener {
 
 	/**
 	 * TextViews dinamicos de Nombre del ultimo bidder y precio actual
@@ -46,9 +48,9 @@ public class ProductDetailActivity extends Activity {
 	TextView ofertante = null;
 	TextView precioActual = null;
 	TextView precioInicial = null;
-	VerticalSeekBar vsk = null;
+	SeekBar vsk = null;
 	TextView seekBarSlave = null;
-	TextView yourBid = null;
+//	TextView yourBid = null;
 	ImageView seekBarTextImage = null;
 	long actualPrice, userBid;
 	String bidderName;
@@ -139,22 +141,23 @@ public class ProductDetailActivity extends Activity {
 		case 1:
 			setContentView(R.layout.product_one);
 			setTitle(R.string.product_title1);
-			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice1);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar1);
-			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave1);
-			yourBid = (TextView) findViewById(R.id.offer1);
-			precioInicial = (TextView) findViewById(R.id.initial_price_1);
-			ofertante = (TextView) findViewById(R.id.bidder_1);
-			precioActual = (TextView) findViewById(R.id.price_1);
+//			 seekBarTextImage = (ImageView)
+//			 findViewById(R.id.image_textodeslice1);
+			vsk = (SeekBar) findViewById(R.id.seekbar);
+			 seekBarSlave = (TextView) findViewById(R.id.myoffer);
+			// yourBid = (TextView) findViewById(R.id.offer1);
+			ofertante = (TextView) findViewById(R.id.bidder);
+			precioInicial = (TextView) findViewById(R.id.starting_price);
+			precioActual = (TextView) findViewById(R.id.last_price);
 			activeProduct = 1;
 			break;
 		case 2:
 			setContentView(R.layout.product_two);
 			setTitle(R.string.product_title2);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice2);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar2);
+			vsk = (SeekBar) findViewById(R.id.seekbar2);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave2);
-			yourBid = (TextView) findViewById(R.id.offer2);
+//			yourBid = (TextView) findViewById(R.id.offer2);
 			precioInicial = (TextView) findViewById(R.id.initial_price_2);
 			ofertante = (TextView) findViewById(R.id.bidder_2);
 			precioActual = (TextView) findViewById(R.id.price_2);
@@ -164,9 +167,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_three);
 			setTitle(R.string.product_title3);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice3);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar3);
+			vsk = (SeekBar) findViewById(R.id.seekbar3);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave3);
-			yourBid = (TextView) findViewById(R.id.offer3);
+//			yourBid = (TextView) findViewById(R.id.offer3);
 			precioInicial = (TextView) findViewById(R.id.initial_price_3);
 			ofertante = (TextView) findViewById(R.id.bidder_3);
 			precioActual = (TextView) findViewById(R.id.price_3);
@@ -176,9 +179,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_four);
 			setTitle(R.string.product_title4);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice4);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar4);
+			vsk = (SeekBar) findViewById(R.id.seekbar4);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave4);
-			yourBid = (TextView) findViewById(R.id.offer4);
+//			yourBid = (TextView) findViewById(R.id.offer4);
 			precioInicial = (TextView) findViewById(R.id.initial_price_4);
 			ofertante = (TextView) findViewById(R.id.bidder_4);
 			precioActual = (TextView) findViewById(R.id.price_4);
@@ -188,9 +191,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_five);
 			setTitle(R.string.product_title5);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice5);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar5);
+			vsk = (SeekBar) findViewById(R.id.seekbar5);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave5);
-			yourBid = (TextView) findViewById(R.id.offer5);
+//			yourBid = (TextView) findViewById(R.id.offer5);
 			precioInicial = (TextView) findViewById(R.id.initial_price_5);
 			ofertante = (TextView) findViewById(R.id.bidder_5);
 			precioActual = (TextView) findViewById(R.id.price_5);
@@ -200,9 +203,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_six);
 			setTitle(R.string.product_title6);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice6);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar6);
+			vsk = (SeekBar) findViewById(R.id.seekbar6);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave6);
-			yourBid = (TextView) findViewById(R.id.offer6);
+//			yourBid = (TextView) findViewById(R.id.offer6);
 			precioInicial = (TextView) findViewById(R.id.initial_price_6);
 			ofertante = (TextView) findViewById(R.id.bidder_6);
 			precioActual = (TextView) findViewById(R.id.price_6);
@@ -212,9 +215,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_seven);
 			setTitle(R.string.product_title7);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice7);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar7);
+			vsk = (SeekBar) findViewById(R.id.seekbar7);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave7);
-			yourBid = (TextView) findViewById(R.id.offer7);
+//			yourBid = (TextView) findViewById(R.id.offer7);
 			precioInicial = (TextView) findViewById(R.id.initial_price_7);
 			ofertante = (TextView) findViewById(R.id.bidder_7);
 			precioActual = (TextView) findViewById(R.id.price_7);
@@ -224,9 +227,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_eight);
 			setTitle(R.string.product_title8);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice8);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar8);
+			vsk = (SeekBar) findViewById(R.id.seekbar8);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave8);
-			yourBid = (TextView) findViewById(R.id.offer8);
+//			yourBid = (TextView) findViewById(R.id.offer8);
 			precioInicial = (TextView) findViewById(R.id.initial_price_8);
 			ofertante = (TextView) findViewById(R.id.bidder_8);
 			precioActual = (TextView) findViewById(R.id.price_8);
@@ -236,9 +239,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_nine);
 			setTitle(R.string.product_title9);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
+			vsk = (SeekBar) findViewById(R.id.seekbar9);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave9);
-			yourBid = (TextView) findViewById(R.id.offer9);
+//			yourBid = (TextView) findViewById(R.id.offer9);
 			precioInicial = (TextView) findViewById(R.id.initial_price_9);
 			ofertante = (TextView) findViewById(R.id.bidder_9);
 			precioActual = (TextView) findViewById(R.id.price_9);
@@ -248,9 +251,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_ten);
 			setTitle(R.string.product_title10);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
+			vsk = (SeekBar) findViewById(R.id.seekbar9);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave9);
-			yourBid = (TextView) findViewById(R.id.offer9);
+//			yourBid = (TextView) findViewById(R.id.offer9);
 			precioInicial = (TextView) findViewById(R.id.initial_price_9);
 			ofertante = (TextView) findViewById(R.id.bidder_9);
 			precioActual = (TextView) findViewById(R.id.price_9);
@@ -261,9 +264,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_eleven);
 			setTitle(R.string.product_title11);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
+			vsk = (SeekBar) findViewById(R.id.seekbar9);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave9);
-			yourBid = (TextView) findViewById(R.id.offer9);
+//			yourBid = (TextView) findViewById(R.id.offer9);
 			precioInicial = (TextView) findViewById(R.id.initial_price_9);
 			ofertante = (TextView) findViewById(R.id.bidder_9);
 			precioActual = (TextView) findViewById(R.id.price_9);
@@ -274,9 +277,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_twelve);
 			setTitle(R.string.product_title12);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
+			vsk = (SeekBar) findViewById(R.id.seekbar9);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave9);
-			yourBid = (TextView) findViewById(R.id.offer9);
+//			yourBid = (TextView) findViewById(R.id.offer9);
 			precioInicial = (TextView) findViewById(R.id.initial_price_9);
 			ofertante = (TextView) findViewById(R.id.bidder_9);
 			precioActual = (TextView) findViewById(R.id.price_9);
@@ -286,9 +289,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_thirteen);
 			setTitle(R.string.product_title13);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
+			vsk = (SeekBar) findViewById(R.id.seekbar9);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave9);
-			yourBid = (TextView) findViewById(R.id.offer9);
+//			yourBid = (TextView) findViewById(R.id.offer9);
 			precioInicial = (TextView) findViewById(R.id.initial_price_9);
 			ofertante = (TextView) findViewById(R.id.bidder_9);
 			precioActual = (TextView) findViewById(R.id.price_9);
@@ -298,9 +301,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_fourteen);
 			setTitle(R.string.product_title14);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
+			vsk = (SeekBar) findViewById(R.id.seekbar9);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave9);
-			yourBid = (TextView) findViewById(R.id.offer9);
+//			yourBid = (TextView) findViewById(R.id.offer9);
 			precioInicial = (TextView) findViewById(R.id.initial_price_9);
 			ofertante = (TextView) findViewById(R.id.bidder_9);
 			precioActual = (TextView) findViewById(R.id.price_9);
@@ -310,9 +313,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_fifteen);
 			setTitle(R.string.product_title15);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
+			vsk = (SeekBar) findViewById(R.id.seekbar9);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave9);
-			yourBid = (TextView) findViewById(R.id.offer9);
+//			yourBid = (TextView) findViewById(R.id.offer9);
 			precioInicial = (TextView) findViewById(R.id.initial_price_9);
 			ofertante = (TextView) findViewById(R.id.bidder_9);
 			precioActual = (TextView) findViewById(R.id.price_9);
@@ -322,9 +325,9 @@ public class ProductDetailActivity extends Activity {
 			setContentView(R.layout.product_sixteen);
 			setTitle(R.string.product_title16);
 			seekBarTextImage = (ImageView) findViewById(R.id.image_textodeslice9);
-			vsk = (VerticalSeekBar) findViewById(R.id.seekbar9);
+			vsk = (SeekBar) findViewById(R.id.seekbar9);
 			seekBarSlave = (TextView) findViewById(R.id.seekBarSlave9);
-			yourBid = (TextView) findViewById(R.id.offer9);
+//			yourBid = (TextView) findViewById(R.id.offer9);
 			precioInicial = (TextView) findViewById(R.id.initial_price_9);
 			ofertante = (TextView) findViewById(R.id.bidder_9);
 			precioActual = (TextView) findViewById(R.id.price_9);
@@ -334,17 +337,35 @@ public class ProductDetailActivity extends Activity {
 		actualPrice = initialPrice(activeProduct);
 		precioInicial.setText(setInitialPrice(activeProduct) + " USD");
 		vsk.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
-			public void onStopTrackingTouch(VerticalSeekBar seekBar) {
+
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+
 			}
 
-			public void onStartTrackingTouch(VerticalSeekBar seekBar) {
+			public void onStartTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+
 			}
 
-			public void onProgressChanged(VerticalSeekBar seekBar,
-					int progress, boolean fromUser) {
+			public void onProgressChanged(SeekBar seekBar, int progress,
+					boolean fromUser) {
 				updateSeekBarSlave(progress);
 			}
 		});
+		// vsk.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+		// public void onStopTrackingTouch(VerticalSeekBar seekBar) {
+		// }
+		//
+		// public void onStartTrackingTouch(VerticalSeekBar seekBar) {
+		// }
+		//
+		// public void onProgressChanged(VerticalSeekBar seekBar,
+		// int progress, boolean fromUser) {
+		// updateSeekBarSlave(progress);
+		// }
+
+		// });
 		if (x == 1) {
 			bidderName = "Nadie ha ofertado";
 			precioActual.setText(setInitialPrice(activeProduct) + " USD");
@@ -505,7 +526,7 @@ public class ProductDetailActivity extends Activity {
 			break;
 		case (14):
 			title = (String) getText(R.string.product_title14);
-		contents = (String) getText(R.string.product_abstract14);
+			contents = (String) getText(R.string.product_abstract14);
 			break;
 		case (15):
 			title = (String) getText(R.string.product_title15);
@@ -584,25 +605,25 @@ public class ProductDetailActivity extends Activity {
 	public void updateSeekBarSlave(int progress) {
 		int bid = MAXIMUM_BID_AMOUNT * progress;
 		String sBid = darFormato(Integer.toString(bid));
-		seekBarSlave.setText("+" + sBid + " USD");
+		seekBarSlave.setText(sBid+" USD");
 		seekBarSlave.setTextSize(20);
-		seekBarTextImage.setVisibility(8);
+//		seekBarTextImage.setVisibility(8);
 
-		int textOffset = (int) (5.35 * progress);
-		textOffset = 598 - textOffset;
-		Resources r = getResources();
-		float topPx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-				textOffset, r.getDisplayMetrics());
-		float rightPx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-				6, r.getDisplayMetrics());
-		LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-				LinearLayout.LayoutParams.WRAP_CONTENT,
-				LinearLayout.LayoutParams.WRAP_CONTENT);
-		lp.setMargins(0, (int) topPx, (int) rightPx, 0);
-		seekBarSlave.setLayoutParams(lp);
+//		int textOffset = (int) (5.35 * progress);
+//		textOffset = 598 - textOffset;
+//		Resources r = getResources();
+//		float topPx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+//				textOffset, r.getDisplayMetrics());
+//		float rightPx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+//				6, r.getDisplayMetrics());
+//		RelativeLayout.LayoutParams relativeParams = new RelativeLayout.LayoutParams(
+//				RelativeLayout.LayoutParams.WRAP_CONTENT,
+//				RelativeLayout.LayoutParams.WRAP_CONTENT);
+//		relativeParams.setMargins(0, (int) topPx, (int) rightPx, 0);
+//		seekBarSlave.setLayoutParams(relativeParams);
 
 		userBid = actualPrice + (bid / 100);
-		yourBid.setText(darFormato(Long.toString(userBid * 100)) + " USD");
+//		yourBid.setText(darFormato(Long.toString(userBid * 100)) + " USD");
 	}
 
 	void doBindService() {
@@ -658,5 +679,24 @@ public class ProductDetailActivity extends Activity {
 	public void sendInts() {
 		sendAliveToService(UpdateService.ALIVE);
 		sendProdNumToService(activeProduct);
+	}
+
+	@Override
+	public void onProgressChanged(SeekBar seekBar, int progress,
+			boolean fromUser) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onStartTrackingTouch(SeekBar seekBar) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onStopTrackingTouch(SeekBar seekBar) {
+		// TODO Auto-generated method stub
+
 	}
 }

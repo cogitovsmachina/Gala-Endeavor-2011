@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <!-- <item android:id="@android:id/background" >
+    <!--
+    <item android:id="@android:id/background" >
         <bitmap android:src="@drawable/seekbar_gray"/>
         <shape>
             <corners android:radius="5dip" />
@@ -28,12 +29,20 @@
                 />
             </shape>
         </clip>
-    </item> -->
+    </item>
+    -->
+    
+<clip xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/full_slider"
+    android:clipOrientation="horizontal"
+    android:gravity="left">
 
-    <item android:id="@android:id/progress" >
-        
-        <clip android:clipOrientation="vertical" android:gravity="bottom" >
-            <bitmap android:src="@drawable/seekbar_blue"/><!-- 
+  <!--   <item android:id="@android:id/progress">
+        <clip
+            android:clipOrientation="vertical"
+            android:gravity="left" >
+            <bitmap android:src="@drawable/full_slider" /> -->
+            <!--
             <shape>
                 <corners android:radius="5dip" />
                 <gradient
@@ -43,9 +52,8 @@
                         android:endColor="#0ee9ed"
                         android:angle="0"
                 />
-            </shape> -->
+            </shape>            -->
+            
         </clip>
-    </item>
 
 </layer-list>
-
