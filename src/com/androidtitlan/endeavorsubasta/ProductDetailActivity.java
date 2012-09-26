@@ -22,6 +22,7 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -104,6 +105,7 @@ public class ProductDetailActivity extends Activity implements
 			mService = null;
 		}
 	};
+	private TextView totalOffer;
 
 	/**
 	 * Dirty hack to get ActionBar filled with a tile programatically
@@ -144,8 +146,8 @@ public class ProductDetailActivity extends Activity implements
 //			 seekBarTextImage = (ImageView)
 //			 findViewById(R.id.image_textodeslice1);
 			vsk = (SeekBar) findViewById(R.id.seekbar);
-			 seekBarSlave = (TextView) findViewById(R.id.myoffer);
-			// yourBid = (TextView) findViewById(R.id.offer1);
+//			 seekBarSlave = (TextView) findViewById(R.id.myoffer);
+			totalOffer = (TextView) findViewById(R.id.myoffer);
 			ofertante = (TextView) findViewById(R.id.bidder);
 			precioInicial = (TextView) findViewById(R.id.starting_price);
 			precioActual = (TextView) findViewById(R.id.last_price);
@@ -339,13 +341,9 @@ public class ProductDetailActivity extends Activity implements
 		vsk.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 
 			public void onStopTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
-
 			}
 
 			public void onStartTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
-
 			}
 
 			public void onProgressChanged(SeekBar seekBar, int progress,
@@ -353,19 +351,7 @@ public class ProductDetailActivity extends Activity implements
 				updateSeekBarSlave(progress);
 			}
 		});
-		// vsk.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
-		// public void onStopTrackingTouch(VerticalSeekBar seekBar) {
-		// }
-		//
-		// public void onStartTrackingTouch(VerticalSeekBar seekBar) {
-		// }
-		//
-		// public void onProgressChanged(VerticalSeekBar seekBar,
-		// int progress, boolean fromUser) {
-		// updateSeekBarSlave(progress);
-		// }
 
-		// });
 		if (x == 1) {
 			bidderName = "Nadie ha ofertado";
 			precioActual.setText(setInitialPrice(activeProduct) + " USD");
@@ -581,23 +567,37 @@ public class ProductDetailActivity extends Activity implements
 	public long initialPrice(int product) {
 		switch (product) {
 		case 1:
-			return 7855;
+			return 7000;
 		case 2:
-			return 8500;
+			return 1100;
 		case 3:
-			return 2500;
+			return 3500;
 		case 4:
-			return 12000;
+			return 1100;
 		case 5:
-			return 615;
+			return 2550;
 		case 6:
-			return 46531;
+			return 10000;
 		case 7:
-			return 1425;
+			return 9000;
 		case 8:
-			return 3600;
+			return 11680;
 		case 9:
-			return 3980;
+			return 10220;	
+		case 10: 
+			return 8500;
+		case 11: 
+			return 1230;
+		case 12:
+			return 900;
+		case 13: 
+			return 2100;
+		case 14:
+			return 125500;
+		case 15:
+			return 1500;
+		case 16:
+			return 500;
 		}
 		return 0;
 	}
@@ -605,7 +605,7 @@ public class ProductDetailActivity extends Activity implements
 	public void updateSeekBarSlave(int progress) {
 		int bid = MAXIMUM_BID_AMOUNT * progress;
 		String sBid = darFormato(Integer.toString(bid));
-		seekBarSlave.setText(sBid+" USD");
+//		seekBarSlave.setText(sBid+" USD");
 //		seekBarSlave.setTextSize(20);
 //		seekBarTextImage.setVisibility(8);
 
@@ -623,6 +623,7 @@ public class ProductDetailActivity extends Activity implements
 //		seekBarSlave.setLayoutParams(relativeParams);
 
 		userBid = actualPrice + (bid / 100);
+		totalOffer.setText(darFormato(Long.toString(userBid * 100))+ " USD");
 //		yourBid.setText(darFormato(Long.toString(userBid * 100)) + " USD");
 	}
 

@@ -74,18 +74,14 @@ public class WebServices extends Network {
 		String ansHttpGet = null;
 		Gson gson = new Gson();
 
-		PullProductos ans = new PullProductos();
-		ArrayList<Producto> productos = null;
+		PullProductos productos = null;
 		ansHttpGet = inputStreamToString(doHttpGet(URL_SUBASTA
 				+ "pullProducto/"));
-		Log.e("***", "answer: " + ansHttpGet);
 		if (ansHttpGet != null) {
-			Type listType = new TypeToken<ArrayList<Producto>>() {}.getType();
-			productos = gson.fromJson(ansHttpGet, listType);
+			productos = gson.fromJson(ansHttpGet, PullProductos.class);
 		}
 
-		ans.productos = productos;
-		
-		return ans;
+		return productos;
 	}
+
 }
