@@ -111,18 +111,18 @@ public class UpdateService extends Service {
 //			}
 
 			Log.i("Pull", "Se hizo pull de: " + Integer.toString(activeProduct));
-			Producto p = null;
+			Producto producto = null;
 			for (int i = 0; i < 9; i++) {
 				Producto temp = catalogo.productos.get(i);
 				if (temp.id_producto == activeProduct) {
-					p = temp;
+					producto = temp;
 					break;
 				}
 			}
-			Log.d("Producto: " + Integer.toString(activeProduct), p.precio
-					+ "   " + p.usuario);
-			if (p.usuario != null) {
-				String toSend = p.precio + "%$%" + p.usuario;
+			Log.d("Producto: " + Integer.toString(activeProduct), producto.precio
+					+ "   " + producto.usuario);
+			if (producto.usuario != null) {
+				String toSend = producto.precio + "%$%" + producto.usuario;
 				sendString(toSend);
 				Log.i("Update",
 						"Just Updated Product: "
