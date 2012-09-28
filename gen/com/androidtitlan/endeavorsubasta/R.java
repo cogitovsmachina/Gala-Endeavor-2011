@@ -397,7 +397,6 @@ containing a value of this type.
         public static final int logo=0x7f0b0049;
         public static final int menu_about=0x7f0b0090;
         public static final int menu_help=0x7f0b008f;
-        public static final int my_offer=0x7f0b004d;
         public static final int myoffer=0x7f0b0052;
         public static final int offer2=0x7f0b0080;
         public static final int offer3=0x7f0b0074;
@@ -408,6 +407,7 @@ containing a value of this type.
         public static final int offer8=0x7f0b0020;
         public static final int offer9=0x7f0b002c;
         public static final int offer_button=0x7f0b001f;
+        public static final int offer_container=0x7f0b004d;
         public static final int offerer_container=0x7f0b004b;
         public static final int price_2=0x7f0b007c;
         public static final int price_3=0x7f0b0070;

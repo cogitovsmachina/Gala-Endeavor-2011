@@ -62,7 +62,7 @@
             android:src="@drawable/slider_container" />
 
         <ImageView
-            android:id="@+id/my_offer"
+            android:id="@+id/offer_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -73,8 +73,8 @@
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/my_offer"
-            android:layout_toRightOf="@+id/my_offer"
+            android:layout_alignTop="@+id/offer_container"
+            android:layout_toRightOf="@+id/offer_container"
             android:onClick="openBiddingDialog"
             android:src="@drawable/offer_button" />
 
@@ -106,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/starting_price"
-            android:layout_alignRight="@+id/my_offer"
+            android:layout_alignRight="@+id/offer_container"
             android:layout_centerVertical="true"
             android:text="Nadie ha ofertado"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -116,9 +116,9 @@
             android:id="@+id/myoffer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/my_offer"
+            android:layout_alignBottom="@+id/offer_container"
             android:layout_alignLeft="@+id/bidder"
-            android:layout_alignRight="@+id/my_offer"
+            android:layout_alignRight="@+id/offer_container"
             android:layout_marginBottom="29dp"
             android:text="$"
             android:textAppearance="?android:attr/textAppearanceMedium"
