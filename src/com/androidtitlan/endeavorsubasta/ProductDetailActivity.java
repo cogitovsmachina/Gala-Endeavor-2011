@@ -53,7 +53,7 @@ public class ProductDetailActivity extends Activity implements
 	final Messenger mMessenger = new Messenger(new IncomingHandler());
 	Timer tmr = new Timer();
 
-	String fromService;
+	String fromService; 
 
 	class IncomingHandler extends Handler {
 		@Override
