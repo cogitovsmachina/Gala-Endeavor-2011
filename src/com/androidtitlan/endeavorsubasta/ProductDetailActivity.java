@@ -26,7 +26,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
@@ -70,7 +69,8 @@ public class ProductDetailActivity extends Activity implements
 				long tempActualPrice = (long) Float.parseFloat(sActualPrice);
 				if (tempActualPrice != 0) {
 					actualPrice = tempActualPrice;
-					latestPrice.setText(darFormato(sActualPrice) + " USD");
+					Log.e("ActualPrice", "" + actualPrice);
+					latestPrice.setText("$ " + actualPrice + " USD");
 					offerer.setText(bidderName);
 				}
 				break;
@@ -136,7 +136,6 @@ public class ProductDetailActivity extends Activity implements
 			setContentView(R.layout.product_one);
 			setTitle(R.string.product_title1);
 			seekBar = (SeekBar) findViewById(R.id.seekbar);
-//			yourBid = (TextView) findViewById(R.id.offer1);
 			offerer = (TextView) findViewById(R.id.bidder);
 			startingPrice = (TextView) findViewById(R.id.starting_price);
 			latestPrice = (TextView) findViewById(R.id.last_price);
@@ -297,7 +296,7 @@ public class ProductDetailActivity extends Activity implements
 			break;
 		}
 		actualPrice = initialPrice(productId);
-		startingPrice.setText(setInitialPrice(productId) + " USD");
+		startingPrice.setText("$ " + setInitialPrice(productId) + " USD");
 		seekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 
 			public void onStopTrackingTouch(SeekBar seekBar) {
@@ -314,8 +313,10 @@ public class ProductDetailActivity extends Activity implements
 			}
 		});
 		if (x == 1) {
+			// TODO Use persistence to keep last offer, last offerer and your
+			// offer
 			bidderName = "Nadie ha ofertado";
-			latestPrice.setText(setInitialPrice(productId) + " USD");
+			latestPrice.setText("$ " + setInitialPrice(productId) + " USD");
 			offerer.setText(bidderName);
 		}
 		if (x == 2) {
@@ -490,37 +491,37 @@ public class ProductDetailActivity extends Activity implements
 	public String setInitialPrice(int product) {
 		switch (product) {
 		case 1:
-			return darFormato("7000.00");
+			return "7000";
 		case 2:
-			return darFormato("1100.00");
+			return "1100";
 		case 3:
-			return darFormato("3500.00");
+			return "3500";
 		case 4:
-			return darFormato("1100.00");
+			return "1100";
 		case 5:
-			return darFormato("2550.00");
+			return "2550";
 		case 6:
-			return darFormato("10000.00");
+			return "10000.00";
 		case 7:
-			return darFormato("9000.00");
+			return "9000.00";
 		case 8:
-			return darFormato("11680.00");
+			return "11680.00";
 		case 9:
-			return darFormato("10220.00");
+			return "10220.00";
 		case 10:
-			return darFormato("8500.00");
+			return "8500.00";
 		case 11:
-			return darFormato("1230.00");
+			return "1230.00";
 		case 12:
-			return darFormato("900.00");
+			return "900.00";
 		case 13:
-			return darFormato("2100.00");
+			return "2100.00";
 		case 14:
-			return darFormato("125500.00");
+			return "125500.00";
 		case 15:
-			return darFormato("1500.00");
+			return "1500.00";
 		case 16:
-			return darFormato("500.00");
+			return "500.00";
 		}
 		return "???";
 	}
@@ -567,9 +568,7 @@ public class ProductDetailActivity extends Activity implements
 	public void updateMyOfferTextView(int progress) {
 		int bid = MAXIMUM_BID_AMOUNT * progress;
 		userBid = actualPrice + bid;
-		myOffer.setText("$ " + userBid  + " USD");
-
-//		 yourBid.setText(darFormato(Long.toString(userBid * 100)) + " USD");
+		myOffer.setText("$ " + userBid + " USD");
 	}
 
 	void doBindService() {
