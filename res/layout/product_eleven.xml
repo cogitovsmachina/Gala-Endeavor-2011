@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/jaegerlecoultre_logo" />
+            android:src="@drawable/johnniewalker_logo" />
 
         <ImageView
             android:id="@+id/price_container"

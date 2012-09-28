@@ -76,6 +76,8 @@ public class DoHttpPostTask extends
 
 	protected void onPostExecute(Responses responses) {
 		
+		//TODO Use AlertDialog instead using Toast
+		
 		//Verificacion de los mensajes de error del webService de CrearUsuario
 		
 		try {

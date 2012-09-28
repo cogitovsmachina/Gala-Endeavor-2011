@@ -7,9 +7,6 @@
         android:endColor="#FFC0BFBF"
         android:startColor="#FFFEFEFE" />
 
-    <stroke
-        android:width="1dip"
-        android:color="#FF000000" />
 
     <padding
         android:bottom="4dip"
