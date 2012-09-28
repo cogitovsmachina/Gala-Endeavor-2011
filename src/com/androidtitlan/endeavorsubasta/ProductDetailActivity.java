@@ -145,153 +145,153 @@ public class ProductDetailActivity extends Activity implements
 		case 2:
 			setContentView(R.layout.product_two);
 			setTitle(R.string.product_title2);
-			seekBar = (SeekBar) findViewById(R.id.seekbar2);
-			// yourBid = (TextView) findViewById(R.id.offer2);
-			startingPrice = (TextView) findViewById(R.id.initial_price_2);
-			offerer = (TextView) findViewById(R.id.bidder_2);
-			latestPrice = (TextView) findViewById(R.id.price_2);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 2;
 			break;
 		case 3:
 			setContentView(R.layout.product_three);
 			setTitle(R.string.product_title3);
-			seekBar = (SeekBar) findViewById(R.id.seekbar3);
-			// yourBid = (TextView) findViewById(R.id.offer3);
-			startingPrice = (TextView) findViewById(R.id.initial_price_3);
-			offerer = (TextView) findViewById(R.id.bidder_3);
-			latestPrice = (TextView) findViewById(R.id.price_3);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 3;
 			break;
 		case 4:
 			setContentView(R.layout.product_four);
 			setTitle(R.string.product_title4);
-			seekBar = (SeekBar) findViewById(R.id.seekbar4);
-			// yourBid = (TextView) findViewById(R.id.offer4);
-			startingPrice = (TextView) findViewById(R.id.initial_price_4);
-			offerer = (TextView) findViewById(R.id.bidder_4);
-			latestPrice = (TextView) findViewById(R.id.price_4);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 4;
 			break;
 		case 5:
 			setContentView(R.layout.product_five);
 			setTitle(R.string.product_title5);
-			seekBar = (SeekBar) findViewById(R.id.seekbar5);
-			// yourBid = (TextView) findViewById(R.id.offer5);
-			startingPrice = (TextView) findViewById(R.id.initial_price_5);
-			offerer = (TextView) findViewById(R.id.bidder_5);
-			latestPrice = (TextView) findViewById(R.id.price_5);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 5;
 			break;
 		case 6:
 			setContentView(R.layout.product_six);
 			setTitle(R.string.product_title6);
-			seekBar = (SeekBar) findViewById(R.id.seekbar6);
-			// yourBid = (TextView) findViewById(R.id.offer6);
-			startingPrice = (TextView) findViewById(R.id.initial_price_6);
-			offerer = (TextView) findViewById(R.id.bidder_6);
-			latestPrice = (TextView) findViewById(R.id.price_6);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 6;
 			break;
 		case 7:
 			setContentView(R.layout.product_seven);
 			setTitle(R.string.product_title7);
-			seekBar = (SeekBar) findViewById(R.id.seekbar7);
-			// yourBid = (TextView) findViewById(R.id.offer7);
-			startingPrice = (TextView) findViewById(R.id.initial_price_7);
-			offerer = (TextView) findViewById(R.id.bidder_7);
-			latestPrice = (TextView) findViewById(R.id.price_7);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 7;
 			break;
 		case 8:
 			setContentView(R.layout.product_eight);
 			setTitle(R.string.product_title8);
-			seekBar = (SeekBar) findViewById(R.id.seekbar8);
-			// yourBid = (TextView) findViewById(R.id.offer8);
-			startingPrice = (TextView) findViewById(R.id.initial_price_8);
-			offerer = (TextView) findViewById(R.id.bidder_8);
-			latestPrice = (TextView) findViewById(R.id.price_8);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 8;
 			break;
 		case 9:
 			setContentView(R.layout.product_nine);
 			setTitle(R.string.product_title9);
-			seekBar = (SeekBar) findViewById(R.id.seekbar9);
-			// yourBid = (TextView) findViewById(R.id.offer9);
-			startingPrice = (TextView) findViewById(R.id.initial_price_9);
-			offerer = (TextView) findViewById(R.id.bidder_9);
-			latestPrice = (TextView) findViewById(R.id.price_9);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 9;
 			break;
 		case 10:
 			setContentView(R.layout.product_ten);
 			setTitle(R.string.product_title10);
-			seekBar = (SeekBar) findViewById(R.id.seekbar9);
-			// yourBid = (TextView) findViewById(R.id.offer9);
-			startingPrice = (TextView) findViewById(R.id.initial_price_9);
-			offerer = (TextView) findViewById(R.id.bidder_9);
-			latestPrice = (TextView) findViewById(R.id.price_9);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 10;
 			break;
 
 		case 11:
 			setContentView(R.layout.product_eleven);
 			setTitle(R.string.product_title11);
-			seekBar = (SeekBar) findViewById(R.id.seekbar9);
-			// yourBid = (TextView) findViewById(R.id.offer9);
-			startingPrice = (TextView) findViewById(R.id.initial_price_9);
-			offerer = (TextView) findViewById(R.id.bidder_9);
-			latestPrice = (TextView) findViewById(R.id.price_9);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 11;
 			break;
 
 		case 12:
 			setContentView(R.layout.product_twelve);
 			setTitle(R.string.product_title12);
-			seekBar = (SeekBar) findViewById(R.id.seekbar9);
-			// yourBid = (TextView) findViewById(R.id.offer9);
-			startingPrice = (TextView) findViewById(R.id.initial_price_9);
-			offerer = (TextView) findViewById(R.id.bidder_9);
-			latestPrice = (TextView) findViewById(R.id.price_9);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 12;
 			break;
 		case 13:
 			setContentView(R.layout.product_thirteen);
 			setTitle(R.string.product_title13);
-			seekBar = (SeekBar) findViewById(R.id.seekbar9);
-			// yourBid = (TextView) findViewById(R.id.offer9);
-			startingPrice = (TextView) findViewById(R.id.initial_price_9);
-			offerer = (TextView) findViewById(R.id.bidder_9);
-			latestPrice = (TextView) findViewById(R.id.price_9);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 13;
 			break;
 		case 14:
 			setContentView(R.layout.product_fourteen);
 			setTitle(R.string.product_title14);
-			seekBar = (SeekBar) findViewById(R.id.seekbar9);
-			// yourBid = (TextView) findViewById(R.id.offer9);
-			startingPrice = (TextView) findViewById(R.id.initial_price_9);
-			offerer = (TextView) findViewById(R.id.bidder_9);
-			latestPrice = (TextView) findViewById(R.id.price_9);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 14;
 			break;
 		case 15:
 			setContentView(R.layout.product_fifteen);
 			setTitle(R.string.product_title15);
-			seekBar = (SeekBar) findViewById(R.id.seekbar9);
-			// yourBid = (TextView) findViewById(R.id.offer9);
-			startingPrice = (TextView) findViewById(R.id.initial_price_9);
-			offerer = (TextView) findViewById(R.id.bidder_9);
-			latestPrice = (TextView) findViewById(R.id.price_9);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 15;
 			break;
 		case 16:
 			setContentView(R.layout.product_sixteen);
 			setTitle(R.string.product_title16);
-			seekBar = (SeekBar) findViewById(R.id.seekbar9);
-			// yourBid = (TextView) findViewById(R.id.offer9);
-			startingPrice = (TextView) findViewById(R.id.initial_price_9);
-			offerer = (TextView) findViewById(R.id.bidder_9);
-			latestPrice = (TextView) findViewById(R.id.price_9);
+			seekBar = (SeekBar) findViewById(R.id.seekbar);
+			startingPrice = (TextView) findViewById(R.id.starting_price);
+			offerer = (TextView) findViewById(R.id.bidder);
+			latestPrice = (TextView) findViewById(R.id.last_price);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 16;
 			break;
 		}
@@ -501,27 +501,27 @@ public class ProductDetailActivity extends Activity implements
 		case 5:
 			return "2550";
 		case 6:
-			return "10000.00";
+			return "10000";
 		case 7:
-			return "9000.00";
+			return "9000";
 		case 8:
-			return "11680.00";
+			return "11680";
 		case 9:
-			return "10220.00";
+			return "10220";
 		case 10:
-			return "8500.00";
+			return "8500";
 		case 11:
-			return "1230.00";
+			return "1230";
 		case 12:
-			return "900.00";
+			return "900";
 		case 13:
-			return "2100.00";
+			return "2100";
 		case 14:
-			return "125500.00";
+			return "125500";
 		case 15:
-			return "1500.00";
+			return "1500";
 		case 16:
-			return "500.00";
+			return "500";
 		}
 		return "???";
 	}

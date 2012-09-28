@@ -105,22 +105,17 @@ public class UpdateService extends Service {
 		try {
 			catalogo = WebServices.pullProductos();
 
-//			if (catalogo.alive == false) {
-//				sendBool(true);
-//				return;
-//			}
-
 			Log.i("Pull", "Se hizo pull de: " + Integer.toString(activeProduct));
 			Producto producto = null;
-			for (int i = 0; i < 9; i++) {
+			for (int i = 0; i < 16; i++) {
 				Producto temp = catalogo.productos.get(i);
 				if (temp.id_producto == activeProduct) {
 					producto = temp;
 					break;
 				}
 			}
-			Log.d("Producto: " + Integer.toString(activeProduct), producto.precio
-					+ "   " + producto.usuario);
+			Log.d("Producto: " + Integer.toString(activeProduct),
+					producto.precio + "   " + producto.usuario);
 			if (producto.usuario != null) {
 				String toSend = producto.precio + "%$%" + producto.usuario;
 				sendString(toSend);
