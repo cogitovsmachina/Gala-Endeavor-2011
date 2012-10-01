@@ -30,7 +30,7 @@
             android:name=".ProductDetailActivity"
             android:label="Producto n"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.Endeavor.ProductDetail" />
+            android:theme="@style/Theme.Endeavor.Home" />
         <activity
             android:name=".ui.BiddingDialog"
             android:label="Inicie Sesión o Regístrese"
