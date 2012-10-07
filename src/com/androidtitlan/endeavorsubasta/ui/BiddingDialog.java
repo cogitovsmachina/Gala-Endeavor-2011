@@ -69,7 +69,7 @@ public class BiddingDialog extends Activity {
 		new DoBiddingTask(userName, Integer.toString(product),
 				Long.toString(userBid), this).execute(Resources.URL_SUBASTA
 				+ "pujaProducto/");
-		Log.e(Resources.APP_NAME, "Puja enviada: "+userName+" pujó $"+Long.toString(userBid));
+		Log.e(Resources.APP_NAME, "Puja enviada: "+userName+" pujo $"+Long.toString(userBid));
 
 		finish();
 	}
@@ -78,13 +78,13 @@ public class BiddingDialog extends Activity {
 	public void registerNewUser(View v){
 		if( (!acceptedTermsAndConditions.isChecked())){
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-			builder.setMessage("Por favor, acepte los términos y condiciones")
+			builder.setMessage("Por favor, acepte los terminos y condiciones")
 			.setCancelable(false)
 			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int id) {
 					dialog.cancel();
 				}
-			});
+			}); 
 			AlertDialog alertDialog = builder.create();
 			alertDialog.show();
 			return;
@@ -117,7 +117,7 @@ public class BiddingDialog extends Activity {
 		}
 		if (tableNumberEdit.getText().toString().equals("")) {
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-			builder.setMessage("Por favor, escriba el número de su mesa")
+			builder.setMessage("Por favor, escriba el numero de su mesa")
 			.setCancelable(false)
 			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int id) {
@@ -137,7 +137,7 @@ public class BiddingDialog extends Activity {
 		float tNum=Float.parseFloat(tableNum);
 		if(!((tNum<=70)&&(tNum>=1))){
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-			builder.setMessage("Por favor, escriba un número de mesa válido")
+			builder.setMessage("Por favor, escriba un numero de mesa valido")
 			.setCancelable(false)
 			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int id) {

@@ -13,6 +13,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -44,9 +46,9 @@ public class ProductDetailActivity extends Activity implements
 	SeekBar seekBar = null;
 	TextView myOffer;
 
-	// TextView yourBid = null;
 	long actualPrice, userBid;
 	String bidderName;
+	SharedPreferences preferences;
 
 	private static final int MAXIMUM_BID_AMOUNT = 100;
 	private int productId;
@@ -58,6 +60,8 @@ public class ProductDetailActivity extends Activity implements
 	String fromService;
 
 	class IncomingHandler extends Handler {
+		private static final String PREFS_NAME = "MySharedPrefs";
+
 		@Override
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
@@ -70,8 +74,20 @@ public class ProductDetailActivity extends Activity implements
 				if (tempActualPrice != 0) {
 					actualPrice = tempActualPrice;
 					Log.e("ActualPrice", "" + actualPrice);
-					latestPrice.setText("$ " + actualPrice + " USD");
-					offerer.setText(bidderName);
+					// TODO Here's the String which prints to UI
+					SharedPreferences settings = getSharedPreferences(
+							PREFS_NAME, 0);
+					SharedPreferences.Editor editor = settings.edit();
+					editor.putLong("price", actualPrice);
+					editor.putString("offerer", bidderName);
+					editor.commit();
+
+					String lastOfferer = settings.getString("last_offerer",
+							null);
+					long lastPrice = settings.getLong("latest_price", 0);
+					latestPrice.setText("$ " + lastPrice + " USD");
+					offerer.setText("" + lastOfferer);
+
 				}
 				break;
 			case UpdateService.MSG_SET_BOOL_VALUE:
@@ -99,19 +115,6 @@ public class ProductDetailActivity extends Activity implements
 		}
 	};
 
-	/**
-	 * Dirty hack to get ActionBar filled with a tile programatically
-	 * 
-	 * */
-	private void setActionBarCustomBackground() {
-		final ActionBar actionBar = getActionBar();
-		BitmapDrawable background = new BitmapDrawable(
-				BitmapFactory.decodeResource(getResources(),
-						R.drawable.actionbar_tile));
-		background.setTileModeX(android.graphics.Shader.TileMode.REPEAT);
-		actionBar.setBackgroundDrawable(background);
-	}
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -138,6 +141,7 @@ public class ProductDetailActivity extends Activity implements
 			seekBar = (SeekBar) findViewById(R.id.seekbar);
 			offerer = (TextView) findViewById(R.id.bidder);
 			startingPrice = (TextView) findViewById(R.id.starting_price);
+			// TODO put here text from SharedPreferences
 			latestPrice = (TextView) findViewById(R.id.last_price);
 			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 1;
@@ -295,7 +299,10 @@ public class ProductDetailActivity extends Activity implements
 			productId = 16;
 			break;
 		}
-		actualPrice = initialPrice(productId);
+		// TODO Refactor, add SharedPreferences to ActualPrice
+		// String price = dataFromServer.getString("latest_price", null);
+		actualPrice = setStartingPrice(productId);
+
 		startingPrice.setText("$ " + setInitialPrice(productId) + " USD");
 		seekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 
@@ -315,8 +322,10 @@ public class ProductDetailActivity extends Activity implements
 		if (x == 1) {
 			// TODO Use persistence to keep last offer, last offerer and your
 			// offer
+
 			bidderName = "Nadie ha ofertado";
 			latestPrice.setText("$ " + setInitialPrice(productId) + " USD");
+
 			offerer.setText(bidderName);
 		}
 		if (x == 2) {
@@ -526,7 +535,7 @@ public class ProductDetailActivity extends Activity implements
 		return "???";
 	}
 
-	public long initialPrice(int product) {
+	public long setStartingPrice(int product) {
 		switch (product) {
 		case 1:
 			return 7000;
@@ -640,5 +649,18 @@ public class ProductDetailActivity extends Activity implements
 	@Override
 	public void onStopTrackingTouch(SeekBar seekBar) {
 
+	}
+
+	/**
+	 * Dirty hack to get ActionBar filled with a tile programatically
+	 * 
+	 * */
+	private void setActionBarCustomBackground() {
+		final ActionBar actionBar = getActionBar();
+		BitmapDrawable background = new BitmapDrawable(
+				BitmapFactory.decodeResource(getResources(),
+						R.drawable.actionbar_tile));
+		background.setTileModeX(android.graphics.Shader.TileMode.REPEAT);
+		actionBar.setBackgroundDrawable(background);
 	}
 }

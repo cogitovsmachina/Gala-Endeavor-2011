@@ -86,7 +86,6 @@
             android:layout_alignRight="@+id/logo"
             android:layout_alignTop="@+id/price_container"
             android:layout_marginTop="43dp"
-            android:text="last price"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/actionbar_text" />
 
