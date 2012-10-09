@@ -49,6 +49,7 @@ public class ProductDetailActivity extends Activity implements
 	long actualPrice, userBid;
 	String bidderName;
 	SharedPreferences preferences;
+	final String PREFS_NAME = "MySharedPrefs";
 
 	private static final int MAXIMUM_BID_AMOUNT = 100;
 	private int productId;
@@ -60,7 +61,6 @@ public class ProductDetailActivity extends Activity implements
 	String fromService;
 
 	class IncomingHandler extends Handler {
-		private static final String PREFS_NAME = "MySharedPrefs";
 
 		@Override
 		public void handleMessage(Message msg) {
@@ -82,12 +82,11 @@ public class ProductDetailActivity extends Activity implements
 					editor.putString("offerer", bidderName);
 					editor.commit();
 
-					String lastOfferer = settings.getString("last_offerer",
+					String lastOfferer = settings.getString("offerer",
 							null);
-					long lastPrice = settings.getLong("latest_price", 0);
+					long lastPrice = settings.getLong("price", 0);
 					latestPrice.setText("$ " + lastPrice + " USD");
 					offerer.setText("" + lastOfferer);
-
 				}
 				break;
 			case UpdateService.MSG_SET_BOOL_VALUE:
