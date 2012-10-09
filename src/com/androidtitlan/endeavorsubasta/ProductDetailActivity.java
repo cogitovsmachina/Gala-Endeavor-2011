@@ -82,8 +82,7 @@ public class ProductDetailActivity extends Activity implements
 					editor.putString("offerer", bidderName);
 					editor.commit();
 
-					String lastOfferer = settings.getString("offerer",
-							null);
+					String lastOfferer = settings.getString("offerer", null);
 					long lastPrice = settings.getLong("price", 0);
 					latestPrice.setText("$ " + lastPrice + " USD");
 					offerer.setText("" + lastOfferer);
@@ -402,9 +401,7 @@ public class ProductDetailActivity extends Activity implements
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			Intent intent = new Intent(this, HomeActivity.class);
-			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(intent);
+			finish(); 
 			return true;
 		case R.id.menu_help:
 			Dialog.showHelpMessage(this);
@@ -661,5 +658,6 @@ public class ProductDetailActivity extends Activity implements
 						R.drawable.actionbar_tile));
 		background.setTileModeX(android.graphics.Shader.TileMode.REPEAT);
 		actionBar.setBackgroundDrawable(background);
+
 	}
 }
