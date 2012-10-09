@@ -135,7 +135,8 @@
             android:paddingTop="19dp"
             android:progressDrawable="@drawable/seekbar_progress"
             android:thumb="@drawable/seekbar_thumb"
-            android:thumbOffset="40dp" />
+            android:thumbOffset="40dp"
+            android:progress="1" />
     </RelativeLayout>
 
 </RelativeLayout>
