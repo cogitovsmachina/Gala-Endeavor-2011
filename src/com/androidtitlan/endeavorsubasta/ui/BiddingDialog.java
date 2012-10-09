@@ -55,12 +55,14 @@ public class BiddingDialog extends Activity {
 		if (nameEdit.getText().toString().equals("")) {
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.setMessage("Por favor, escriba su nombre de usuario")
-			.setCancelable(false)
-			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id) {
-					dialog.cancel();
-				}
-			});
+					.setCancelable(false)
+					.setNegativeButton("Ok",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									dialog.cancel();
+								}
+							});
 			AlertDialog alertDialog = builder.create();
 			alertDialog.show();
 			return;
@@ -69,22 +71,24 @@ public class BiddingDialog extends Activity {
 		new DoBiddingTask(userName, Integer.toString(product),
 				Long.toString(userBid), this).execute(Resources.URL_SUBASTA
 				+ "pujaProducto/");
-		Log.e(Resources.APP_NAME, "Puja enviada: "+userName+" pujo $"+Long.toString(userBid));
+		Log.e(Resources.APP_NAME, "Puja enviada: " + userName + " pujo $"
+				+ Long.toString(userBid));
 
 		finish();
 	}
 
-
-	public void registerNewUser(View v){
-		if( (!acceptedTermsAndConditions.isChecked())){
+	public void registerNewUser(View v) {
+		if ((!acceptedTermsAndConditions.isChecked())) {
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.setMessage("Por favor, acepte los terminos y condiciones")
-			.setCancelable(false)
-			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id) {
-					dialog.cancel();
-				}
-			}); 
+					.setCancelable(false)
+					.setNegativeButton("Ok",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									dialog.cancel();
+								}
+							});
 			AlertDialog alertDialog = builder.create();
 			alertDialog.show();
 			return;
@@ -92,12 +96,14 @@ public class BiddingDialog extends Activity {
 		if (nameRegistroEdit.getText().toString().equals("")) {
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.setMessage("Por favor, escriba su nombre")
-			.setCancelable(false)
-			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id) {
-					dialog.cancel();
-				}
-			});
+					.setCancelable(false)
+					.setNegativeButton("Ok",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									dialog.cancel();
+								}
+							});
 			AlertDialog alertDialog = builder.create();
 			alertDialog.show();
 			return;
@@ -105,12 +111,14 @@ public class BiddingDialog extends Activity {
 		if (userNameEdit.getText().toString().equals("")) {
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.setMessage("Por favor, escriba su nombre de usuario")
-			.setCancelable(false)
-			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id) {
-					dialog.cancel();
-				}
-			});
+					.setCancelable(false)
+					.setNegativeButton("Ok",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									dialog.cancel();
+								}
+							});
 			AlertDialog alertDialog = builder.create();
 			alertDialog.show();
 			return;
@@ -118,49 +126,48 @@ public class BiddingDialog extends Activity {
 		if (tableNumberEdit.getText().toString().equals("")) {
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.setMessage("Por favor, escriba el numero de su mesa")
-			.setCancelable(false)
-			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id) {
-					dialog.cancel();
-				}
-			});
+					.setCancelable(false)
+					.setNegativeButton("Ok",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									dialog.cancel();
+								}
+							});
 			AlertDialog alertDialog = builder.create();
 			alertDialog.show();
 			return;
 		}
 
 		// Assigning to variables
-		userName = userNameEdit.getText().toString();
+		userName = userNameEdit.getText().toString().toLowerCase();
 		fullName = nameRegistroEdit.getText().toString();
 		tableNumber = tableNumberEdit.getText().toString();
-		String tableNum=tableNumberEdit.getText().toString();
-		float tNum=Float.parseFloat(tableNum);
-		if(!((tNum<=70)&&(tNum>=1))){
+		String tableNum = tableNumberEdit.getText().toString();
+		float tNum = Float.parseFloat(tableNum);
+		if (!((tNum <= 70) && (tNum >= 1))) {
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.setMessage("Por favor, escriba un numero de mesa valido")
-			.setCancelable(false)
-			.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int id) {
-					dialog.cancel();
-				}
-			});
+					.setCancelable(false)
+					.setNegativeButton("Ok",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									dialog.cancel();
+								}
+							});
 			AlertDialog alertDialog = builder.create();
 			alertDialog.show();
 			return;
 		}
-		//Assigning to variables
-		userName = userNameEdit.getText().toString();
+		// Assigning to variables
+		userName = userNameEdit.getText().toString().toLowerCase();
 		fullName = nameRegistroEdit.getText().toString();
 		tableNumber = tableNumberEdit.getText().toString();
-		
-		new DoHttpPostTask(userName, fullName, tableNumber, Long.toString(userBid), Integer.toString(product), this).execute(Resources.URL_SUBASTA);
 
-
-		/*
-		new DoHttpPostTask(userName, fullName, tableNumber, this)
-				.execute(Resources.URL_SUBASTA + "/creaUsuario/");
-		*/		
-				
+		new DoHttpPostTask(userName, fullName, tableNumber,
+				Long.toString(userBid), Integer.toString(product), this)
+				.execute(Resources.URL_SUBASTA);
 
 		finish();
 	}

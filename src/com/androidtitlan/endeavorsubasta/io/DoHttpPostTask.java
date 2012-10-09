@@ -118,7 +118,7 @@ public class DoHttpPostTask extends
 				});
 				AlertDialog alertDialog = builder.create();
 				alertDialog.show();*/
-				Toast.makeText(mActivity, "El usuario ya existe, intenta con otro usuarioe", Toast.LENGTH_LONG).show();
+				Toast.makeText(mActivity, "El usuario ya existe, intenta con otro usuario", Toast.LENGTH_LONG).show();
 			}
 			
 			//Verificacion de los mensajes de error del webService de bidding
