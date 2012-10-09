@@ -129,13 +129,13 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignTop="@id/seekbar_container"
+            android:max="25"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
             android:paddingTop="19dp"
             android:progressDrawable="@drawable/seekbar_progress"
             android:thumb="@drawable/seekbar_thumb"
             android:thumbOffset="40dp" />
-
     </RelativeLayout>
 
 </RelativeLayout>
