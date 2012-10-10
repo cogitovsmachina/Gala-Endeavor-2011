@@ -275,10 +275,10 @@ containing a value of this type.
         public static final int jaeger_detail=0x7f020044;
         public static final int jaeger_lecoultre_reloj=0x7f020045;
         public static final int jaegerlecoultre_logo=0x7f020046;
-        public static final int johniewalker=0x7f020047;
+        public static final int johnniewalker=0x7f020047;
         public static final int johnniewalker_detail=0x7f020048;
         public static final int johnniewalker_logo=0x7f020049;
-        public static final int montexanic_coleccion=0x7f02004a;
+        public static final int montexanic=0x7f02004a;
         public static final int montexanic_detail=0x7f02004b;
         public static final int montexanic_logo=0x7f02004c;
         public static final int motorsheaven=0x7f02004d;

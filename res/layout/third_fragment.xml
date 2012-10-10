@@ -50,7 +50,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:onClick="goToProductActivity"
-            android:src="@drawable/montexanic_coleccion" />
+            android:src="@drawable/montexanic" />
     </LinearLayout>
 
 </RelativeLayout>

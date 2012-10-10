@@ -40,6 +40,22 @@ import com.androidtitlan.endeavorsubasta.ui.HomeActivity;
 public class ProductDetailActivity extends Activity implements
 		android.widget.SeekBar.OnSeekBarChangeListener {
 
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		Bundle extras = getIntent().getExtras();
+		productId = extras.getInt("Product");
+		startUI(1, productId);
+		setActionBarCustomBackground();
+		doBindService();
+		tmr.schedule(new TimerTask() {
+			public void run() {
+				sendInts();
+			}
+		}, 500);
+
+	}
+
 	TextView offerer = null;
 	TextView latestPrice = null;
 	TextView startingPrice = null;
@@ -62,6 +78,12 @@ public class ProductDetailActivity extends Activity implements
 
 	class IncomingHandler extends Handler {
 
+		String lastOfferer;
+		long lastPrice;
+
+		// SharedPreferences.Editor editor;
+		// SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+
 		@Override
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
@@ -82,8 +104,10 @@ public class ProductDetailActivity extends Activity implements
 					editor.putString("offerer", bidderName);
 					editor.commit();
 
-					String lastOfferer = settings.getString("offerer", null);
-					long lastPrice = settings.getLong("price", 0);
+					// String lastOfferer = settings.getString("offerer", null);
+					// long lastPrice = settings.getLong("price", 0);
+					lastOfferer = settings.getString("offerer", null);
+					lastPrice = settings.getLong("price", 0);
 					latestPrice.setText("$ " + lastPrice + " USD");
 					offerer.setText("" + lastOfferer);
 				}
@@ -112,26 +136,15 @@ public class ProductDetailActivity extends Activity implements
 			mService = null;
 		}
 	};
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setActionBarCustomBackground();
-		doBindService();
-		tmr.schedule(new TimerTask() {
-			public void run() {
-				sendInts();
-			}
-		}, 500);
-		/**
-		 * Inflado especifico del layout para cada producto
-		 */
-		Bundle extras = getIntent().getExtras();
-		productId = extras.getInt("Product");
-		startUI(1, productId);
-	}
-
+	/**
+	 * This method allows you to generate programatically the UI.
+	 * @param x some some
+	 * @param selectedProduct The productId gotten from Bundle
+	 */
 	private void startUI(int x, int selectedProduct) {
+		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+		long lastPrice;
+		String lastOfferer;
 		switch (selectedProduct) {
 		case 1:
 			setContentView(R.layout.product_one);
@@ -140,8 +153,14 @@ public class ProductDetailActivity extends Activity implements
 			offerer = (TextView) findViewById(R.id.bidder);
 			startingPrice = (TextView) findViewById(R.id.starting_price);
 			// TODO put here text from SharedPreferences
+
+			lastPrice = settings.getLong("price", 7000);
+			lastOfferer = settings.getString("offerer", "Nadie ha ofertado");
 			latestPrice = (TextView) findViewById(R.id.last_price);
 			myOffer = (TextView) findViewById(R.id.myoffer);
+			myOffer.setText("$ " + lastPrice + " USD");
+			latestPrice.setText("$ " + lastPrice + " USD");
+			offerer.setText(lastOfferer);
 			productId = 1;
 			break;
 		case 2:
@@ -151,7 +170,7 @@ public class ProductDetailActivity extends Activity implements
 			startingPrice = (TextView) findViewById(R.id.starting_price);
 			offerer = (TextView) findViewById(R.id.bidder);
 			latestPrice = (TextView) findViewById(R.id.last_price);
-			myOffer = (TextView) findViewById(R.id.myoffer);
+			lastPrice = settings.getLong("price", 1100);
 			productId = 2;
 			break;
 		case 3:
@@ -401,7 +420,7 @@ public class ProductDetailActivity extends Activity implements
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			finish(); 
+			finish();
 			return true;
 		case R.id.menu_help:
 			Dialog.showHelpMessage(this);

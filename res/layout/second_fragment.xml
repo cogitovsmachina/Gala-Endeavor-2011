@@ -57,7 +57,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:onClick="goToProductActivity"
-            android:src="@drawable/johniewalker" />
+            android:src="@drawable/johnniewalker" />
 
         <ImageView
             android:id="@+id/productTwelve"
