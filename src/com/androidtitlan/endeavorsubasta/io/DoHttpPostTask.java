@@ -1,15 +1,11 @@
 package com.androidtitlan.endeavorsubasta.io;
 
-import com.androidtitlan.endeavorsubasta.util.Resources;
 import com.androidtitlan.galaendeavor.pojo.ResponseFromHttpPost;
 import com.androidtitlan.galaendeavor.pojo.Responses;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.widget.Toast;
 
 public class DoHttpPostTask extends
@@ -92,7 +88,7 @@ public class DoHttpPostTask extends
 				});
 				AlertDialog alertDialog = builder.create();
 				alertDialog.show();*/
-				Toast.makeText(mActivity, "Se ha creado el usuario", Toast.LENGTH_LONG).show();
+				Toast.makeText(mActivity, "Se ha registrado el usuario", Toast.LENGTH_LONG).show();
 			}
 			else if (responses.getResponseCreateUser().getStatusCode() == 400) {
 				/*AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
@@ -134,7 +130,7 @@ public class DoHttpPostTask extends
 				});
 				AlertDialog alertDialog = builder.create();
 				alertDialog.show();*/
-				Toast.makeText(mActivity, "Ocurrio un error al realizar la oferta<", Toast.LENGTH_LONG).show();
+				Toast.makeText(mActivity, "Ocurri— un error al realizar la oferta", Toast.LENGTH_LONG).show();
 			}
 		} catch (Exception e) {
 			/*AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);

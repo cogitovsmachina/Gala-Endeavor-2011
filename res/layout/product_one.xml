@@ -69,24 +69,14 @@
             android:layout_below="@id/seekbar_container"
             android:src="@drawable/tuoferta_img" />
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/offer_container"
-            android:layout_toRightOf="@+id/offer_container"
-            android:onClick="openBiddingDialog"
-            android:src="@drawable/offer_button" />
-
         <TextView
             android:id="@+id/last_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/imageView1"
             android:layout_alignRight="@+id/logo"
             android:layout_alignTop="@+id/price_container"
             android:layout_marginTop="43dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/actionbar_text" />
 
         <TextView
@@ -97,7 +87,7 @@
             android:layout_alignBottom="@+id/last_price"
             android:layout_alignLeft="@+id/logo"
             android:text="started at"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/actionbar_text" />
 
         <TextView
@@ -108,7 +98,7 @@
             android:layout_alignRight="@+id/offer_container"
             android:layout_centerVertical="true"
             android:text="Nadie ha ofertado"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/actionbar_text" />
 
         <TextView
@@ -120,7 +110,7 @@
             android:layout_alignRight="@+id/offer_container"
             android:layout_marginBottom="29dp"
             android:text="$"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/actionbar_text" />
 
         <SeekBar
@@ -128,15 +118,24 @@
             android:layout_width="642dp"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_alignTop="@id/seekbar_container"
+            android:layout_below="@+id/offerer_container"
             android:max="25"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
             android:paddingTop="19dp"
             android:progressDrawable="@drawable/seekbar_progress"
             android:thumb="@drawable/seekbar_thumb"
-            android:thumbOffset="40dp"
-            />
+            android:thumbOffset="40dp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/seekbar_container"
+            android:layout_below="@+id/seekbar"
+            android:onClick="openBiddingDialog"
+            android:src="@drawable/offer_button" />
+
     </RelativeLayout>
 
 </RelativeLayout>

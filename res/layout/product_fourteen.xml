@@ -73,8 +73,8 @@
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/offer_container"
-            android:layout_toRightOf="@+id/offer_container"
+            android:layout_alignRight="@+id/seekbar_container"
+            android:layout_below="@+id/seekbar"
             android:onClick="openBiddingDialog"
             android:src="@drawable/offer_button" />
 
@@ -87,7 +87,7 @@
             android:layout_alignTop="@+id/price_container"
             android:layout_marginTop="43dp"
             android:text="last price"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/actionbar_text" />
 
         <TextView
@@ -98,7 +98,7 @@
             android:layout_alignBottom="@+id/last_price"
             android:layout_alignLeft="@+id/logo"
             android:text="started at"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/actionbar_text" />
 
         <TextView
@@ -109,7 +109,7 @@
             android:layout_alignRight="@+id/offer_container"
             android:layout_centerVertical="true"
             android:text="Nadie ha ofertado"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/actionbar_text" />
 
         <TextView
@@ -121,7 +121,7 @@
             android:layout_alignRight="@+id/offer_container"
             android:layout_marginBottom="29dp"
             android:text="$"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/actionbar_text" />
 
         <SeekBar
@@ -134,7 +134,6 @@
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
             android:paddingTop="19dp"
-            android:progress="1"
             android:progressDrawable="@drawable/seekbar_progress"
             android:thumb="@drawable/seekbar_thumb"
             android:thumbOffset="40dp" />

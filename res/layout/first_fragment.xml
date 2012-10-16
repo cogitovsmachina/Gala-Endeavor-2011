@@ -25,7 +25,7 @@
             android:layout_height="280dp"
             android:layout_margin="30dp"
             android:onClick="goToProductActivity"
-            android:src="@drawable/carlin_vestido" />
+            android:src="@drawable/alejandrocarlin" />
 
         <ImageView
             android:id="@+id/productThree"

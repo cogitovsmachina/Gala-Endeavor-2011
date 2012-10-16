@@ -12,8 +12,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.androidtitlan.endeavorsubasta.R;
-import com.androidtitlan.endeavorsubasta.R.id;
-import com.androidtitlan.endeavorsubasta.R.layout;
 import com.androidtitlan.endeavorsubasta.io.DoBiddingTask;
 import com.androidtitlan.endeavorsubasta.io.DoHttpPostTask;
 import com.androidtitlan.endeavorsubasta.util.Resources;

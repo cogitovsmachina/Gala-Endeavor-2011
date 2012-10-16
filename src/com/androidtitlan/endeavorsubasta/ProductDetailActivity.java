@@ -14,7 +14,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -170,7 +169,7 @@ public class ProductDetailActivity extends Activity implements
 			startingPrice = (TextView) findViewById(R.id.starting_price);
 			offerer = (TextView) findViewById(R.id.bidder);
 			latestPrice = (TextView) findViewById(R.id.last_price);
-			lastPrice = settings.getLong("price", 1100);
+			myOffer = (TextView) findViewById(R.id.myoffer);
 			productId = 2;
 			break;
 		case 3:
@@ -346,7 +345,7 @@ public class ProductDetailActivity extends Activity implements
 			offerer.setText(bidderName);
 		}
 		if (x == 2) {
-			sendProdNumToService(productId);
+			sendProductIdToService(productId);
 		}
 	}
 
@@ -631,7 +630,7 @@ public class ProductDetailActivity extends Activity implements
 		}
 	}
 
-	private void sendProdNumToService(int intvaluetosend) {
+	private void sendProductIdToService(int intvaluetosend) {
 		if (mService != null) {
 			try {
 				Bundle b = new Bundle();
@@ -647,7 +646,7 @@ public class ProductDetailActivity extends Activity implements
 
 	public void sendInts() {
 		sendAliveToService(UpdateService.ALIVE);
-		sendProdNumToService(productId);
+		sendProductIdToService(productId);
 	}
 
 	@Override
